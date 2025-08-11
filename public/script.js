@@ -141,6 +141,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Citation data for reports
     const citationData = {
+        'digital-divide-paper': {
+            title: "Closing the Gap: Youth Education, the Digital Divide, and the Global Pursuit of SDG 4",
+            authors: "Kush Dave, Ayushmaan Mukherjee, Anika Nandi, Lillianna Stroock",
+            year: "2025",
+            month: "August",
+            type: "unpublished white paper",
+            leadResearcher: "Kush Dave (lead researcher)",
+            citations: {
+                apa: "Dave, K., Mukherjee, A., Nandi, A., & Stroock, L. (2025, August). Closing the gap: Youth education, the digital divide, and the global pursuit of SDG 4 [Unpublished white paper].",
+                mla: "Dave, Kush, Ayushmaan Mukherjee, Anika Nandi, and Lillianna Stroock. Closing the Gap: Youth Education, the Digital Divide, and the Global Pursuit of SDG 4. Unpublished white paper, Aug. 2025.",
+                "chicago-nb": "Kush Dave, Ayushmaan Mukherjee, Anika Nandi, and Lillianna Stroock, Closing the Gap: Youth Education, the Digital Divide, and the Global Pursuit of SDG 4 (unpublished white paper, August 2025).",
+                "chicago-ad": "Dave, Kush, Ayushmaan Mukherjee, Anika Nandi, and Lillianna Stroock. 2025. Closing the Gap: Youth Education, the Digital Divide, and the Global Pursuit of SDG 4. Unpublished white paper, August.",
+                harvard: "Dave, K., Mukherjee, A., Nandi, A. and Stroock, L., 2025. Closing the gap: Youth education, the digital divide, and the global pursuit of SDG 4. Unpublished white paper, August.",
+                ieee: "[1] K. Dave, A. Mukherjee, A. Nandi, and L. Stroock, \"Closing the Gap: Youth Education, the Digital Divide, and the Global Pursuit of SDG 4,\" unpublished white paper, Aug. 2025.",
+                vancouver: "Dave K, Mukherjee A, Nandi A, Stroock L. Closing the Gap: Youth Education, the Digital Divide, and the Global Pursuit of SDG 4. [unpublished white paper]. 2025 Aug.",
+                ama: "Dave K, Mukherjee A, Nandi A, Stroock L. Closing the Gap: Youth Education, the Digital Divide, and the Global Pursuit of SDG 4. Unpublished white paper. August 2025."
+            }
+        },
         'haiti-report': {
             title: "To What Extent Can U.S. and Caribbean-Led Interventions Stabilize Haiti While Ensuring Its Long-Term Sovereignty and Development?",
             author: "Kush K. Dave",
