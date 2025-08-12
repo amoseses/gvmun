@@ -1941,3 +1941,325 @@
         font-size: 1.5rem;
     }
 }
+
+/* Press Releases Section */
+.press-releases-section {
+    padding: 80px 0;
+    background: white;
+    position: relative;
+    z-index: 2;
+}
+
+.press-releases-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-top: 48px;
+}
+
+.press-release-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid #e2e8f0;
+    overflow: hidden;
+    position: relative;
+}
+
+.press-release-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.press-release-card:hover::before {
+    transform: scaleX(1);
+}
+
+.press-release-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(102, 126, 234, 0.15);
+    border-color: #667eea;
+}
+
+.press-release-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.press-release-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 16px 16px 0 0;
+}
+
+.press-release-card:hover .press-release-image img {
+    transform: scale(1.05);
+}
+
+.press-release-content {
+    padding: 48px;
+}
+
+.press-release-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.press-release-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.press-release-date i {
+    color: #667eea;
+}
+
+.press-release-category {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.press-release-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+    line-height: 1.3;
+}
+
+.press-release-excerpt {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    font-size: 1.125rem;
+}
+
+.press-release-highlights {
+    margin-bottom: 32px;
+    background: #f8fafc;
+    padding: 24px;
+    border-radius: 16px;
+    border-left: 4px solid #667eea;
+}
+
+.press-release-highlights h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+}
+
+.press-release-highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+.press-release-highlights li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    color: #374151;
+    line-height: 1.6;
+}
+
+.press-release-highlights li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.press-release-quote {
+    margin-bottom: 32px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 32px;
+    border-radius: 16px;
+    border-left: 4px solid #667eea;
+}
+
+.press-release-quote blockquote {
+    margin: 0;
+    font-style: italic;
+}
+
+.press-release-quote blockquote p {
+    font-size: 1.25rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.press-release-quote blockquote p::before {
+    content: '"';
+    font-size: 3rem;
+    color: #667eea;
+    position: absolute;
+    left: -16px;
+    top: -8px;
+    font-family: serif;
+    opacity: 0.5;
+}
+
+.press-release-quote cite {
+    color: #667eea;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.press-release-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.press-release-share {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.press-release-share span {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.share-link {
+    width: 40px;
+    height: 40px;
+    background: #f1f5f9;
+    color: #64748b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.share-link:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* About Press Releases Section */
+.about-press-releases {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+    z-index: 2;
+}
+
+.about-press-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-press-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #1a1a1a;
+}
+
+.about-press-content p {
+    font-size: 1.125rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 48px;
+}
+
+.press-contact {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid #e2e8f0;
+    text-align: left;
+}
+
+.press-contact h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+}
+
+.press-contact p {
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.press-contact a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.press-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile responsive for press releases */
+@media (max-width: 768px) {
+    .press-release-content {
+        padding: 32px;
+    }
+    
+    .press-release-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .press-release-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+    
+    .press-release-share {
+        justify-content: center;
+    }
+    
+    .about-press-content h2 {
+        font-size: 2rem;
+    }
+    
+    .press-contact {
+        padding: 24px;
+    }
+}
