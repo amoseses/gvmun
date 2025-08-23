@@ -196,20 +196,18 @@
 
 .overview-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
     margin-top: 64px;
-    max-width: 900px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     justify-items: center;
 }
 
-/* Center the Educational Impact card when it's alone in the bottom row */
+/* Remove the center class functionality since we want 2x2 */
 .overview-center {
-    grid-column: 1 / -1;
-    max-width: 400px;
-    justify-self: center;
+    /* No special styling needed for 2x2 layout */
 }
 
 .overview-item {
@@ -1957,5 +1955,7 @@
     
     .stat-number {
         font-size: 1.5rem;
+    }
+}
     }
 }

@@ -17,10 +17,12 @@
     margin: 0 auto;
 }
 
-/* Center the last item (Jackson) when it's alone in the bottom row */
-.team-grid .team-member:nth-child(7) {
-    grid-column: 1 / -1;
-    justify-self: center;
+/* Remove the special centering for 7th member since we now have 6 members */
+/* Center the bottom row with 3 members */
+.team-grid .team-member:nth-child(4),
+.team-grid .team-member:nth-child(5),
+.team-grid .team-member:nth-child(6) {
+    /* Bottom row naturally centers with 3 items in 3-column grid */
 }
 
 .team-member {
@@ -67,8 +69,8 @@
     display: block;
 }
 
-/* Special centering for Lilli's image with better positioning */
-.team-member:nth-child(6) .member-photo img {
+/* Special centering for Anushka's image (now 5th member) with better positioning */
+.team-member:nth-child(5) .member-photo img {
     object-position: center 30%;
     object-fit: cover;
     transform: scale(1.15);
@@ -179,11 +181,7 @@
         max-width: 600px;
     }
     
-    /* Center the last item when odd number in 2-column layout */
-    .team-grid .team-member:nth-child(7) {
-        grid-column: 1 / -1;
-        justify-self: center;
-    }
+    /* No special centering needed for even number of members in 2-column layout */
 }
 
 @media (max-width: 768px) {
@@ -237,5 +235,7 @@
         width: 100px;
         height: 100px;
         margin-bottom: 16px;
+    }
+}
     }
 }
