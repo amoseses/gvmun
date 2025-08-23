@@ -194,6 +194,57 @@ document.addEventListener('DOMContentLoaded', function() {
                 vancouver: "2. Mukherjee A. Policy Recommendations for the United States Regarding Syria. [unpublished manuscript]. 2025;22 p.",
                 ama: "Mukherjee A. Policy Recommendations for the United States Regarding Syria. Unpublished manuscript; 2025."
             }
+        },
+        'ukraine-resolution': {
+            title: "Resolution on Humanitarian Aid and Reconstruction in Ukraine",
+            committee: "United Nations Security Council",
+            conference: "GVMUNC VIII",
+            year: "2024",
+            type: "resolution",
+            citations: {
+                apa: "United Nations Security Council. (2024). Resolution on humanitarian aid and reconstruction in Ukraine [Conference resolution]. GVMUNC VIII.",
+                mla: "United Nations Security Council. \"Resolution on Humanitarian Aid and Reconstruction in Ukraine.\" GVMUNC VIII, 2024.",
+                "chicago-nb": "United Nations Security Council, \"Resolution on Humanitarian Aid and Reconstruction in Ukraine\" (conference resolution, GVMUNC VIII, 2024).",
+                "chicago-ad": "United Nations Security Council. 2024. \"Resolution on Humanitarian Aid and Reconstruction in Ukraine.\" Conference resolution, GVMUNC VIII.",
+                harvard: "United Nations Security Council, 2024. Resolution on humanitarian aid and reconstruction in Ukraine. Conference resolution, GVMUNC VIII.",
+                ieee: "[1] United Nations Security Council, \"Resolution on Humanitarian Aid and Reconstruction in Ukraine,\" conference resolution, GVMUNC VIII, 2024.",
+                vancouver: "1. United Nations Security Council. Resolution on Humanitarian Aid and Reconstruction in Ukraine [conference resolution]. GVMUNC VIII; 2024.",
+                ama: "United Nations Security Council. Resolution on Humanitarian Aid and Reconstruction in Ukraine. Conference resolution, GVMUNC VIII; 2024."
+            }
+        },
+        'climate-resolution': {
+            title: "Comprehensive Framework for Climate Action and Green Technology Transfer",
+            committee: "United Nations Environment Programme (UNEP)",
+            conference: "GVMUNC VII",
+            year: "2024",
+            type: "resolution",
+            citations: {
+                apa: "United Nations Environment Programme. (2024). Comprehensive framework for climate action and green technology transfer [Conference resolution]. GVMUNC VII.",
+                mla: "United Nations Environment Programme. \"Comprehensive Framework for Climate Action and Green Technology Transfer.\" GVMUNC VII, 2024.",
+                "chicago-nb": "United Nations Environment Programme, \"Comprehensive Framework for Climate Action and Green Technology Transfer\" (conference resolution, GVMUNC VII, 2024).",
+                "chicago-ad": "United Nations Environment Programme. 2024. \"Comprehensive Framework for Climate Action and Green Technology Transfer.\" Conference resolution, GVMUNC VII.",
+                harvard: "United Nations Environment Programme, 2024. Comprehensive framework for climate action and green technology transfer. Conference resolution, GVMUNC VII.",
+                ieee: "[2] United Nations Environment Programme, \"Comprehensive Framework for Climate Action and Green Technology Transfer,\" conference resolution, GVMUNC VII, 2024.",
+                vancouver: "2. United Nations Environment Programme. Comprehensive Framework for Climate Action and Green Technology Transfer [conference resolution]. GVMUNC VII; 2024.",
+                ama: "United Nations Environment Programme. Comprehensive Framework for Climate Action and Green Technology Transfer. Conference resolution, GVMUNC VII; 2024."
+            }
+        },
+        'cybersecurity-resolution': {
+            title: "International Cybersecurity Cooperation and Digital Rights Protection",
+            committee: "United Nations General Assembly Third Committee",
+            conference: "GVMUNC VI",
+            year: "2023",
+            type: "resolution",
+            citations: {
+                apa: "United Nations General Assembly Third Committee. (2023). International cybersecurity cooperation and digital rights protection [Conference resolution]. GVMUNC VI.",
+                mla: "United Nations General Assembly Third Committee. \"International Cybersecurity Cooperation and Digital Rights Protection.\" GVMUNC VI, 2023.",
+                "chicago-nb": "United Nations General Assembly Third Committee, \"International Cybersecurity Cooperation and Digital Rights Protection\" (conference resolution, GVMUNC VI, 2023).",
+                "chicago-ad": "United Nations General Assembly Third Committee. 2023. \"International Cybersecurity Cooperation and Digital Rights Protection.\" Conference resolution, GVMUNC VI.",
+                harvard: "United Nations General Assembly Third Committee, 2023. International cybersecurity cooperation and digital rights protection. Conference resolution, GVMUNC VI.",
+                ieee: "[3] United Nations General Assembly Third Committee, \"International Cybersecurity Cooperation and Digital Rights Protection,\" conference resolution, GVMUNC VI, 2023.",
+                vancouver: "3. United Nations General Assembly Third Committee. International Cybersecurity Cooperation and Digital Rights Protection [conference resolution]. GVMUNC VI; 2023.",
+                ama: "United Nations General Assembly Third Committee. International Cybersecurity Cooperation and Digital Rights Protection. Conference resolution, GVMUNC VI; 2023."
+            }
         }
     };
 
