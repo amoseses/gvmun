@@ -74,7 +74,17 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
                     <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
-                    <a href="get-involved.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Get Involved</a>
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" class="flex items-center text-gray-600 hover:text-gvmun-blue transition-colors">
+                            <span>Get Involved</span>
+                            <i class="fas fa-caret-down ml-1"></i>
+                        </button>
+                        <div x-show="open" @click.away="open = false" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+                            <a href="apply-internship.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">Internship</a>
+                            <a href="apply-fellowship.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">Fellowship</a>
+                            <a href="apply-secretariat.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">Secretariat</a>
+                        </div>
+                    </div>
                     <div class="relative" x-data="{ open: false }">
                         <button @click="open = !open" class="flex items-center text-gray-600 hover:text-gvmun-blue transition-colors">
                             <span>Publications</span>

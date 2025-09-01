@@ -61,6 +61,15 @@
     display: block;
 }
 
+/* Get Involved dropdown styling - match existing Publications dropdown */
+.nav-dropdown.get-involved .nav-dropdown-menu {
+    min-width: 180px; /* Narrower than Publications dropdown */
+}
+
+.nav-dropdown.get-involved .nav-dropdown-menu a {
+    padding: 12px 20px; /* Slightly more compact padding */
+}
+
 /* Mobile: show dropdown as part of nav-menu */
 @media (max-width: 768px) {
     .nav-dropdown-menu {

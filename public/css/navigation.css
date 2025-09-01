@@ -110,7 +110,6 @@
     position: relative;
     display: flex;
     align-items: center;
-    height: 100%; /* Take full height of nav item */
 }
 
 .nav-dropdown-toggle {
@@ -154,14 +153,18 @@
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 200px;
+    min-width: 200px; /* For Publications */
     background: white;
     border: 1px solid #e2e8f0;
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.08);
     z-index: 1001;
     padding: 8px 0;
-    margin-top: 8px;
+}
+
+/* Get Involved dropdown menu is slightly narrower */
+.nav-dropdown.get-involved .nav-dropdown-menu {
+    min-width: 160px;
 }
 
 .nav-dropdown-menu a {
@@ -177,6 +180,13 @@
 .nav-dropdown-menu a:hover {
     background: #f8fafc;
     color: #667eea;
+}
+
+/* Active state for dropdown items */
+.nav-dropdown-menu a.active {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    font-weight: 600;
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
