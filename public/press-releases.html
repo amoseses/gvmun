@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Press Releases - GVMUN</title>
     <link rel="icon" type="image/png" href="assets/gvmunlogo.png">
+    <!-- Main site styles for consistent look -->
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -20,15 +21,9 @@
                 </a>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="events.html" class="nav-link">Events</a>
-                </li>
-                <li class="nav-item">
-                    <a href="get-involved.html" class="nav-link">Get Involved</a>
-                </li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="get-involved.html" class="nav-link">Get Involved</a></li>
                 <li class="nav-item nav-dropdown">
                     <span class="nav-link nav-dropdown-toggle active">
                         Publications
@@ -51,9 +46,8 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <div class="page-header">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section class="page-header">
+        <div class="container">
             <h1>Press Releases</h1>
             <p>Official statements and announcements from GVMUN</p>
             <div class="header-cta">
@@ -63,118 +57,72 @@
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Press Releases Content -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Introduction -->
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Latest News & Announcements</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Stay updated with GVMUN's official press releases, covering our participation in international events, 
-                    policy initiatives, and organizational developments.
-                </p>
-            </div>
-
-            <!-- Press Release Cards -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                <!-- International Youth Day Press Release -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-gray-200 hover:border-gvmun-blue transition-all duration-300 hover:shadow-xl">
-                    <div class="relative">
-                        <img src="assets/images/iyd-2025.jpg" alt="International Youth Day 2025" class="w-full h-48 object-cover">
-                        <div class="absolute top-4 left-4">
-                            <span class="bg-gvmun-blue text-white px-3 py-1 rounded-full text-xs font-semibold">
-                                Press Release
-                            </span>
-                        </div>
-                        <div class="absolute top-4 right-4">
-                            <span class="bg-white text-gray-800 px-2 py-1 rounded text-xs font-medium">
-                                August 2025
-                            </span>
-                        </div>
+    <section class="publications-overview">
+        <div class="container">
+            <div class="publications-grid">
+                <div class="publication-category">
+                    <div class="category-icon">
+                        <i class="fas fa-bullhorn"></i>
                     </div>
-                    
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">
-                            International Youth Day '25 at the UN
-                        </h3>
-                        
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            The GVMUN team recently got a chance to attend International Youth Day hosted by AFS, UNITAR, 
-                            and the Mission of Malta to the UN at the UN Secretariat Building in NYC. We participated in 
-                            sessions centered on how young people are advancing multilateral cooperation through technology and partnerships.
-                        </p>
-                        
-                        <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
-                            <div class="flex items-center space-x-1">
-                                <i class="fas fa-calendar"></i>
-                                <span>August 8, 2025</span>
-                            </div>
-                            <div class="flex items-center space-x-1">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>UN Secretariat, NYC</span>
-                            </div>
-                        </div>
-                        
-                        <div class="border-t border-gray-200 pt-4">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center space-x-2">
-                                    <i class="fas fa-file-pdf text-red-600"></i>
-                                    <span class="text-sm text-gray-600">Full Press Release</span>
-                                </div>
-                                <a href="assets/reports/IYD Press Release (1).pdf" 
-                                   target="_blank" 
-                                   class="gradient-bg text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity text-sm font-medium">
-                                    <i class="fas fa-external-link-alt mr-1"></i>
-                                    Full Text
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Placeholder for future press releases -->
-                <div class="bg-gray-50 rounded-xl border-2 border-dashed border-gray-300 p-8 text-center">
-                    <i class="fas fa-plus-circle text-gray-400 text-4xl mb-4"></i>
-                    <h3 class="text-lg font-semibold text-gray-600 mb-2">More Coming Soon</h3>
-                    <p class="text-gray-500">Additional press releases will be published here as they become available.</p>
-                </div>
-
-                <div class="bg-gray-50 rounded-xl border-2 border-dashed border-gray-300 p-8 text-center">
-                    <i class="fas fa-newspaper text-gray-400 text-4xl mb-4"></i>
-                    <h3 class="text-lg font-semibold text-gray-600 mb-2">Stay Informed</h3>
-                    <p class="text-gray-500 mb-4">Subscribe to our newsletter to receive press releases directly in your inbox.</p>
-                    <a href="mailto:gvmunsecretariat@gmail.com" class="text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium">
-                        Subscribe Now <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Additional Information -->
-            <div class="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
-                <div class="text-center">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Media Inquiries</h3>
-                    <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-                        For media inquiries, interview requests, or additional information about GVMUN's activities and initiatives, 
-                        please contact our communications team.
+                    <h3>International Youth Day '25 at the UN</h3>
+                    <p>
+                        The GVMUN team recently got a chance to attend International Youth Day hosted by AFS, UNITAR, and the Mission of Malta to the UN at the UN Secretariat Building in NYC. We participated in sessions centered on how young people are advancing multilateral cooperation through technology and partnerships.
                     </p>
-                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6">
-                        <a href="mailto:gvmunsecretariat@gmail.com" class="flex items-center text-gvmun-blue hover:text-gvmun-purple transition-colors">
-                            <i class="fas fa-envelope mr-2"></i>
-                            gvmunsecretariat@gmail.com
-                        </a>
-                        <a href="http://www.gvmun.com" class="flex items-center text-gvmun-blue hover:text-gvmun-purple transition-colors">
-                            <i class="fas fa-globe mr-2"></i>
-                            www.gvmun.com
-                        </a>
+                    <div class="article-meta" style="margin-bottom: 12px;">
+                        <span><i class="fas fa-calendar"></i> August 8, 2025</span>
+                        <span><i class="fas fa-map-marker-alt"></i> UN Secretariat, NYC</span>
                     </div>
+                    <a href="assets/press-releases/International-Youth-Day-2025.pdf" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-file-pdf"></i> Full Press Release
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section class="publications-overview">
+        <div class="container">
+            <div class="publications-grid">
+                <div class="publication-category" style="text-align:center;">
+                    <i class="fas fa-plus fa-2x" style="color:#667eea; margin-bottom:16px;"></i>
+                    <h3 style="margin-bottom:8px;">More Coming Soon</h3>
+                    <p>Additional press releases will be published here as they become available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="container">
+            <h2 class="section-title">Stay Informed</h2>
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Subscribe for Updates</h3>
+                    <p>Subscribe to our newsletter to receive press releases directly in your inbox.</p>
+                    <a href="GVMUN Newsletter.pdf" target="_blank" class="btn btn-primary">Subscribe Now &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="publications-overview">
+        <div class="container">
+            <div class="publications-grid">
+                <div class="publication-category" style="text-align:center;">
+                    <h3>Media Inquiries</h3>
+                    <p>
+                        For media inquiries, interview requests, or additional information about GVMUN's activities and initiatives, please contact our communications team:<br>
+                        <a href="mailto:gvmunsecretariat@gmail.com"><i class="fas fa-envelope"></i> gvmunsecretariat@gmail.com</a>
+                        &nbsp;|&nbsp;
+                        <a href="https://www.gvmun.com" target="_blank"><i class="fas fa-globe"></i> www.gvmun.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -192,47 +140,6 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
-</body>
-</html>
-                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
-                        <span class="text-xl font-bold">GVMUN</span>
-                    </div>
-                    <p class="text-gray-400">Global Virtual Model United Nations - Improving the Model UN space while encouraging youth activism and political education.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Quick Links</h4>
-                    <div class="space-y-2">
-                        <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
-                        <a href="events.html" class="block text-gray-400 hover:text-white transition-colors">Events</a>
-                        <a href="get-involved.html" class="block text-gray-400 hover:text-white transition-colors">Get Involved</a>
-                        <a href="publications.html" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Connect With Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/gvmun_official/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@GVModelUN" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-youtube text-xl"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/official-gvmun/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@gvmunofficial" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-tiktok text-xl"></i>
-                        </a>
-                    </div>
-                    <p class="text-gray-400 mt-4">Contact: <a href="mailto:gvmunsecretariat@gmail.com" class="text-gvmun-blue hover:underline">gvmunsecretariat@gmail.com</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Alpine.js -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 </html>

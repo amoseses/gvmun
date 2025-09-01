@@ -245,6 +245,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 vancouver: "3. United Nations General Assembly Third Committee. International Cybersecurity Cooperation and Digital Rights Protection [conference resolution]. GVMUNC VI; 2023.",
                 ama: "United Nations General Assembly Third Committee. International Cybersecurity Cooperation and Digital Rights Protection. Conference resolution, GVMUNC VI; 2023."
             }
+        },
+        'eu-extremism-resolution': {
+            title: "Political Extremism",
+            committee: "European Union",
+            conference: "GVMUNC IV",
+            year: "2022",
+            type: "resolution",
+            citations: {
+                apa: "European Union. (2022). Political extremism [Conference resolution]. GVMUNC IV.",
+                mla: "European Union. \"Political Extremism.\" GVMUNC IV, 2022.",
+                "chicago-nb": "European Union, \"Political Extremism\" (conference resolution, GVMUNC IV, 2022).",
+                "chicago-ad": "European Union. 2022. \"Political Extremism.\" Conference resolution, GVMUNC IV.",
+                harvard: "European Union, 2022. Political extremism. Conference resolution, GVMUNC IV.",
+                ieee: "[4] European Union, \"Political Extremism,\" conference resolution, GVMUNC IV, 2022.",
+                vancouver: "4. European Union. Political Extremism [conference resolution]. GVMUNC IV; 2022.",
+                ama: "European Union. Political Extremism. Conference resolution, GVMUNC IV; 2022."
+            }
         }
     };
 
