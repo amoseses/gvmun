@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starvation Surges in Gaza as Aid Fails to Meet Needs - GVMUN</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom styling -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        
+        /* Article-specific styles with enhanced headers */
+        .article-content h2 {
+            @apply text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 mt-12 mb-6 pt-8;
+            border-top: 3px solid #667eea;
+            position: relative;
+            font-family: 'Merriweather', serif;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        .article-content h2::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .article-content h3 {
+            @apply text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-8 mb-4;
+            border-left: 4px solid #667eea;
+            padding-left: 16px;
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+        }
+        
+        .article-content h4 {
+            @apply text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-6 mb-3;
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+        }
+        
+        .article-content p {
+            @apply text-gray-700 leading-7 mb-4 text-lg;
+            font-weight: 400;
+        }
+        
+        .article-content strong {
+            @apply font-semibold text-gray-900;
+        }
+    </style>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gvmun-blue': '#667eea',
+                        'gvmun-purple': '#764ba2',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="navbar fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold gradient-bg bg-clip-text text-transparent">GVMUN</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
+                    <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
+                    <div class="relative">
+                        <a href="#" class="dropdown-trigger text-gray-600 hover:text-gvmun-blue transition-colors flex items-center">
+                            Get Involved
+                            <svg class="dropdown-arrow w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu hidden">
+                            <a href="apply-fellowship.html" class="dropdown-item">Fellowship</a>
+                            <a href="apply-internship.html" class="dropdown-item">Internship</a>
+                            <a href="apply-secretariat.html" class="dropdown-item">Secretariat</a>
+                        </div>
+                    </div>
+                    <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
+                </div>
+                <button class="md:hidden mobile-menu-button p-2">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">About Us</a>
+                <a href="events.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Events</a>
+                <div class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-trigger block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50 flex justify-between items-center">
+                        Get Involved
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div class="mobile-dropdown-menu hidden pl-4">
+                        <a href="apply-fellowship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Fellowship</a>
+                        <a href="apply-internship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Internship</a>
+                        <a href="apply-secretariat.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Secretariat</a>
+                    </div>
+                </div>
+                <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="pt-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                <a href="index.html" class="hover:text-gvmun-blue transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html" class="hover:text-gvmun-blue transition-colors">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html" class="hover:text-gvmun-blue transition-colors">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-gray-900">Gaza Crisis</span>
+            </nav>
+
+            <!-- Article Metadata -->
+            <div class="mb-8">
+                <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 mb-4">
+                    Middle East
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                    Starvation Surges in Gaza as Aid Fails to Meet Needs
+                </h1>
+                
+                <!-- Author and Date Info -->
+                <div class="flex items-center space-x-6 text-gray-600 mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-gray-500"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Alisa Pomelnikova</p>
+                            <p class="text-sm text-gray-500">Journalism Intern</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 text-sm">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-calendar text-gray-400"></i>
+                            <span>August 15, 2025</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-clock text-gray-400"></i>
+                            <span>9 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-12">
+                <img src="assets/articles/gaza.png" alt="Gaza humanitarian crisis" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
+                <p class="text-sm text-gray-500 mt-2 italic">Gaza faces severe food shortages and humanitarian crisis as aid delivery remains inadequate. (File photo)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="prose prose-lg max-w-none article-content">
+                <p class="text-xl text-gray-700 leading-8 font-medium mb-8">
+                    On July 29, an international hunger organization issued its starkest warning yet: Gaza is on the brink of a "worst-case famine scenario", battered by months of Israeli military assault and an unrelenting blockade.
+                </p>
+
+                <p>
+                    For nearly a year, food and humanitarian supplies have barely trickled into the enclave. The crisis reached a critical point in March, when Israel imposed a complete blockade in the midst of a truce with Hamas, effectively cutting off the last lifelines of aid to the Gaza Strip. According to the Integrated Food Security Phase Classification (IPC), the number of families facing extreme hunger doubled between May and July. Many areas have now crossed the critical threshold that signals famine.
+                </p>
+
+                <p>
+                    By mid-July, Gaza City was registering malnutrition rates that met formal famine criteria. In just three months (April - mid-July), more than 20,000 children were hospitalized with acute malnutrition; over 3,000 were in life-threatening condition. Doctors are warning of a sharp rise in deaths among children under five. Projections show more than 71,000 children and 17,000 mothers will soon require urgent, specialized treatment for acute malnutrition.
+                </p>
+
+                <p>
+                    Under mounting international pressure, the Israeli army has announced occasional "tactical pauses" to allow in aid convoys. But relief agencies warn that this volume is catastrophically insufficient to stop the looming famine. After partially easing the blockade in May, Israel allowed only minimal amounts of humanitarian goods to be delivered for several weeks — a lifeline so thin that it failed to reach many in need. Moreover, according to humanitarian organizations, new import regulations have only worsened the situation, causing logistical disruptions and delays in the delivery of food and medicine.
+                </p>
+
+                <p>
+                    "With such limited aid, the humanitarian situation is spiraling," said Dr. Amjad Alshawa, head of the Palestinian NGO Network.
+                </p>
+
+                <h2>Israel's Defense and Disputed Claims</h2>
+                <p>
+                    Israeli officials maintain that restrictions and a controversial new distribution system are necessary to prevent Hamas from seizing aid. Yet a classified U.S. government analysis submitted to the State Department reportedly found no evidence of systematic aid theft by Hamas. The Israel Defense Forces dismissed the report as "biased."
+                </p>
+
+                <p>
+                    At an August 10 press conference, Prime Minister Benjamin Netanyahu again rejected allegations of famine as "exaggerated." While acknowledging "deprivation" in the enclave, he insisted: "If Israel had a policy of starvation, no one in Gaza would have survived two years of war."
+                </p>
+
+                <p>
+                    Meanwhile, the United Nations and other international organizations disagree, warning that the current level of aid (limited truck deliveries and sporadic airdrops) is completely insufficient for Gaza's two million residents.
+                </p>
+
+                <p>
+                    Airdrops, in particular, have drawn public anger for their inefficiency and danger. In one tragic incident, 14-year-old Muhannad Eid was killed when a humanitarian package fell on him. "This is humiliation from the air, not help," his brother, Mohammed, told reporters. "We've warned again and again about these unsafe, inhumane methods and repeatedly called for the safe and adequate delivery of aid through land crossings. We need protection."
+                </p>
+
+                <h2>Why More Food Alone Won't End the Crisis</h2>
+                <p>
+                    Experts caution that with famine already gripping parts of Gaza, simply increasing food deliveries will not be enough. Over half the population is now in the "emergency" or "catastrophic" phase of hunger, where the body's systems begin to collapse. The medical complexity of treating such phases of acute malnutrition makes the situation especially dangerous.
+                </p>
+
+                <p>
+                    "In the final stages of starvation, even water can trigger organ failure, and improper or too-rapid feeding can cause refeeding syndrome, which is deadly due to the sudden imbalance of electrolytes," explained Dr. Patel, a specialist in emergency nutrition. Dr. Noor Alamassi of Project HOPE added: "A bag of flour will not save anyone if it does not contain the essential nutrients people need." Recovery requires weeks or even months of careful medical supervision. Children need fortified milk, ready-to-use therapeutic foods, and constant monitoring of sodium and potassium levels in the blood.
+                </p>
+
+                <p>
+                    But in reality, Gaza's healthcare system is already crippled by shortages of doctors, medicine, and equipment to provide such care. Aid workers warn that even if food supplies resume, without medical infrastructure, saving thousands of lives will be extremely difficult.
+                </p>
+            </div>
+
+            <!-- Article Footer -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+                    <!-- Social Sharing -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-600 font-medium">Share this article:</span>
+                        <div class="flex space-x-3">
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                                <i class="fab fa-twitter text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors">
+                                <i class="fab fa-facebook text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors">
+                                <i class="fab fa-linkedin text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors">
+                                <i class="fab fa-whatsapp text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Back to Articles -->
+                    <a href="journalism.html" class="inline-flex items-center space-x-2 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to All Articles</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="mt-12 bg-gray-50 rounded-xl p-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-user text-gray-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 text-lg">Alisa Pomelnikova</h3>
+                        <p class="text-gray-600 mb-2">Journalism Intern</p>
+                        <p class="text-gray-700">
+                            Alisa is a journalism intern at GVMUN with a focus on humanitarian crises and international 
+                            relations in conflict zones. She specializes in analyzing the impact of political decisions
+                            on vulnerable populations and documenting humanitarian challenges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/palestine.png" alt="Palestine Article" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 mb-3">
+                            Middle East
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">As Conflict Escalates, Displaced Families Seek Shelter in 'Ghost Camps'</h3>
+                        <p class="text-gray-600 text-sm">Thousands of Palestinians are forced into makeshift shelters...</p>
+                        <a href="palestine-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/haiti.png" alt="Haiti Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 mb-3">
+                            Caribbean
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Haiti's Crisis: A Policy Analysis</h3>
+                        <p class="text-gray-600 text-sm">An in-depth examination of Haiti's ongoing political and humanitarian crisis...</p>
+                        <a href="haiti-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/nato.png" alt="NATO-Russia" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 mb-3">
+                            Security
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Militarization of NATO-Russian Border</h3>
+                        <p class="text-gray-600 text-sm">Analyzing the deteriorating security relationship between NATO and Russia...</p>
+                        <a href="nato-russia-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold">GVMUN</span>
+                    </div>
+                    <p class="text-gray-400">Global Virtual Model United Nations - Improving the Model UN space while encouraging youth activism and political education.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+                        <a href="events.html" class="block text-gray-400 hover:text-white transition-colors">Events</a>
+                        <div class="space-y-1 pl-4 mt-1 border-l border-gray-700">
+                            <a href="apply-fellowship.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Fellowship</a>
+                            <a href="apply-internship.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Internship</a>
+                            <a href="apply-secretariat.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Secretariat</a>
+                        </div>
+                        <a href="publications.html" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gvmun_official/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@GVModelUN" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/official-gvmun/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@gvmunofficial" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mt-4">Contact: <a href="mailto:gvmunsecretariat@gmail.com" class="text-gvmun-blue hover:underline">gvmunsecretariat@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navigation dropdown script -->
+    <script src="navigation.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button')?.addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Mobile dropdown toggle
+        document.querySelector('.mobile-dropdown-trigger')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.mobile-dropdown-menu').classList.toggle('hidden');
+        });
+        
+        // Desktop dropdown functionality
+        const dropdownTrigger = document.querySelector('.dropdown-trigger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        if (dropdownTrigger && dropdownMenu) {
+            // Toggle dropdown visibility on click
+            dropdownTrigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('hidden');
+            });
+            
+            // Hide dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdownTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

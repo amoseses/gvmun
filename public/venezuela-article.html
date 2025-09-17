@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venezuela's Crisis Deepens as Opposition Leader Faces Exile - GVMUN</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom styling -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        
+        /* Article-specific styles with enhanced headers */
+        .article-content h2 {
+            @apply text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 mt-12 mb-6 pt-8;
+            border-top: 3px solid #667eea;
+            position: relative;
+            font-family: 'Merriweather', serif;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        .article-content h2::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .article-content h3 {
+            @apply text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-8 mb-4;
+            border-left: 4px solid #667eea;
+            padding-left: 16px;
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+        }
+        
+        .article-content h4 {
+            @apply text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-6 mb-3;
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+        }
+        
+        .article-content p {
+            @apply text-gray-700 leading-7 mb-4 text-lg;
+            font-weight: 400;
+        }
+        
+        .article-content strong {
+            @apply font-semibold text-gray-900;
+        }
+    </style>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gvmun-blue': '#667eea',
+                        'gvmun-purple': '#764ba2',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="navbar fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold gradient-bg bg-clip-text text-transparent">GVMUN</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
+                    <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
+                    <div class="relative">
+                        <a href="#" class="dropdown-trigger text-gray-600 hover:text-gvmun-blue transition-colors flex items-center">
+                            Get Involved
+                            <svg class="dropdown-arrow w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu hidden">
+                            <a href="apply-fellowship.html" class="dropdown-item">Fellowship</a>
+                            <a href="apply-internship.html" class="dropdown-item">Internship</a>
+                            <a href="apply-secretariat.html" class="dropdown-item">Secretariat</a>
+                        </div>
+                    </div>
+                    <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
+                </div>
+                <button class="md:hidden mobile-menu-button p-2">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">About Us</a>
+                <a href="events.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Events</a>
+                <div class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-trigger block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50 flex justify-between items-center">
+                        Get Involved
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div class="mobile-dropdown-menu hidden pl-4">
+                        <a href="apply-fellowship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Fellowship</a>
+                        <a href="apply-internship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Internship</a>
+                        <a href="apply-secretariat.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Secretariat</a>
+                    </div>
+                </div>
+                <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="pt-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                <a href="index.html" class="hover:text-gvmun-blue transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html" class="hover:text-gvmun-blue transition-colors">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html" class="hover:text-gvmun-blue transition-colors">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-gray-900">Venezuela Crisis</span>
+            </nav>
+
+            <!-- Article Metadata -->
+            <div class="mb-8">
+                <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 mb-4">
+                    Political Crisis
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                    U.S.-Venezuela Tensions Escalate Amid Caribbean Standoff
+                </h1>
+                
+                <!-- Author and Date Info -->
+                <div class="flex items-center space-x-6 text-gray-600 mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-gray-500"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Haleigh Marshall</p>
+                            <p class="text-sm text-gray-500">Journalism Intern</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 text-sm">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-calendar text-gray-400"></i>
+                            <span>September 20, 2025</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-clock text-gray-400"></i>
+                            <span>7 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-12">
+                <img src="assets/articles/venezuela.png" alt="Venezuela political crisis" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
+                <p class="text-sm text-gray-500 mt-2 italic">Venezuelan opposition leader María Corina Machado addressing supporters amid rising political tensions. (File photo)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="prose prose-lg max-w-none article-content">
+                <p>
+                    As Venezuela continues to grapple with political turmoil and economic collapse, opposition leader María Corina Machado faces mounting pressure from the Maduro regime that threatens to push her into exile. The deepening crisis comes at a critical juncture as international observers warn that Venezuela's democratic institutions hang by a thread, with millions of citizens caught in the crossfire of an increasingly authoritarian state struggling to maintain legitimacy amid widespread social unrest and economic devastation.
+                </p>
+
+                <h2>The Escalating Political Confrontation</h2>
+                <p>
+                    María Corina Machado, the prominent opposition leader who has emerged as one of the most vocal critics of President Nicolás Maduro's government, now finds herself in an increasingly precarious position. Recent months have seen a systematic campaign of intimidation and legal harassment directed against her and her supporters, culminating in threats that could force her to seek refuge abroad.
+                </p>
+                <p>
+                    The government's crackdown on opposition figures has intensified following a series of massive protests demanding democratic reforms and economic relief. Machado's calls for free and fair elections have resonated with millions of Venezuelans who view her as a symbol of resistance against authoritarian rule. However, this popularity has also made her a primary target of state persecution.
+                </p>
+
+                <h2>Economic Collapse and Humanitarian Crisis</h2>
+                <p>
+                    Venezuela's economic situation continues to deteriorate at an alarming pace, with hyperinflation, currency devaluation, and widespread shortages creating conditions that the United Nations has described as a humanitarian emergency. The country's oil-dependent economy, once the wealthiest in Latin America, has contracted by more than 75% since 2013, leaving millions struggling to access basic necessities including food, medicine, and clean water.
+                </p>
+                <p>
+                    The economic crisis has been exacerbated by international sanctions, government mismanagement, and widespread corruption. Essential services including electricity, water, and healthcare have collapsed in many regions, forcing millions to rely on humanitarian aid or seek opportunities abroad. The exodus of Venezuelan migrants and refugees has become one of the largest displacement crises in the Western Hemisphere, with over seven million Venezuelans now living outside their homeland.
+                </p>
+
+                <h2>International Response and Regional Implications</h2>
+                <p>
+                    The international community has responded to Venezuela's crisis with a combination of diplomatic pressure, economic sanctions, and humanitarian assistance. The United States, European Union, and several Latin American countries have imposed targeted sanctions on Venezuelan officials while providing support to opposition movements and civil society organizations.
+                </p>
+                <p>
+                    Regional neighbors including Colombia, Peru, and Ecuador have borne the brunt of the Venezuelan migration crisis, straining their resources and creating new challenges for regional stability. International organizations including the Organization of American States (OAS) and the Lima Group have called for democratic transition and respect for human rights, though their efforts have thus far failed to produce meaningful change.
+                </p>
+
+                <h2>The Struggle for Democratic Legitimacy</h2>
+                <p>
+                    The Maduro government's grip on power relies increasingly on military support and control of state institutions, while its popular legitimacy continues to erode. Opposition parties face severe restrictions on their activities, with many leaders imprisoned, exiled, or banned from participating in politics. Electoral processes have been manipulated to ensure government victories, leading most opposition groups to boycott recent elections.
+                </p>
+                <p>
+                    Machado's potential exile would represent another significant blow to Venezuela's already weakened opposition movement. Her departure would deprive the movement of one of its most charismatic and effective leaders at a time when unity and coordination are essential for mounting effective resistance to authoritarian rule.
+                </p>
+
+                <h2>Civil Society Under Siege</h2>
+                <p>
+                    Beyond political opposition, Venezuelan civil society faces systematic repression that has severely limited space for independent activism and journalism. Non-governmental organizations working on human rights, education, and social services operate under constant threat of closure or criminalization. Independent media outlets have been shuttered or forced to self-censor, creating an information vacuum that the government has filled with propaganda and disinformation.
+                </p>
+                <p>
+                    The targeting of civil society represents a broader strategy to eliminate all forms of organized resistance to government policies. Professional associations, student organizations, and labor unions have all faced persecution, with many leaders forced underground or into exile. This systematic dismantling of civil society has left Venezuelan citizens with few avenues for peaceful expression of dissent.
+                </p>
+
+                <h2>Looking Forward: Paths to Resolution</h2>
+                <p>
+                    The resolution of Venezuela's multifaceted crisis requires both internal and external elements working in coordination. Domestically, the restoration of democratic institutions, rule of law, and respect for human rights are essential prerequisites for long-term stability and prosperity. This includes holding free and fair elections, releasing political prisoners, and allowing civil society organizations to operate freely.
+                </p>
+                <p>
+                    Internationally, sustained engagement from regional and global partners will be necessary to support democratic transition and provide humanitarian assistance to those in need. However, any external intervention must respect Venezuelan sovereignty and be led by Venezuelans themselves. The experience of other democratic transitions suggests that sustainable change must come from within, supported but not imposed by external actors.
+                </p>
+
+                <h2>The Human Cost of Crisis</h2>
+                <p>
+                    Behind the political maneuvering and international diplomacy lies a human tragedy of immense proportions. Millions of Venezuelan families have been separated by migration, while those who remain face daily struggles to survive. Children suffer from malnutrition, students cannot access education, and patients die from preventable diseases due to lack of medical supplies.
+                </p>
+                <p>
+                    The potential exile of María Corina Machado symbolizes the broader displacement and disruption that characterizes modern Venezuela. Her story reflects that of millions of Venezuelans who have been forced to choose between personal safety and remaining in their homeland. The resolution of this crisis will ultimately be measured not by political victories or defeats, but by the restoration of dignity, opportunity, and hope for the Venezuelan people.
+                </p>
+
+                <h2>Conclusion: A Critical Juncture</h2>
+                <p>
+                    Venezuela stands at a critical juncture where the choices made in the coming months will determine the country's trajectory for years to come. The pressure facing María Corina Machado and other opposition leaders reflects the broader struggle between authoritarian control and democratic aspirations that defines contemporary Venezuela.
+                </p>
+                <p>
+                    The international community must continue to support democratic forces while providing humanitarian assistance to those in need. However, the ultimate responsibility for Venezuela's future lies with Venezuelans themselves, who must find ways to overcome divisions and work together toward a more just and prosperous society. The stakes could not be higher, as the outcome will affect not only Venezuela but the entire Latin American region's commitment to democracy and human rights.
+                </p>
+            </div>
+
+            <!-- Article Footer -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+                    <!-- Social Sharing -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-600 font-medium">Share this article:</span>
+                        <div class="flex space-x-3">
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                                <i class="fab fa-twitter text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors">
+                                <i class="fab fa-facebook text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors">
+                                <i class="fab fa-linkedin text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors">
+                                <i class="fab fa-whatsapp text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Back to Articles -->
+                    <a href="journalism.html" class="inline-flex items-center space-x-2 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to All Articles</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="mt-12 bg-gray-50 rounded-xl p-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-user text-gray-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 text-lg">Tanzeel Shahid</h3>
+                        <p class="text-gray-600 mb-2">Journalism Intern</p>
+                        <p class="text-gray-700">
+                            Tanzeel is a journalism intern at GVMUN specializing in Latin American affairs and political 
+                            analysis. With a focus on democratic transitions and human rights, he provides in-depth 
+                            coverage of political developments across the Americas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/congo.png" alt="Congo Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 mb-3">
+                            Humanitarian Crisis
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Rebel Violence and Resource Wars Push Congo to the Brink</h3>
+                        <p class="text-gray-600 text-sm">The Central Republic of Congo faces unprecedented humanitarian challenges...</p>
+                        <a href="congo-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/palestine.png" alt="Palestine Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 mb-3">
+                            Middle East
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">As Conflict Escalates, Displaced Families Seek Shelter in 'Ghost Camps'</h3>
+                        <p class="text-gray-600 text-sm">Palestinian displacement crisis worsens amid ongoing conflict...</p>
+                        <a href="palestine-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/haiti.png" alt="Haiti Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 mb-3">
+                            Caribbean
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Haiti's Crisis: A Policy Analysis</h3>
+                        <p class="text-gray-600 text-sm">Examining the ongoing humanitarian and political crisis in Haiti...</p>
+                        <a href="haiti-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold">GVMUN</span>
+                    </div>
+                    <p class="text-gray-400">Global Virtual Model United Nations - Improving the Model UN space while encouraging youth activism and political education.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+                        <a href="events.html" class="block text-gray-400 hover:text-white transition-colors">Events</a>
+                        <div class="space-y-1 pl-4 mt-1 border-l border-gray-700">
+                            <a href="apply-fellowship.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Fellowship</a>
+                            <a href="apply-internship.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Internship</a>
+                            <a href="apply-secretariat.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Secretariat</a>
+                        </div>
+                        <a href="publications.html" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gvmun_official/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@GVModelUN" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/official-gvmun/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@gvmunofficial" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mt-4">Contact: <a href="mailto:gvmunsecretariat@gmail.com" class="text-gvmun-blue hover:underline">gvmunsecretariat@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navigation dropdown script -->
+    <script src="navigation.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button')?.addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Mobile dropdown toggle
+        document.querySelector('.mobile-dropdown-trigger')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.mobile-dropdown-menu').classList.toggle('hidden');
+        });
+        
+        // Desktop dropdown functionality
+        const dropdownTrigger = document.querySelector('.dropdown-trigger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        if (dropdownTrigger && dropdownMenu) {
+            // Toggle dropdown visibility on click
+            dropdownTrigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('hidden');
+            });
+            
+            // Hide dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdownTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

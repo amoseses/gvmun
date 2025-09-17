@@ -210,6 +210,72 @@
     border-radius: 2px;
 }
 
+/* Dropdown styles */
+.dropdown-trigger {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dropdown-trigger .dropdown-arrow {
+    transition: transform 0.2s ease;
+    margin-left: 0.25rem;
+}
+
+.dropdown-trigger:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -1rem;
+    min-width: 200px;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s cubic-bezier(0.5, 0, 0.2, 1.25);
+    z-index: 60;
+    border: 1px solid rgba(229, 231, 235, 1);
+    padding: 0.5rem 0;
+}
+
+.dropdown-menu.active,
+.dropdown-trigger:hover .dropdown-menu,
+.dropdown-trigger:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #4b5563;
+    font-size: 0.875rem;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+}
+
+.dropdown-item:hover {
+    background-color: #f3f4f6;
+    color: #667eea;
+}
+
+.dropdown-item:first-child {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.dropdown-item:last-child {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
 /* Mobile Navigation Styles */
 @media (max-width: 768px) {
     .nav-menu {
@@ -279,5 +345,25 @@
     .nav-dropdown:hover .nav-dropdown-menu,
     .nav-dropdown:focus-within .nav-dropdown-menu {
         display: block;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        background-color: #f9fafb;
+        margin-top: 0;
+        margin-left: 1rem;
+        border-left: 2px solid #e5e7eb;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .dropdown-menu.active {
+        max-height: 300px;
     }
 }

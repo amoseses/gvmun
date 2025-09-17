@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebel Violence and Resource Wars Push Congo to the Brink - GVMUN</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom styling -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        
+        /* Article-specific styles with enhanced headers */
+        .article-content h2 {
+            @apply text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 mt-12 mb-6 pt-8;
+            border-top: 3px solid #667eea;
+            position: relative;
+            font-family: 'Merriweather', serif;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        .article-content h2::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .article-content h3 {
+            @apply text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-8 mb-4;
+            border-left: 4px solid #667eea;
+            padding-left: 16px;
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+        }
+        
+        .article-content h4 {
+            @apply text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-6 mb-3;
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+        }
+        
+        .article-content p {
+            @apply text-gray-700 leading-7 mb-4 text-lg;
+            font-weight: 400;
+        }
+        
+        .article-content strong {
+            @apply font-semibold text-gray-900;
+        }
+    </style>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gvmun-blue': '#667eea',
+                        'gvmun-purple': '#764ba2',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="navbar fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold gradient-bg bg-clip-text text-transparent">GVMUN</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
+                    <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
+                    <div class="relative">
+                        <a href="#" class="dropdown-trigger text-gray-600 hover:text-gvmun-blue transition-colors flex items-center">
+                            Get Involved
+                            <svg class="dropdown-arrow w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu hidden">
+                            <a href="apply-fellowship.html" class="dropdown-item">Fellowship</a>
+                            <a href="apply-internship.html" class="dropdown-item">Internship</a>
+                            <a href="apply-secretariat.html" class="dropdown-item">Secretariat</a>
+                        </div>
+                    </div>
+                    <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
+                </div>
+                <button class="md:hidden mobile-menu-button p-2">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">About Us</a>
+                <a href="events.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Events</a>
+                <div class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-trigger block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50 flex justify-between items-center">
+                        Get Involved
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div class="mobile-dropdown-menu hidden pl-4">
+                        <a href="apply-fellowship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Fellowship</a>
+                        <a href="apply-internship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Internship</a>
+                        <a href="apply-secretariat.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Secretariat</a>
+                    </div>
+                </div>
+                <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="pt-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                <a href="index.html" class="hover:text-gvmun-blue transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html" class="hover:text-gvmun-blue transition-colors">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html" class="hover:text-gvmun-blue transition-colors">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-gray-900">Congo Crisis</span>
+            </nav>
+
+            <!-- Article Metadata -->
+            <div class="mb-8">
+                <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 mb-4">
+                    Humanitarian Crisis
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                    Rebel Violence and Resource Wars Push Congo to the Brink
+                </h1>
+                
+                <!-- Author and Date Info -->
+                <div class="flex items-center space-x-6 text-gray-600 mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-gray-500"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Tanzeel Shahid</p>
+                            <p class="text-sm text-gray-500">Journalism Intern</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 text-sm">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-calendar text-gray-400"></i>
+                            <span>September 15, 2025</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-clock text-gray-400"></i>
+                            <span>8 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-12">
+                <img src="assets/articles/congo.png" alt="Democratic Republic of Congo crisis" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
+                <p class="text-sm text-gray-500 mt-2 italic">Displaced families flee violence in the Democratic Republic of Congo. (File photo)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="prose prose-lg max-w-none article-content">
+                <p>
+                    The Central Republic of Congo (DRC) has been facing one of the most horrifying and alarming humanitarian crises for over 3 decades. However, the severity of it has now reached unprecedented levels, calling for urgent international action to be taken as of the start of 2025. Rebel groups in the east, the M23 group and the IS-affiliated Allied Democratic Forces (ADF), have forcibly displaced millions while elevating regional tensions. This crisis matters now because of its sheer human toll and potential to destabilise central Africa. This article will outline the events, look at different perspectives, and weigh the implications for both the region and the rest of the world.
+                </p>
+
+                <h2>The Fall of Goma and Regional Escalation</h2>
+                <p>
+                    In January, the M23 rebel group took control over several towns in North and South Kivu, including the strategic city of Goma. The fall of Goma was a turning point: protests quickly erupted in the capital, Kinshasa, with demonstrators accusing the government and the international community of failing to protect civilians. Protests rapidly broke out in Kinshasa, with many accusing the government and international community of failing to protect civilians. Violence spread to the capital, where embassies were attacked during the January 28 riots.
+                </p>
+
+                <h2>The Humanitarian Catastrophe</h2>
+                <p>
+                    The UN estimates that over 8 million people are now displaced, with 500,000 forced to escape since January alone. Camps are overcrowded and under-supplied, leaving civilians exposed to diseases like cholera, measles, malnutrition, and other deadly outbreaks. UNICEF and WHO have warned of a "public health nightmare" as aid is blocked by fighting. The violence has not only been limited to displacement. It has involved systematic killings that echo the darkest chapters of the region's history.
+                </p>
+                <p>
+                    In February, the ADF massacred over 70 Christians in North Kivu. In July, an outbreak of brutality took place again in a Catholic church, where at least 43 devotees were killed in Komanda.
+                </p>
+
+                <h2>Regional and International Response</h2>
+                <p>
+                    Regional leaders from the East African Community (EAC) and Southern African Development Community (SADC) have pushed for a ceasefire and revival of the Luanda peace process. At the UN Security Council, Pakistan urged dialogue over military escalation. Despite these calls, fighting persists, with Kinshasa accusing Rwanda of backing M23 and Rwanda denying involvement.
+                </p>
+                <p>
+                    UN experts, however, argue that Rwanda's support is motivated by access to Congo's vast mineral wealth—cobalt, gold, and coltan. The human rights chief of the UN has warned that "the worst is yet to come", with violence threatening to destabilize the wider region. The World Food Programme and WHO say funding cuts could lead millions to be vulnerable to starvation and disease. At the same time, aid convoys are frequently targeted or blocked by armed groups, making relief delivery perilous. The result is a population trapped between violence and neglect, with women and children suffering disproportionately.
+                </p>
+
+                <h2>Government Response and Political Deadlock</h2>
+                <p>
+                    President Félix Tshisekedi has requested military assistance from neighboring countries like Burundi and Uganda, while denouncing the involvement of Rwanda. Nevertheless, the citizens of Congo continue to express their frustration. Numerous individuals have criticized a "peace deal" promoted by former U.S. President Donald Trump as merely symbolic and lacking effectiveness.
+                </p>
+                <p>
+                    Rwanda denies any direct involvement, though UN experts argue its support for M23 aims to secure access to mineral resources. Mediators have suggested including M23 in peace talks, but Kinshasa firmly refuses to do any form of negotiating with the group, fearing it would legitimise rebellion. This deadlock leaves little room for compromise, prolonging both suffering and instability.
+                </p>
+
+                <h2>The Human Cost</h2>
+                <p>
+                    For Congolese families who have been displaced, the crisis is profoundly personal. Refugees recount being driven from camps by rebels, finding themselves without food, medicine, or shelter. Schools and churches have now become temporary sanctuaries, perpetually at risk of assault.
+                </p>
+
+                <h2>Global Implications and Resource Dependencies</h2>
+                <p>
+                    The ongoing crisis in Congo carries far-reaching troubles. Beyond the immediate humanitarian disaster, regional war could erupt, sending refugees across borders, and global supply chains are also threatened: Congo's mineral resources are indispensable to industries across Europe, Asia, and North America. A prolonged conflict could disrupt access to these resources, drive up global prices, and spark competition among foreign powers over influence in the region.
+                </p>
+                <p>
+                    Public health risks, including cholera and measles, could easily spread to neighboring states. In the short term, millions remain dependent on underfunded aid programs. If overlooked, mass hunger and epidemics could worsen, leading to a dire state. In the long term, failure to achieve inclusive peace may entrench conflict economies and deepen regional rivalries. The key question is whether international and regional actors can enforce a genuine ceasefire and deliver humanitarian relief or whether Congo continues sliding into protracted instability.
+                </p>
+
+                <h2>Looking Forward: A Test of International Resolve</h2>
+                <p>
+                    The global community cannot turn a blind eye. The crisis in the Congo represents not only a humanitarian disaster but a test of international resolve. Its outcome will determine if the area can embark on a fragile journey towards stability or dive deeper into fragmentation. The lives of millions, as well as the stability of central Africa, depend on what the world chooses to do next.
+                </p>
+            </div>
+
+            <!-- Article Footer -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+                    <!-- Social Sharing -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-600 font-medium">Share this article:</span>
+                        <div class="flex space-x-3">
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                                <i class="fab fa-twitter text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors">
+                                <i class="fab fa-facebook text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors">
+                                <i class="fab fa-linkedin text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors">
+                                <i class="fab fa-whatsapp text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Back to Articles -->
+                    <a href="journalism.html" class="inline-flex items-center space-x-2 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to All Articles</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="mt-12 bg-gray-50 rounded-xl p-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-user text-gray-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 text-lg">Tanzeel Shahid</h3>
+                        <p class="text-gray-600 mb-2">Journalism Intern</p>
+                        <p class="text-gray-700">
+                            Tanzeel is a journalism intern at GVMUN specializing in African affairs and humanitarian 
+                            crises. With a focus on conflict reporting and human rights, he brings attention to 
+                            underreported stories that matter for global peace and security.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/gaza.png" alt="Gaza Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 mb-3">
+                            Middle East
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Starvation Surges in Gaza as Aid Fails to Meet Needs</h3>
+                        <p class="text-gray-600 text-sm">Humanitarian crisis deepens as aid deliveries remain insufficient...</p>
+                        <a href="gaza-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/palestine.png" alt="Palestine Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 mb-3">
+                            Middle East
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">As Conflict Escalates, Displaced Families Seek Shelter in 'Ghost Camps'</h3>
+                        <p class="text-gray-600 text-sm">Palestinian displacement crisis worsens amid ongoing conflict...</p>
+                        <a href="palestine-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/haiti.png" alt="Haiti Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 mb-3">
+                            Caribbean
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Haiti's Crisis: A Policy Analysis</h3>
+                        <p class="text-gray-600 text-sm">Examining the ongoing humanitarian and political crisis in Haiti...</p>
+                        <a href="haiti-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold">GVMUN</span>
+                    </div>
+                    <p class="text-gray-400">Global Virtual Model United Nations - Improving the Model UN space while encouraging youth activism and political education.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+                        <a href="events.html" class="block text-gray-400 hover:text-white transition-colors">Events</a>
+                        <div class="space-y-1 pl-4 mt-1 border-l border-gray-700">
+                            <a href="apply-fellowship.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Fellowship</a>
+                            <a href="apply-internship.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Internship</a>
+                            <a href="apply-secretariat.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Secretariat</a>
+                        </div>
+                        <a href="publications.html" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gvmun_official/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@GVModelUN" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/official-gvmun/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@gvmunofficial" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mt-4">Contact: <a href="mailto:gvmunsecretariat@gmail.com" class="text-gvmun-blue hover:underline">gvmunsecretariat@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navigation dropdown script -->
+    <script src="navigation.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button')?.addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Mobile dropdown toggle
+        document.querySelector('.mobile-dropdown-trigger')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.mobile-dropdown-menu').classList.toggle('hidden');
+        });
+        
+        // Desktop dropdown functionality
+        const dropdownTrigger = document.querySelector('.dropdown-trigger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        if (dropdownTrigger && dropdownMenu) {
+            // Toggle dropdown visibility on click
+            dropdownTrigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('hidden');
+            });
+            
+            // Hide dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdownTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

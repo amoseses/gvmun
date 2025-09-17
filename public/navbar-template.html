@@ -1,0 +1,70 @@
+<!-- Navigation Bar Template -->
+<nav class="navbar fixed w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="logo h-8 w-8 rounded-lg">
+                    <span class="text-xl font-bold gradient-bg bg-clip-text text-transparent">GVMUN</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
+                <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
+                <div class="relative">
+                    <a href="#" class="dropdown-trigger text-gray-600 hover:text-gvmun-blue transition-colors flex items-center">
+                        Get Involved
+                        <svg class="dropdown-arrow w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu hidden">
+                        <a href="apply-fellowship.html" class="dropdown-item">Fellowship</a>
+                        <a href="apply-internship.html" class="dropdown-item">Internship</a>
+                        <a href="apply-secretariat.html" class="dropdown-item">Secretariat</a>
+                    </div>
+                </div>
+                <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
+            </div>
+            <button class="md:hidden mobile-menu-button p-2">
+                <i class="fas fa-bars text-gray-600"></i>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile menu, shown/hidden based on menu state -->
+    <div class="mobile-menu hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">About Us</a>
+            <a href="events.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Events</a>
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-dropdown-trigger block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50 flex justify-between items-center">
+                    Get Involved
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+                <div class="mobile-dropdown-menu hidden pl-4">
+                    <a href="apply-fellowship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Fellowship</a>
+                    <a href="apply-internship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Internship</a>
+                    <a href="apply-secretariat.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Secretariat</a>
+                </div>
+            </div>
+            <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Publications</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Remember to include these scripts -->
+<script src="navigation.js"></script>
+<script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+        document.querySelector('.mobile-menu').classList.toggle('hidden');
+    });
+    
+    // Mobile dropdown toggle
+    document.querySelector('.mobile-dropdown-trigger').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('.mobile-dropdown-menu').classList.toggle('hidden');
+    });
+</script>

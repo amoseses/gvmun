@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 17th BRICS Summit 2025: A Defining Moment for the Global South - GVMUN</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom styling -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        
+        /* Article-specific styles with enhanced headers */
+        .article-content h2 {
+            @apply text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 mt-12 mb-6 pt-8;
+            border-top: 3px solid #667eea;
+            position: relative;
+            font-family: 'Merriweather', serif;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        .article-content h2::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .article-content h3 {
+            @apply text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-8 mb-4;
+            border-left: 4px solid #667eea;
+            padding-left: 16px;
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+        }
+        
+        .article-content h4 {
+            @apply text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-6 mb-3;
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+        }
+        
+        .article-content p {
+            @apply text-gray-700 leading-7 mb-4 text-lg;
+            font-weight: 400;
+        }
+        
+        .article-content strong {
+            @apply font-semibold text-gray-900;
+        }
+
+        .bibliography {
+            background: #f8fafc;
+            border-left: 4px solid #667eea;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 32px;
+        }
+
+        .bibliography h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+
+        .bibliography ol {
+            padding-left: 20px;
+        }
+
+        .bibliography li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            color: #374151;
+            font-size: 16px;
+        }
+
+        .bibliography a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .bibliography a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gvmun-blue': '#667eea',
+                        'gvmun-purple': '#764ba2',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="navbar fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold gradient-bg bg-clip-text text-transparent">GVMUN</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
+                    <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
+                    <div class="relative">
+                        <a href="#" class="dropdown-trigger text-gray-600 hover:text-gvmun-blue transition-colors flex items-center">
+                            Get Involved
+                            <svg class="dropdown-arrow w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu hidden">
+                            <a href="apply-fellowship.html" class="dropdown-item">Fellowship</a>
+                            <a href="apply-internship.html" class="dropdown-item">Internship</a>
+                            <a href="apply-secretariat.html" class="dropdown-item">Secretariat</a>
+                        </div>
+                    </div>
+                    <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
+                </div>
+                <button class="md:hidden mobile-menu-button p-2">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">About Us</a>
+                <a href="events.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Events</a>
+                <div class="mobile-dropdown">
+                    <a href="#" class="mobile-dropdown-trigger block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50 flex justify-between items-center">
+                        Get Involved
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <div class="mobile-dropdown-menu hidden pl-4">
+                        <a href="apply-fellowship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Fellowship</a>
+                        <a href="apply-internship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Internship</a>
+                        <a href="apply-secretariat.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Secretariat</a>
+                    </div>
+                </div>
+                <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="pt-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                <a href="index.html" class="hover:text-gvmun-blue transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html" class="hover:text-gvmun-blue transition-colors">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html" class="hover:text-gvmun-blue transition-colors">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-gray-900">BRICS Summit</span>
+            </nav>
+
+            <!-- Article Metadata -->
+            <div class="mb-8">
+                <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 mb-4">
+                    Politics
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                    The 17th BRICS Summit 2025: A Defining Moment for the Global South
+                </h1>
+                
+                <!-- Author and Date Info -->
+                <div class="flex items-center space-x-6 text-gray-600 mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-gray-500"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Asawar Aftab</p>
+                            <p class="text-sm text-gray-500">Journalism Intern</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 text-sm">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-calendar text-gray-400"></i>
+                            <span>July 15, 2025</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-clock text-gray-400"></i>
+                            <span>8 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-12">
+                <img src="assets/articles/brics.png" alt="BRICS Summit 2025" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
+                <p class="text-sm text-gray-500 mt-2 italic">The 17th BRICS Summit in Rio de Janeiro brought together leaders from emerging economies to reshape global governance. (File photo)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="prose prose-lg max-w-none article-content">
+                <h2>A Historic Gathering in Rio de Janeiro</h2>
+                <p>
+                    The 17th BRICS Summit, held in Rio de Janeiro, Brazil, on July 6–7, 2025, marked one of the most consequential gatherings in the bloc's history. Under the theme "Strengthening Global South Cooperation for More Inclusive and Sustainable Governance," leaders from Brazil, Russia, India, China, South Africa, and newly admitted members such as Indonesia, Egypt, Ethiopia, Iran, and the United Arab Emirates came together to reshape the contours of international politics. More than just a routine meeting, the summit highlighted the determination of emerging economies to play a decisive role in world affairs.
+                </p>
+
+                <h2>The Rio Declaration: A Blueprint for Fairer Governance</h2>
+                <p>
+                    A major outcome was the adoption of the Rio Declaration, which reaffirmed BRICS' vision of a multipolar global order—fair, inclusive, and resistant to domination by a single power. Alongside it, a groundbreaking declaration on artificial intelligence urged the United Nations to develop ethical and inclusive AI governance frameworks. This dual focus revealed the bloc's commitment not only to reforming outdated international institutions but also to embracing twenty-first-century challenges such as AI and technological disruption.
+                </p>
+
+                <h2>Brazil's Leadership and the Six Pillars of Debate</h2>
+                <p>
+                    Brazil's stewardship ensured the summit went beyond symbolism. With more than 100 preparatory meetings across the country, the agenda was organized around six major themes: global health, trade and finance, climate change, AI governance, security reform, and institutional strengthening. This thematic breadth underscored BRICS' evolution from a loose coalition into a forum that seeks to actively influence global governance. President Luiz Inácio Lula da Silva's emphasis on sustainability and fairness resonated with a Global South increasingly dissatisfied with the current world order.
+                </p>
+
+                <h2>Expansion: From Regional Bloc to Global Force</h2>
+                <p>
+                    The summit also underscored BRICS' rising influence through its expanded membership. Indonesia's entry as the first Southeast Asian member, alongside new partners from Africa and the Middle East, reflected the bloc's reach across continents. Collectively, BRICS now represents more than half of the world's population and commands a significant share of global GDP. For observers, this expansion signaled the bloc's transition from an emerging coalition of rising economies to a central player in shaping the balance of global power.
+                </p>
+
+                <h2>Clash with the U.S.: "We Don't Want an Emperor"</h2>
+                <p>
+                    No summit would be complete without geopolitical friction, and in Rio the sparks came from Washington. Former U.S. President Donald Trump threatened punitive tariffs on BRICS economies, a move that provoked strong pushback. Leaders condemned the threats as "mistaken and irresponsible," while Lula delivered the most memorable line of the summit: "We don't want an emperor." This remark crystallized BRICS' core philosophy: a rejection of hegemony in favor of sovereignty, equality, and multipolarity.
+                </p>
+
+                <h2>De-Dollarization Without a Single Currency</h2>
+                <p>
+                    One of the most anticipated agenda items was the question of global financial sovereignty. While speculation about a unified BRICS currency dominated headlines, the summit clarified that no such project is currently underway. Instead, leaders focused on alternative payment systems and currency cooperation to reduce reliance on the U.S. dollar. Though gradual, these moves point toward a long-term vision of financial diversification, offering Global South nations more stability in the face of dollar-driven volatility.
+                </p>
+
+                <h2>What the Experts Are Saying</h2>
+                <p>
+                    Analysts offered mixed assessments. The Stimson Center praised the summit for amplifying the Global South's collective voice at a time of fractured global governance. By contrast, the Atlantic Council cautioned that internal contradictions—ranging from economic disparities to geopolitical rivalries—could undermine the bloc's unity. Policy experts highlighted that Brazil's strong leadership helped deliver a coherent agenda, but sustaining momentum will depend on India, which assumes the chairmanship in 2026.
+                </p>
+
+                <h2>A Turning Point or Just Another Summit?</h2>
+                <p>
+                    The Rio Summit should be seen as more than a diplomatic showcase. It represented a declaration of intent from emerging economies to demand greater equity in international institutions such as the IMF, World Bank, and UN Security Council. The emphasis on AI governance, climate action, and de-dollarization showed that BRICS is not merely critiquing the current system—it is offering alternatives. Still, whether this vision translates into real change will depend on the bloc's ability to turn words into coordinated action.
+                </p>
+
+                <h2>Looking Ahead: India's Turn at the Helm</h2>
+                <p>
+                    As the chairmanship passes to India in 2026, the international community will be watching closely. India's leadership is expected to emphasize sustainable energy and digital transformation, themes aligned with its national priorities. Yet it will also have to balance its delicate relationship with China and its ties to Western powers. If BRICS can sustain the momentum from Rio, the summit may be remembered as the moment the bloc moved decisively from aspiration to action.
+                </p>
+
+                <div class="bibliography">
+                    <h2>References</h2>
+                    <ol>
+                        <li>
+                            Atlantic Council. (2025, July 8). What really came out of this year's BRICS Summit? <em>Atlantic Council</em>. <a href="https://www.atlanticcouncil.org/blogs/new-atlanticist/what-really-came-out-of-this-years-brics-summit/" target="_blank">https://www.atlanticcouncil.org/blogs/new-atlanticist/what-really-came-out-of-this-years-brics-summit/</a>
+                        </li>
+                        <li>
+                            AP News. (2025, July 7). BRICS expands as leaders push for more influence in global governance. <em>AP News</em>. <a href="https://apnews.com/article/ea1ad30cd114143d91840a37f96725ee" target="_blank">https://apnews.com/article/ea1ad30cd114143d91840a37f96725ee</a>
+                        </li>
+                        <li>
+                            BRICS Today. (2025, July 6). 17th BRICS Summit: Highlights from Brazil. <em>BRICS Today</em>. <a href="https://bricstoday.com/17th-brics-summit/" target="_blank">https://bricstoday.com/17th-brics-summit/</a>
+                        </li>
+                        <li>
+                            Economics Times – Governance. (2025, July 7). BRICS Summit 2025: A new era for Global South leadership and multilateralism. <em>The Economic Times</em>. <a href="https://government.economictimes.indiatimes.com/news/governance/brics-summit-2025-a-new-era-for-global-south-leadership-and-multilateralism/122288374" target="_blank">https://government.economictimes.indiatimes.com/news/governance/brics-summit-2025-a-new-era-for-global-south-leadership-and-multilateralism/122288374</a>
+                        </li>
+                        <li>
+                            International Institute for Sustainable Development. (2025). 17th BRICS Summit. <em>SDG Knowledge Hub</em>. <a href="https://sdg.iisd.org/events/17th-brics-summit/" target="_blank">https://sdg.iisd.org/events/17th-brics-summit/</a>
+                        </li>
+                        <li>
+                            Stimson Center. (2025, July 9). 2025 BRICS Summit: Takeaways and projections. <em>Stimson Center</em>. <a href="https://www.stimson.org/2025/2025-brics-summit-takeaways-and-projections/" target="_blank">https://www.stimson.org/2025/2025-brics-summit-takeaways-and-projections/</a>
+                        </li>
+                        <li>
+                            Time. (2025, July 7). Trump's tariff threats fuel anti-American concerns at BRICS Summit. <em>Time</em>. <a href="https://time.com/7300395/trump-tariffs-threat-brics-anti-american-concerns/" target="_blank">https://time.com/7300395/trump-tariffs-threat-brics-anti-american-concerns/</a>
+                        </li>
+                        <li>
+                            Wikipedia contributors. (2025, August 25). 17th BRICS Summit. In <em>Wikipedia</em>. <a href="https://en.wikipedia.org/wiki/17th_BRICS_summit" target="_blank">https://en.wikipedia.org/wiki/17th_BRICS_summit</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Article Footer -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+                    <!-- Social Sharing -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-600 font-medium">Share this article:</span>
+                        <div class="flex space-x-3">
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                                <i class="fab fa-twitter text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors">
+                                <i class="fab fa-facebook text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors">
+                                <i class="fab fa-linkedin text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors">
+                                <i class="fab fa-whatsapp text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Back to Articles -->
+                    <a href="journalism.html" class="inline-flex items-center space-x-2 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to All Articles</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="mt-12 bg-gray-50 rounded-xl p-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-user text-gray-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 text-lg">Asawar Aftab</h3>
+                        <p class="text-gray-600 mb-2">Journalism Intern</p>
+                        <p class="text-gray-700">
+                            Asawar is a journalism intern at GVMUN with expertise in international politics and 
+                            global governance. He specializes in analyzing emerging economies and their role in 
+                            reshaping the international order, with particular focus on multilateral organizations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/trump.png" alt="Trump Article" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 mb-3">
+                            Politics
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Trump 2.0: What It Means For The World</h3>
+                        <p class="text-gray-600 text-sm">President-Elect Donald Trump's return raises questions about global implications...</p>
+                        <a href="trump-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/gaza.png" alt="Gaza Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 mb-3">
+                            Middle East
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Starvation Surges in Gaza as Aid Fails to Meet Needs</h3>
+                        <p class="text-gray-600 text-sm">Gaza faces a worst-case famine scenario as humanitarian aid fails to reach those in need...</p>
+                        <a href="gaza-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/nato.png" alt="NATO-Russia" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 mb-3">
+                            Security
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Militarization of NATO-Russian Border</h3>
+                        <p class="text-gray-600 text-sm">Analyzing the deteriorating security relationship between NATO and Russia...</p>
+                        <a href="nato-russia-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold">GVMUN</span>
+                    </div>
+                    <p class="text-gray-400">Global Virtual Model United Nations - Improving the Model UN space while encouraging youth activism and political education.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+                        <a href="events.html" class="block text-gray-400 hover:text-white transition-colors">Events</a>
+                        <div class="space-y-1 pl-4 mt-1 border-l border-gray-700">
+                            <a href="apply-fellowship.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Fellowship</a>
+                            <a href="apply-internship.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Internship</a>
+                            <a href="apply-secretariat.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Secretariat</a>
+                        </div>
+                        <a href="publications.html" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gvmun_official/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@GVModelUN" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/official-gvmun/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@gvmunofficial" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mt-4">Contact: <a href="mailto:gvmunsecretariat@gmail.com" class="text-gvmun-blue hover:underline">gvmunsecretariat@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navigation dropdown script -->
+    <script src="navigation.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button')?.addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Mobile dropdown toggle
+        document.querySelector('.mobile-dropdown-trigger')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.mobile-dropdown-menu').classList.toggle('hidden');
+        });
+        
+        // Desktop dropdown functionality
+        const dropdownTrigger = document.querySelector('.dropdown-trigger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        if (dropdownTrigger && dropdownMenu) {
+            // Toggle dropdown visibility on click
+            dropdownTrigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('hidden');
+            });
+            
+            // Hide dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdownTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
