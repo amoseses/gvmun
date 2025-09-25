@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haiti's Crisis: A Policy Analysis - GVMUN</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom styling -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        
+        /* Article-specific styles with enhanced headers */
+        .article-content h2 {
+            @apply text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 mt-12 mb-8 pt-8;
+            border-top: 3px solid #667eea;
+            position: relative;
+            font-family: 'Merriweather', serif;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        .article-content h2::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .article-content h3 {
+            @apply text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-8 mb-6;
+            border-left: 4px solid #667eea;
+            padding-left: 16px;
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+        }
+        
+        .article-content h4 {
+            @apply text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-6 mb-4;
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+        }
+        
+        .article-content p {
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 16px;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: justify;
+        }
+        
+        .article-content strong {
+            @apply font-semibold text-gray-900;
+        }
+
+        /* Modern article header */
+        .article-header-modern {
+            position: relative;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+            overflow: hidden;
+        }
+
+        .article-header-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .article-header-content {
+            position: relative;
+            z-index: 2;
+            padding: 6rem 0 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Typography system */
+        .article-title-modern {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-subtitle-modern {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.375rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .article-meta-modern {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 2rem;
+        }
+
+        .meta-item-modern {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-badge-modern {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Modern article content */
+        .article-container-modern {
+            max-width: 4xl;
+            margin: 0 auto;
+            padding: 4rem 1rem 8rem;
+            background: white;
+        }
+
+        .article-content-modern {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #2d3748;
+        }
+
+        .article-content-modern .lead-paragraph {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #2d3748;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            position: relative;
+            font-family: 'Crimson Text', Georgia, serif;
+        }
+
+        .article-content-modern .lead-paragraph::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        /* Enhanced headings */
+        .article-content-modern h2 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin: 3rem 0 1.5rem;
+            line-height: 1.2;
+            position: relative;
+            padding-top: 2rem;
+        }
+
+        .article-content-modern h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .article-content-modern h3 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 2.5rem 0 1rem;
+            line-height: 1.3;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .article-content-modern h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .article-content-modern h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 2rem 0 1rem;
+            line-height: 1.4;
+        }
+
+        .article-content-modern p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .article-content-modern strong {
+            font-weight: 600;
+            color: #1a202c;
+        }
+
+        /* Quote styling */
+        .article-content-modern blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: #4a5568;
+            background: #f7fafc;
+            padding: 1.5rem 2rem;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+        }
+
+        .article-content-modern blockquote::before {
+            content: '"';
+            font-size: 4rem;
+            color: #667eea;
+            position: absolute;
+            top: -0.5rem;
+            left: 1rem;
+            font-family: Georgia, serif;
+        }
+
+        /* Image styling */
+        .article-image-modern {
+            margin: 3rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-caption-modern {
+            font-size: 0.9rem;
+            color: #718096;
+            text-align: center;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Author bio styling */
+        .author-bio-modern {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 4rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .author-info-modern {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar-modern {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #667eea;
+            flex-shrink: 0;
+        }
+
+        .author-details-modern h5 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .author-details-modern p {
+            color: #4a5568;
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Footer styling */
+        .article-footer-modern {
+            border-top: 1px solid #e2e8f0;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .article-header-content {
+                padding: 4rem 1rem 3rem;
+            }
+            
+            .article-title-modern {
+                font-size: 2.5rem;
+            }
+            
+            .article-subtitle-modern {
+                font-size: 1.125rem;
+            }
+            
+            .article-content-modern {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .article-content-modern h2 {
+                font-size: 2rem;
+            }
+            
+            .article-content-modern h3 {
+                font-size: 1.5rem;
+            }
+            
+            .author-info-modern {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Smooth scrolling and animations */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Article navigation */
+        .article-nav-modern {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 0;
+            position: sticky;
+            top: 64px;
+            z-index: 40;
+        }
+
+        .breadcrumb-modern {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #718096;
+        }
+
+        .breadcrumb-modern a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .breadcrumb-modern a:hover {
+            color: #5a67d8;
+        }
+    </style>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gvmun-blue': '#667eea',
+                        'gvmun-purple': '#764ba2',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold gradient-bg bg-clip-text text-transparent">GVMUN</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
+                    <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
+                    <a href="get-involved.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Get Involved</a>
+                    <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
+                </div>
+                <button class="md:hidden p-2">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="pt-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                <a href="index.html" class="hover:text-gvmun-blue transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html" class="hover:text-gvmun-blue transition-colors">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html" class="hover:text-gvmun-blue transition-colors">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-gray-900">Haiti's Crisis: A Policy Analysis</span>
+            </nav>
+
+            <!-- Article Metadata -->
+            <div class="mb-8">
+                <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 mb-4">
+                    Caribbean
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                    Haiti's Crisis: A Policy Analysis
+                </h1>
+                
+                <!-- Author and Date Info -->
+                <div class="flex items-center space-x-6 text-gray-600 mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                            <i class="fas fa-users text-gray-500"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">GVMUN Research Team</p>
+                            <p class="text-sm text-gray-500">Policy Analysis Division</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 text-sm">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-calendar text-gray-400"></i>
+                            <span>March 15, 2025</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-clock text-gray-400"></i>
+                            <span>15 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-12">
+                <img src="assets/articles/haiti.png" alt="Haiti crisis analysis" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
+                <p class="text-sm text-gray-500 mt-2 italic">Haiti faces ongoing political and humanitarian challenges. (File photo)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="prose prose-lg max-w-none article-content">
+                <p class="text-xl text-gray-700 leading-8 font-medium mb-8">
+                    Haiti continues to face unprecedented challenges as political instability, economic collapse, and humanitarian crises converge to create one of the most complex situations in the Western Hemisphere. This analysis examines the multifaceted nature of Haiti's crisis and explores potential policy solutions for sustainable development and stability.
+                </p>
+
+                <h2>Historical Context and Root Causes</h2>
+                <p>
+                    Haiti's current crisis cannot be understood without examining its historical foundations. The country has faced persistent challenges since its independence in 1804, including colonial legacy effects, international debt burdens, and repeated cycles of political instability. The 2010 earthquake further devastated an already fragile infrastructure, while the 2021 assassination of President Jovenel Moïse created a significant power vacuum.
+                </p>
+                <p>
+                    Structural issues including weak governance institutions, limited economic opportunities, and environmental degradation have created a complex web of challenges that require comprehensive, long-term solutions rather than short-term interventions.
+                </p>
+
+                <h2>Current Security Challenges</h2>
+                <p>
+                    The security situation in Haiti has deteriorated dramatically, with armed gangs controlling an estimated 60% of Port-au-Prince and surrounding areas. These groups have disrupted essential services, blocked fuel supplies, and created a climate of fear that has paralyzed normal economic and social activities.
+                </p>
+                <p>
+                    The humanitarian impact has been severe, with thousands of people displaced from their homes and limited access to basic services including healthcare, education, and clean water. The situation has been compounded by a cholera outbreak and ongoing food insecurity affecting millions of Haitians.
+                </p>
+
+                <h2>Economic Implications</h2>
+                <p>
+                    Haiti's economy has contracted significantly, with GDP declining and inflation reaching critical levels. The informal economy, which employs the majority of Haitians, has been particularly affected by the security crisis. International trade has been disrupted, affecting both imports of essential goods and exports of agricultural products.
+                </p>
+                <p>
+                    Remittances from the Haitian diaspora remain a crucial source of foreign currency, but the deteriorating security situation has made it increasingly difficult for families to access these funds safely.
+                </p>
+
+                <h2>International Response and Policy Options</h2>
+                <p>
+                    The international community has responded with various initiatives, including humanitarian aid, diplomatic efforts, and discussions about security intervention. However, the effectiveness of these responses has been limited by the complexity of the situation and the need for Haitian-led solutions.
+                </p>
+                <p>
+                    Policy recommendations include strengthening local governance institutions, supporting community-based security initiatives, investing in economic development programs, and addressing the root causes of instability through comprehensive reforms.
+                </p>
+
+                <h2>Path Forward</h2>
+                <p>
+                    Sustainable solutions for Haiti require a coordinated approach that addresses immediate security concerns while building long-term institutional capacity. This includes supporting democratic governance, promoting economic diversification, investing in education and healthcare, and addressing environmental challenges.
+                </p>
+                <p>
+                    The role of the Haitian diaspora and regional partners will be crucial in developing and implementing effective policies that respect Haitian sovereignty while providing necessary support for stability and development.
+                </p>
+            </div>
+
+            <!-- Article Footer -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+                    <!-- Social Sharing -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-600 font-medium">Share this article:</span>
+                        <div class="flex space-x-3">
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                                <i class="fab fa-twitter text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors">
+                                <i class="fab fa-facebook text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors">
+                                <i class="fab fa-linkedin text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors">
+                                <i class="fab fa-whatsapp text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Back to Articles -->
+                    <a href="journalism.html" class="inline-flex items-center space-x-2 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to All Articles</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="mt-12 bg-gray-50 rounded-xl p-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-users text-gray-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 text-lg">GVMUN Research Team</h3>
+                        <p class="text-gray-600 mb-2">Policy Analysis Division</p>
+                        <p class="text-gray-700">
+                            Our research team consists of experienced policy analysts and international relations experts who provide 
+                            in-depth analysis of global issues. This article represents collaborative research on Caribbean affairs and 
+                            policy development initiatives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/trump.png" alt="Trump Article" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 mb-3">
+                            US Politics
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Trump 2.0: What It Means For The World</h3>
+                        <p class="text-gray-600 text-sm">Examining the potential impact of Donald Trump's return to the presidency...</p>
+                        <a href="trump-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/tiktok.png" alt="TikTok Ban" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 mb-3">
+                            Technology
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Discussing the Recent US Ban on TikTok</h3>
+                        <p class="text-gray-600 text-sm">The geopolitical battle over TikTok and its implications...</p>
+                        <a href="tiktok-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/palestine.png" alt="Palestine Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 mb-3">
+                            Middle East
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">As Conflict Escalates, Displaced Families Seek Shelter in 'Ghost Camps'</h3>
+                        <p class="text-gray-600 text-sm">Thousands of Palestinians are forced into makeshift shelters...</p>
+                        <a href="palestine-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold">GVMUN</span>
+                    </div>
+                    <p class="text-gray-400">Global Virtual Model United Nations - Improving the Model UN space while encouraging youth activism and political education.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+                        <a href="events.html" class="block text-gray-400 hover:text-white transition-colors">Events</a>
+                        <a href="get-involved.html" class="block text-gray-400 hover:text-white transition-colors">Get Involved</a>
+                        <a href="publications.html" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gvmun_official/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@GVModelUN" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/official-gvmun/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@gvmunofficial" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mt-4">Contact: <a href="mailto:gvmunsecretariat@gmail.com" class="text-gvmun-blue hover:underline">gvmunsecretariat@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+                </li>
+                <li class="nav-item">
+                    <a href="get-involved.html" class="nav-link">Get Involved</a>
+                </li>
+                <li class="nav-item">
+                    <a href="publications.html" class="nav-link">Publications</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid p-0">
+        <article class="article-container" data-aos="fade-up">
+            <!-- Hero Section -->
+            <header class="article-hero">
+                <div class="hero-content">
+                    <span class="article-category" data-aos="fade-down" data-aos-delay="200">Humanitarian Crisis</span>
+                    <h1 class="article-title" data-aos="fade-up" data-aos-delay="400">Situation in Haiti: UNICEF Warns About Surge in Youth Armed Recruitment</h1>
+                    <p class="article-subtitle" data-aos="fade-up" data-aos-delay="600">Highlight on the Worsening Humanitarian Crisis</p>
+                    <div class="article-meta" data-aos="fade-up" data-aos-delay="800">
+                        <div class="meta-item">
+                            <i class="fas fa-user"></i>
+                            <span>Prisha Aurora</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>January 18, 2025</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>6 min read</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-eye"></i>
+                            <span>892 views</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Article Content -->
+            <div class="article-content">
+                <!-- Author Section -->
+                <div class="author-section fade-in">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=200&h=200&fit=crop&crop=face" alt="Prisha Aurora">
+                    </div>
+                    <div class="author-info">
+                        <h4>Prisha Aurora</h4>
+                        <p>Winter 2025 Journalism Intern at GVMUN</p>
+                        <p><i class="fas fa-envelope"></i> prisha.aurora@gvmun.org</p>
+                    </div>
+                </div>
+
+                <!-- Article Body -->
+                <div class="article-body">
+                    <p class="fade-in">Haiti is facing a worsening humanitarian crisis, with a dramatic rise in the recruitment of children into armed gangs. According to a recent report by UNICEF, the number of children being forcibly or coercively recruited by criminal groups has surged by 70% over the past year.</p>
+
+                    <div class="highlight-box fade-in">
+                        <p><strong>Critical Statistics:</strong> It is estimated that children now make up between 30% to 50% of gang members in Haiti, a troubling statistic that underscores the increasing vulnerability of minors in the country's deteriorating security landscape.</p>
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="stats-grid fade-in">
+                        <div class="stat-card">
+                            <span class="stat-number">70%</span>
+                            <span class="stat-label">Increase in Child Recruitment</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">50%</span>
+                            <span class="stat-label">Max Gang Composition (Children)</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">85%</span>
+                            <span class="stat-label">Port-au-Prince Under Gang Control</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">700K</span>
+                            <span class="stat-label">Displaced People</span>
+                        </div>
+                    </div>
+
+                    <h2 class="section-header fade-in">Root Causes of Child Recruitment</h2>
+                    
+                    <p class="fade-in">The recruitment of children into armed groups is fueled by extreme poverty, political instability, and the near-total collapse of state institutions. Gangs, which now control approximately 85% of the capital, Port-au-Prince, have taken advantage of the absence of government oversight and law enforcement to expand their influence.</p>
+
+                    <div class="row fade-in">
+                        <div class="col-lg-6">
+                            <div class="highlight-box">
+                                <h5><i class="fas fa-child"></i> Vulnerable Demographics</h5>
+                                <p>Children as young as eight are being abducted, forcibly recruited, or lured with promises of food, protection, and money.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="highlight-box">
+                                <h5><i class="fas fa-chart-line"></i> Poverty Statistics</h5>
+                                <p>More than 60% of the population lives on less than $4 a day, making children particularly vulnerable to exploitation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="section-header fade-in">The Reality for Haiti's Children</h2>
+                    
+                    <p class="fade-in">For boys, the most common roles within these gangs include acting as lookouts, informants, and active combatants. Many are armed and forced to participate in violent acts, including kidnappings, assassinations, and street battles between rival gangs. The psychological and emotional toll on these children is devastating, as they are often exposed to extreme brutality and trauma at an early age.</p>
+
+                    <p class="fade-in">For girls, the situation is even more dire. Many are subjected to sexual exploitation, forced domestic labor, and other forms of abuse at the hands of gang members. Reports indicate that rape and other forms of gender-based violence are being systematically used as tools of control and intimidation.</p>
+
+                    <h2 class="section-header fade-in">International Response and Funding Needs</h2>
+                    
+                    <p class="fade-in">UNICEF and other humanitarian organizations are calling for urgent intervention to address the crisis. The agency has requested $38 million in emergency funding to provide educational programs aimed at preventing child recruitment. UNICEF emphasizes that education is one of the most effective tools in keeping children away from gangs, offering them an alternative to a life of violence.</p>
+
+                    <div class="highlight-box fade-in">
+                        <h5>Key Challenges</h5>
+                        <ul>
+                            <li>Funding shortages limiting aid delivery and educational services</li>
+                            <li>Ongoing security crisis making humanitarian access difficult</li>
+                            <li>Need for stronger child protection and rehabilitation programs</li>
+                            <li>Requirement for increased law enforcement to dismantle criminal networks</li>
+                        </ul>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons fade-in">
+                        <a href="journalism.html" class="btn-custom btn-outline-custom">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Articles
+                        </a>
+                        <a href="#" class="btn-custom btn-primary-custom" onclick="shareArticle()">
+                            <i class="fas fa-share-alt"></i>
+                            Share Article
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related Articles -->
+                <section class="related-articles">
+                    <h2 class="text-center mb-4 fade-in">Related Articles</h2>
+                    <div class="related-grid">
+                        <a href="myanmar-coup-article.html" class="related-card fade-in" data-aos="fade-up" data-aos-delay="200">
+                            <div class="related-image"></div>
+                            <div class="related-content">
+                                <h5 class="related-title">Four Years On: How the Coup Has Shaped Myanmar</h5>
+                                <p class="related-excerpt">Analysis of Myanmar's political crisis and humanitarian impact.</p>
+                            </div>
+                        </a>
+                        <a href="palestine-article.html" class="related-card fade-in" data-aos="fade-up" data-aos-delay="400">
+                            <div class="related-image"></div>
+                            <div class="related-content">
+                                <h5 class="related-title">Palestinian Families Seek Shelter in 'Ghost Camps'</h5>
+                                <p class="related-excerpt">Displacement crisis in the ongoing conflict.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="related-card fade-in" data-aos="fade-up" data-aos-delay="600">
+                            <div class="related-image"></div>
+                            <div class="related-content">
+                                <h5 class="related-title">Children in Conflict Zones</h5>
+                                <p class="related-excerpt">Global perspectives on protecting vulnerable youth.</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>By the GVMUN Secretariat</p>
+                    <p>GVMUN is a nonprofit organization fiscally sponsored by the Hack Foundation</p>
+                    <p>Contact us: <a href="mailto:gvmunsecretariat@gmail.com" style="color: #667eea; text-decoration: none;">gvmunsecretariat@gmail.com</a></p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/gvmun_official/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@GVModelUN" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@gvmunofficial?lang=en" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/company/official-gvmun/?viewAsMember=true" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

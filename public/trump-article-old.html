@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trump 2.0: What It Means For The World - GVMUN</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom styling -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        
+        /* Article-specific styles with enhanced headers */
+        .article-content h2 {
+            @apply text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 mt-12 mb-8 pt-8;
+            border-top: 3px solid #667eea;
+            position: relative;
+            font-family: 'Merriweather', serif;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        .article-content h2::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .article-content h3 {
+            @apply text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-8 mb-6;
+            border-left: 4px solid #667eea;
+            padding-left: 16px;
+            font-family: 'Merriweather', serif;
+            font-weight: 900;
+        }
+        
+        .article-content h4 {
+            @apply text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-6 mb-4;
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+        }
+        
+        .article-content p {
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 16px;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: justify;
+        }
+        
+        .article-content strong {
+            @apply font-semibold text-gray-900;
+        }
+
+        /* Modern article header */
+        .article-header-modern {
+            position: relative;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+            overflow: hidden;
+        }
+
+        .article-header-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .article-header-content {
+            position: relative;
+            z-index: 2;
+            padding: 6rem 0 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Typography system */
+        .article-title-modern {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-subtitle-modern {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.375rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .article-meta-modern {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 2rem;
+        }
+
+        .meta-item-modern {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-badge-modern {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Modern article content */
+        .article-container-modern {
+            max-width: 4xl;
+            margin: 0 auto;
+            padding: 4rem 1rem 8rem;
+            background: white;
+        }
+
+        .article-content-modern {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #2d3748;
+        }
+
+        .article-content-modern .lead-paragraph {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #2d3748;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            position: relative;
+            font-family: 'Crimson Text', Georgia, serif;
+        }
+
+        .article-content-modern .lead-paragraph::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        /* Enhanced headings */
+        .article-content-modern h2 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin: 3rem 0 1.5rem;
+            line-height: 1.2;
+            position: relative;
+            padding-top: 2rem;
+        }
+
+        .article-content-modern h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .article-content-modern h3 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 2.5rem 0 1rem;
+            line-height: 1.3;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .article-content-modern h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .article-content-modern h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 2rem 0 1rem;
+            line-height: 1.4;
+        }
+
+        .article-content-modern p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .article-content-modern strong {
+            font-weight: 600;
+            color: #1a202c;
+        }
+
+        /* Quote styling */
+        .article-content-modern blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: #4a5568;
+            background: #f7fafc;
+            padding: 1.5rem 2rem;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+        }
+
+        .article-content-modern blockquote::before {
+            content: '"';
+            font-size: 4rem;
+            color: #667eea;
+            position: absolute;
+            top: -0.5rem;
+            left: 1rem;
+            font-family: Georgia, serif;
+        }
+
+        /* Image styling */
+        .article-image-modern {
+            margin: 3rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-caption-modern {
+            font-size: 0.9rem;
+            color: #718096;
+            text-align: center;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Author bio styling */
+        .author-bio-modern {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 4rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .author-info-modern {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar-modern {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #667eea;
+            flex-shrink: 0;
+        }
+
+        .author-details-modern h5 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .author-details-modern p {
+            color: #4a5568;
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+    </style>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gvmun-blue': '#667eea',
+                        'gvmun-purple': '#764ba2',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold gradient-bg bg-clip-text text-transparent">GVMUN</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
+                    <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
+                    <a href="get-involved.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Get Involved</a>
+                    <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
+                </div>
+                <button class="md:hidden p-2">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="pt-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                <a href="index.html" class="hover:text-gvmun-blue transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html" class="hover:text-gvmun-blue transition-colors">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html" class="hover:text-gvmun-blue transition-colors">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-gray-900">Trump 2.0: What It Means For The World</span>
+            </nav>
+
+            <!-- Article Metadata -->
+            <div class="mb-8">
+                <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 mb-4">
+                    US Politics
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                    Trump 2.0: What It Means For The World
+                </h1>
+                
+                <!-- Author and Date Info -->
+                <div class="flex items-center space-x-6 text-gray-600 mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-gray-500"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Bharath Sathiajith</p>
+                            <p class="text-sm text-gray-500">Fall 2024 Journalism Intern</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 text-sm">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-calendar text-gray-400"></i>
+                            <span>January 20, 2025</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-clock text-gray-400"></i>
+                            <span>5 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-12">
+                <img src="assets/articles/trump.png" alt="Donald Trump" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
+                <p class="text-sm text-gray-500 mt-2 italic">President-elect Donald Trump at his victory speech. (File photo)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="prose prose-lg max-w-none article-content">
+                <p class="text-xl text-gray-700 leading-8 font-medium mb-8">
+                    On January 20th, 2025, President-Elect Donald Trump will begin his historic second, non-consecutive term as the 47th President of the United States. His upset victory over Vice-President Kamala Harris has prompted global reactions and questions over the implications of a second Trump Administration on the global order.
+                </p>
+
+                <h2>Impact on the Global Economy</h2>
+                <p>
+                    Central to Trump's "America First" policy throughout the campaign trail has been his vow to slap a 60% tariff on Chinese imports, a 10%-20% universal tariff, and a 200% tariff on Mexican automobiles. Economists warn that this will increase domestic inflation and slow global trade. A trade war with China may resume, prompting China to dump its exports elsewhere like Europe (prompting a chain reaction of tariffs) and retaliate with high tariffs, disrupting global trade.
+                </p>
+                <p>
+                    Trump's plans to deport five million undocumented Mexican immigrants back to Mexico and impose tariffs on its automobile industry, can also damage the Mexican economy. Additionally, Trump threatens to withdraw from the Indo-Pacific Economic Framework, further undermining regional trade alliances.
+                </p>
+
+                <h2>Trump's Foreign Policy</h2>
+                <p>
+                    Trump's distinctive foreign policy is characterized by skepticism and a "transactional" approach toward alliances. Trump's criticism of NATO and his policy of conditional support based on allies spending their 'fair share' for defense, concerns Europe. His vow to end the war in Ukraine quickly without specifying how, is also a point of concern, as a quick end—possibly with concessions to Russia such as Ukrainian territory—may embolden further Russian encroachment threatening NATO, and offer China a template to exert its expansionist ideas.
+                </p>
+                <p>
+                    In the Middle East, Trump must balance Israel, the Gulf States, and Iran. Trump's "maximum pressure" policy against Iran in his first term, which included withdrawing from the nuclear deal and imposing sanctions, may continue. However, a more aggressive Iran, funding Hezbollah in Lebanon and Houthis in Yemen, may force the administration to rethink its approach. Trump's cordial ties with Saudi Arabia, the UAE, Qatar, and Egypt whilst also being pro-Israel may continue, prompting efforts similar to the brokering of the Abraham Accords and further normalization of relations between Israel and Middle Eastern states.
+                </p>
+                <p>
+                    In Asia, Japan and South Korea will have to navigate strategically to counter China and North Korea. Japan's relationship with the US thrived during his first term thanks to then-PM Shinzo Abe's careful maneuvering and proactive strategic policies. However, the trajectory of this alliance under Trump will rely on the results of Japan's general election, scheduled to take place in February 2025. Trump's openness to engage with Kim Jong Un contrasts with South Korea's hardline policy against North Korea, specifically its nuclear program, raising questions about the future of the Korean Peninsula. U.S.-India relations are expected to remain cordial—even strengthened—as both countries aim to curb China's growing military and economic influence.
+                </p>
+                <p>
+                    Trump's well-known track record of anti-climate protection policies, including withdrawing the U.S. from the Paris Agreement in his first term, raises concerns that he may potentially do the same once again in his second term, as well as implement other detrimental policies, sidelining climate action in an already fragile global climate situation.
+                </p>
+
+                <h2>Conclusion</h2>
+                <p>
+                    President-Elect Trump inherits a volatile world, rife with uncertainty, conflicts, and a slowing global economy. It remains to be seen what policies will be enacted in the coming four years, but what is certain is that Trump's policies will undoubtedly leave a mark on the world for decades to come, for better or for worse.
+                </p>
+            </div>
+
+            <!-- Article Footer -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+                    <!-- Social Sharing -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-600 font-medium">Share this article:</span>
+                        <div class="flex space-x-3">
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                                <i class="fab fa-twitter text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors">
+                                <i class="fab fa-facebook text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors">
+                                <i class="fab fa-linkedin text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors">
+                                <i class="fab fa-whatsapp text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Back to Articles -->
+                    <a href="journalism.html" class="inline-flex items-center space-x-2 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to All Articles</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="mt-12 bg-gray-50 rounded-xl p-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-user text-gray-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 text-lg">Bharath Sathiajith</h3>
+                        <p class="text-gray-600 mb-2">Fall 2024 Journalism Intern</p>
+                        <p class="text-gray-700">
+                            Bharath is a journalism intern at GVMUN, specializing in international relations and U.S. foreign policy analysis. 
+                            He focuses on examining the global implications of American political developments and their impact on international affairs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop" alt="Myanmar Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800 mb-3">
+                            Southeast Asia
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Myanmar's Democratic Crisis: Three Years After the Military Coup</h3>
+                        <p class="text-gray-600 text-sm">Examining the ongoing humanitarian crisis and international response...</p>
+                        <a href="myanmar-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&h=250&fit=crop" alt="TikTok Ban" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 mb-3">
+                            Technology
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">The TikTok Ban: National Security vs. Digital Rights</h3>
+                        <p class="text-gray-600 text-sm">Analyzing the implications of the TikTok ban on national security concerns...</p>
+                        <a href="tiktok-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=250&fit=crop" alt="NATO Russia" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 mb-3">
+                            Security
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">NATO-Russia Relations: Security Architecture in Crisis</h3>
+                        <p class="text-gray-600 text-sm">Analyzing the deteriorating security relationship between NATO and Russia...</p>
+                        <a href="nato-russia-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold">GVMUN</span>
+                    </div>
+                    <p class="text-gray-400">Global Virtual Model United Nations - Improving the Model UN space while encouraging youth activism and political education.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+                        <a href="events.html" class="block text-gray-400 hover:text-white transition-colors">Events</a>
+                        <a href="get-involved.html" class="block text-gray-400 hover:text-white transition-colors">Get Involved</a>
+                        <a href="publications.html" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gvmun_official/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@GVModelUN" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/official-gvmun/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@gvmunofficial" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mt-4">Contact: <a href="mailto:gvmunsecretariat@gmail.com" class="text-gvmun-blue hover:underline">gvmunsecretariat@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

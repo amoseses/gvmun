@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>As Conflict Escalates, Displaced Families Seek Shelter in 'Ghost Camps' - GVMUN</title>
+    <title>Starvation Surges in Gaza as Aid Fails to Meet Needs - GVMUN</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +24,7 @@
 
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --secondary-gradient: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             --accent-color: #667eea;
             --text-primary: #1a202c;
             --text-secondary: #4a5568;
@@ -49,7 +49,7 @@
         /* Modern article header */
         .article-header-modern {
             position: relative;
-            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            background: linear-gradient(135deg, #000428 0%, #004e92 100%);
             color: white;
             overflow: hidden;
         }
@@ -116,50 +116,55 @@
         .category-badge-modern {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             color: white;
             padding: 0.5rem 1rem;
-            border-radius: 20px;
+            border-radius: 50px;
+            font-weight: 500;
             font-size: 0.875rem;
-            font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         /* Modern article content */
         .article-container-modern {
-            max-width: 4xl;
-            margin: 0 auto;
-            padding: 4rem 1rem 8rem;
+            max-width: 800px;
+            margin: -3rem auto 0;
+            position: relative;
+            z-index: 10;
             background: white;
+            border-radius: 24px 24px 0 0;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+            min-height: 50vh;
         }
 
         .article-content-modern {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.125rem;
+            padding: 4rem 3rem 3rem;
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 1.25rem;
             line-height: 1.8;
-            color: #2d3748;
+            color: var(--text-primary);
         }
 
         .article-content-modern .lead-paragraph {
             font-size: 1.5rem;
             font-weight: 400;
-            color: #2d3748;
-            line-height: 1.6;
-            margin-bottom: 3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
             padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-light);
+            font-style: italic;
             position: relative;
-            font-family: 'Crimson Text', Georgia, serif;
         }
 
         .article-content-modern .lead-paragraph::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -1px;
             left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 2px;
+            width: 80px;
+            height: 2px;
+            background: var(--primary-gradient);
         }
 
         /* Enhanced headings */
@@ -167,9 +172,9 @@
             font-family: 'Source Serif Pro', Georgia, serif;
             font-size: 2.5rem;
             font-weight: 700;
-            color: #1a202c;
-            margin: 3rem 0 1.5rem;
             line-height: 1.2;
+            margin: 3rem 0 1.5rem;
+            color: var(--text-primary);
             position: relative;
             padding-top: 2rem;
         }
@@ -179,9 +184,9 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-gradient);
             border-radius: 2px;
         }
 
@@ -189,9 +194,9 @@
             font-family: 'Source Serif Pro', Georgia, serif;
             font-size: 1.875rem;
             font-weight: 600;
-            color: #2d3748;
-            margin: 2.5rem 0 1rem;
             line-height: 1.3;
+            margin: 2.5rem 0 1rem;
+            color: var(--text-primary);
             position: relative;
             padding-left: 1.5rem;
         }
@@ -202,8 +207,8 @@
             left: 0;
             top: 0.5rem;
             width: 4px;
-            height: 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 1.5rem;
+            background: var(--primary-gradient);
             border-radius: 2px;
         }
 
@@ -211,110 +216,109 @@
             font-family: 'Inter', sans-serif;
             font-size: 1.5rem;
             font-weight: 600;
-            color: #2d3748;
+            line-height: 1.3;
             margin: 2rem 0 1rem;
-            line-height: 1.4;
+            color: var(--accent-color);
         }
 
         .article-content-modern p {
             margin-bottom: 1.5rem;
             text-align: justify;
-            text-justify: inter-word;
+            hyphens: auto;
         }
 
         .article-content-modern strong {
             font-weight: 600;
-            color: #1a202c;
+            color: var(--text-primary);
         }
 
         /* Quote styling */
         .article-content-modern blockquote {
-            border-left: 4px solid #667eea;
-            padding-left: 2rem;
-            margin: 2rem 0;
+            font-size: 1.375rem;
             font-style: italic;
-            font-size: 1.25rem;
-            color: #4a5568;
-            background: #f7fafc;
-            padding: 1.5rem 2rem;
-            border-radius: 0 8px 8px 0;
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 12px 12px 0;
             position: relative;
         }
 
         .article-content-modern blockquote::before {
             content: '"';
             font-size: 4rem;
-            color: #667eea;
+            color: var(--accent-color);
+            opacity: 0.3;
             position: absolute;
-            top: -0.5rem;
+            top: 0.5rem;
             left: 1rem;
             font-family: Georgia, serif;
         }
 
         /* Image styling */
         .article-image-modern {
-            margin: 3rem 0;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
         }
 
         .image-caption-modern {
-            font-size: 0.9rem;
-            color: #718096;
-            text-align: center;
-            margin-top: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: var(--text-muted);
             font-style: italic;
+            margin-top: 0.75rem;
+            text-align: center;
         }
 
         /* Author bio styling */
         .author-bio-modern {
-            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            border-radius: 16px;
-            padding: 2rem;
-            margin-top: 4rem;
-            border: 1px solid #e2e8f0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border: 1px solid var(--border-light);
         }
 
         .author-info-modern {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .author-avatar-modern {
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid #667eea;
-            flex-shrink: 0;
+            border: 3px solid white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
 
         .author-details-modern h5 {
+            font-family: 'Inter', sans-serif;
             font-size: 1.25rem;
             font-weight: 600;
-            color: #1a202c;
+            color: var(--text-primary);
             margin-bottom: 0.5rem;
         }
 
         .author-details-modern p {
-            color: #4a5568;
+            font-family: 'Inter', sans-serif;
             font-size: 1rem;
-            margin: 0;
+            color: var(--text-secondary);
             line-height: 1.6;
+            margin: 0;
         }
 
         /* Footer styling */
         .article-footer-modern {
-            border-top: 1px solid #e2e8f0;
-            padding-top: 2rem;
-            margin-top: 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
+            background: var(--text-primary);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
         }
 
         /* Responsive design */
@@ -322,28 +326,28 @@
             .article-header-content {
                 padding: 4rem 1rem 3rem;
             }
-            
+
             .article-title-modern {
                 font-size: 2.5rem;
             }
-            
+
             .article-subtitle-modern {
+                font-size: 1.25rem;
+            }
+
+            .article-content-modern {
+                padding: 3rem 1.5rem 2rem;
                 font-size: 1.125rem;
             }
-            
-            .article-content-modern {
-                font-size: 1rem;
-                padding: 0 1rem;
-            }
-            
+
             .article-content-modern h2 {
                 font-size: 2rem;
             }
-            
+
             .article-content-modern h3 {
                 font-size: 1.5rem;
             }
-            
+
             .author-info-modern {
                 flex-direction: column;
                 text-align: center;
@@ -356,12 +360,14 @@
         }
 
         .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease-out forwards;
+            animation: fadeInUp 0.8s ease-out;
         }
 
         @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -370,30 +376,29 @@
 
         /* Article navigation */
         .article-nav-modern {
-            background: white;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 1rem 0;
             position: sticky;
-            top: 64px;
+            top: 80px;
+            background: var(--bg-overlay);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
             z-index: 40;
         }
 
         .breadcrumb-modern {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-family: 'Inter', sans-serif;
             font-size: 0.875rem;
-            color: #718096;
+            color: var(--text-muted);
         }
 
         .breadcrumb-modern a {
-            color: #667eea;
+            color: var(--accent-color);
             text-decoration: none;
-            transition: color 0.2s ease;
+            transition: color 0.2s;
         }
 
         .breadcrumb-modern a:hover {
-            color: #5a67d8;
+            color: var(--text-primary);
         }
     </style>
     
@@ -411,7 +416,7 @@
         }
     </script>
 </head>
-<body class="bg-gray-50">
+<body>
     <!-- Navigation Bar -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -441,27 +446,27 @@
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Article Metadata -->
                 <div class="category-badge-modern mb-6">
-                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart-broken"></i>
                     Middle East
                 </div>
                 
                 <h1 class="article-title-modern">
-                    As Conflict Escalates, Displaced Families Seek Shelter in 'Ghost Camps'
+                    Starvation Surges in Gaza as Aid Fails to Meet Needs
                 </h1>
                 
                 <p class="article-subtitle-modern">
-                    Thousands of Palestinian families find themselves in makeshift settlements as humanitarian conditions deteriorate amid ongoing violence
+                    Gaza faces a worst-case famine scenario as food and humanitarian supplies barely trickle into the enclave, leaving thousands of children with acute malnutrition
                 </p>
                 
                 <!-- Author and Date Info -->
                 <div class="article-meta-modern">
                     <div class="meta-item-modern">
                         <i class="fas fa-user"></i>
-                        <span>By <a href="author-jackson-daly.html" class="text-white hover:text-blue-200 transition-colors">Jackson Daly</a></span>
+                        <span>By Alisa Pomelnikova</span>
                     </div>
                     <div class="meta-item-modern">
                         <i class="fas fa-calendar"></i>
-                        <span>December 5, 2024</span>
+                        <span>August 15, 2025</span>
                     </div>
                     <div class="meta-item-modern">
                         <i class="fas fa-clock"></i>
@@ -482,7 +487,7 @@
                 <i class="fas fa-chevron-right text-xs"></i>
                 <a href="journalism.html">Journalism</a>
                 <i class="fas fa-chevron-right text-xs"></i>
-                <span class="text-gray-900">Ghost Camps</span>
+                <span class="text-gray-900">Gaza Crisis</span>
             </nav>
         </div>
     </div>
@@ -491,70 +496,69 @@
     <div class="article-container-modern fade-in">
         <div class="article-content-modern">
             <!-- Featured Image -->
-            <img src="assets/articles/palestine.png" alt="Palestinian displacement camps" class="article-image-modern">
-            <p class="image-caption-modern">Families navigate the harsh conditions of displacement camps established in response to escalating conflict. (UN OCHA)</p>
+            <img src="assets/articles/gaza.png" alt="Gaza humanitarian crisis" class="article-image-modern">
+            <p class="image-caption-modern">Gaza faces severe food shortages and humanitarian crisis as aid delivery remains inadequate. (File photo)</p>
 
             <p class="lead-paragraph">
-                In the shadow of escalating conflict, thousands of Palestinian families have established what aid workers grimly refer to as "ghost camps"—makeshift settlements that emerge overnight as people flee violence, only to disappear when conditions become untenable or new threats emerge.
+                On July 29, an international hunger organization issued its starkest warning yet: Gaza is on the brink of a "worst-case famine scenario", battered by months of Israeli military assault and an unrelenting blockade.
             </p>
 
-            <h2>Life in the Shadows</h2>
-            
-            <p>These temporary settlements represent a stark evolution in the displacement crisis, characterized by their ephemeral nature and the desperate circumstances that drive their creation. Unlike established refugee camps with international oversight and basic infrastructure, ghost camps exist in a legal and humanitarian gray area, often lacking access to clean water, medical care, or adequate shelter.</p>
+            <h2>The Unfolding Crisis</h2>
+            <p>
+                For nearly a year, food and humanitarian supplies have barely trickled into the enclave. The crisis reached a critical point in March, when Israel imposed a complete blockade in the midst of a truce with Hamas, effectively cutting off the last lifelines of aid to the Gaza Strip. According to the Integrated Food Security Phase Classification (IPC), the number of families facing extreme hunger doubled between May and July. Many areas have now crossed the critical threshold that signals famine.
+            </p>
 
-            <p>The residents of these camps live in constant uncertainty, never knowing whether their temporary refuge will last days or weeks. Families construct shelters from whatever materials they can salvage—plastic sheeting, discarded wood, metal scraps—creating a patchwork landscape of desperation and resilience that shifts with each new wave of displacement.</p>
+            <p>
+                By mid-July, Gaza City was registering malnutrition rates that met formal famine criteria. In just three months (April - mid-July), more than 20,000 children were hospitalized with acute malnutrition; over 3,000 were in life-threatening condition. Doctors are warning of a sharp rise in deaths among children under five. Projections show more than 71,000 children and 17,000 mothers will soon require urgent, specialized treatment for acute malnutrition.
+            </p>
 
-            <h3>The Human Cost of Invisible Displacement</h3>
+            <h2>Insufficient Aid and Failed Promises</h2>
+            <p>
+                Under mounting international pressure, the Israeli army has announced occasional "tactical pauses" to allow in aid convoys. But relief agencies warn that this volume is catastrophically insufficient to stop the looming famine. After partially easing the blockade in May, Israel allowed only minimal amounts of humanitarian goods to be delivered for several weeks — a lifeline so thin that it failed to reach many in need. Moreover, according to humanitarian organizations, new import regulations have only worsened the situation, causing logistical disruptions and delays in the delivery of food and medicine.
+            </p>
 
-            <p>What makes these ghost camps particularly troubling is their invisibility to official humanitarian response systems. Because they exist outside formal structures and often in locations that are difficult to access or monitor, their residents frequently fall through the cracks of international aid distribution networks.</p>
+            <blockquote>
+                "With such limited aid, the humanitarian situation is spiraling," said Dr. Amjad Alshawa, head of the Palestinian NGO Network.
+            </blockquote>
 
-            <p>Children in these settlements face particular hardships, with education becoming a distant memory as families focus on day-to-day survival. Health conditions deteriorate rapidly in the unsanitary conditions, while the psychological trauma of repeated displacement compounds the stress of living in constant fear of having to move again.</p>
+            <h2>Israel's Defense and Disputed Claims</h2>
+            <p>
+                Israeli officials maintain that restrictions and a controversial new distribution system are necessary to prevent Hamas from seizing aid. Yet a classified U.S. government analysis submitted to the State Department reportedly found no evidence of systematic aid theft by Hamas. The Israel Defense Forces dismissed the report as "biased."
+            </p>
 
-            <h3>Humanitarian Access and Security Challenges</h3>
+            <p>
+                At an August 10 press conference, Prime Minister Benjamin Netanyahu again rejected allegations of famine as "exaggerated." While acknowledging "deprivation" in the enclave, he insisted: "If Israel had a policy of starvation, no one in Gaza would have survived two years of war."
+            </p>
 
-            <p>Aid organizations struggle to provide assistance to ghost camp residents due to security concerns and the shifting nature of these settlements. The locations often exist in areas where humanitarian access is restricted or dangerous, and by the time aid workers can establish contact, the camps may have already dissolved and reformed elsewhere.</p>
+            <p>
+                Meanwhile, the United Nations and other international organizations disagree, warning that the current level of aid (limited truck deliveries and sporadic airdrops) is completely insufficient for Gaza's two million residents.
+            </p>
 
-            <p>This dynamic creates a cycle of humanitarian inefficiency, where resources are allocated to address needs that may no longer exist in specific locations, while new crises emerge in areas that have not yet been assessed or reached by aid organizations.</p>
+            <h2>Dangerous and Inadequate Relief Methods</h2>
+            <p>
+                Airdrops, in particular, have drawn public anger for their inefficiency and danger. In one tragic incident, 14-year-old Muhannad Eid was killed when a humanitarian package fell on him. "This is humiliation from the air, not help," his brother, Mohammed, told reporters. "We've warned again and again about these unsafe, inhumane methods and repeatedly called for the safe and adequate delivery of aid through land crossings. We need protection."
+            </p>
 
-            <h2>International Response and Legal Obligations</h2>
+            <h2>Why More Food Alone Won't End the Crisis</h2>
+            <p>
+                Experts caution that with famine already gripping parts of Gaza, simply increasing food deliveries will not be enough. Over half the population is now in the "emergency" or "catastrophic" phase of hunger, where the body's systems begin to collapse. The medical complexity of treating such phases of acute malnutrition makes the situation especially dangerous.
+            </p>
 
-            <p>The existence of ghost camps highlights significant gaps in international humanitarian law and protection mechanisms. While international law provides clear frameworks for protecting displaced populations, the fluid nature of these settlements makes it difficult to apply traditional protection measures effectively.</p>
+            <p>
+                "In the final stages of starvation, even water can trigger organ failure, and improper or too-rapid feeding can cause refeeding syndrome, which is deadly due to the sudden imbalance of electrolytes," explained Dr. Patel, a specialist in emergency nutrition. Dr. Noor Alamassi of Project HOPE added: "A bag of flour will not save anyone if it does not contain the essential nutrients people need." Recovery requires weeks or even months of careful medical supervision. Children need fortified milk, ready-to-use therapeutic foods, and constant monitoring of sodium and potassium levels in the blood.
+            </p>
 
-            <p>International organizations have called for innovative approaches to address this challenge, including mobile aid distribution systems and rapid response teams capable of providing assistance to temporary settlements. However, implementation remains constrained by security concerns and resource limitations.</p>
-
-            <h3>The Role of Technology and Innovation</h3>
-
-            <p>Some humanitarian organizations are experimenting with technology-based solutions to track and assist ghost camp populations. Satellite imagery, mobile communication networks, and digital cash transfer systems offer potential tools for reaching displaced populations that traditional aid delivery methods cannot effectively serve.</p>
-
-            <p>These technological innovations, while promising, face significant challenges in implementation, including concerns about privacy, security, and the digital divide that may exclude the most vulnerable populations from receiving assistance.</p>
-
-            <h3>Regional Implications and Cross-Border Dynamics</h3>
-
-            <p>The ghost camp phenomenon extends beyond immediate displacement to affect regional stability and international relations. Neighboring countries face pressure to accommodate populations that may attempt to cross borders, while international partners grapple with how to provide support without legitimizing or inadvertently encouraging further displacement.</p>
-
-            <p>This regional dimension complicates diplomatic efforts to address the underlying causes of displacement while highlighting the interconnected nature of humanitarian crises in the contemporary Middle East.</p>
-
-            <h2>Looking Forward: Sustainable Solutions</h2>
-
-            <p>Addressing the ghost camp crisis requires both immediate humanitarian action and longer-term political solutions. In the short term, the international community must develop more flexible and responsive aid delivery mechanisms capable of adapting to the fluid nature of displacement patterns.</p>
-
-            <p>However, sustainable solutions ultimately depend on addressing the root causes of displacement through political dialogue, conflict resolution, and efforts to rebuild the social and economic infrastructure necessary for stable communities. Without such comprehensive approaches, the cycle of displacement and temporary settlement is likely to continue indefinitely.</p>
-
-            <h3>The Path to Dignity and Stability</h3>
-
-            <p>The stories emerging from ghost camps are ultimately about human dignity and the universal desire for safety and stability. Each temporary settlement represents not just a humanitarian challenge but a collection of individual stories—families seeking to protect their children, elderly people trying to maintain their health and independence, and young adults attempting to build futures despite overwhelming uncertainty.</p>
-
-            <p>As the international community grapples with how to respond to this evolving crisis, the voices and experiences of ghost camp residents must remain at the center of policy discussions and humanitarian planning. Only by centering their needs and experiences can effective solutions be developed and implemented.</p>
-
-            <p>The ghost camps may be temporary in their physical existence, but their impact on the lives of displaced populations and the broader humanitarian landscape will likely persist long after the last tent is taken down and the last family finds permanent shelter.</p>
+            <p>
+                But in reality, Gaza's healthcare system is already crippled by shortages of doctors, medicine, and equipment to provide such care. Aid workers warn that even if food supplies resume, without medical infrastructure, saving thousands of lives will be extremely difficult.
+            </p>
 
             <!-- Author Bio -->
             <div class="author-bio-modern">
                 <div class="author-info-modern">
-                    <img src="assets/team/default-avatar.png" alt="Jackson Daly" class="author-avatar-modern">
+                    <img src="assets/team/default-avatar.png" alt="Alisa Pomelnikova" class="author-avatar-modern">
                     <div class="author-details-modern">
-                        <h5>Jackson Daly</h5>
-                        <p>Jackson specializes in Middle Eastern affairs and humanitarian crises, with extensive experience covering displacement and refugee issues. His reporting focuses on the human impact of conflict and the challenges facing humanitarian organizations in crisis zones.</p>
+                        <h5>Alisa Pomelnikova</h5>
+                        <p>Alisa is a journalism intern at GVMUN with a focus on humanitarian crises and international relations in conflict zones. She specializes in analyzing the impact of political decisions on vulnerable populations and documenting humanitarian challenges.</p>
                     </div>
                 </div>
             </div>
@@ -567,14 +571,14 @@
             <h2 class="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <img src="assets/articles/trump.png" alt="Trump Article" class="w-full h-48 object-cover">
+                    <img src="assets/articles/palestine.png" alt="Palestine Article" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 mb-3">
-                            US Politics
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 mb-3">
+                            Middle East
                         </div>
-                        <h3 class="font-semibold text-gray-900 mb-2">Trump 2.0: What It Means For The World</h3>
-                        <p class="text-gray-600 text-sm">Examining the potential impact of Donald Trump's return to the presidency...</p>
-                        <a href="trump-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                        <h3 class="font-semibold text-gray-900 mb-2">As Conflict Escalates, Displaced Families Seek Shelter in 'Ghost Camps'</h3>
+                        <p class="text-gray-600 text-sm">Thousands of Palestinians are forced into makeshift shelters...</p>
+                        <a href="palestine-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
                             <span>Read More</span>
                             <i class="fas fa-arrow-right text-xs"></i>
                         </a>
@@ -582,7 +586,22 @@
                 </article>
 
                 <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <img src="assets/articles/nato.png" alt="NATO Russia" class="w-full h-48 object-cover">
+                    <img src="assets/articles/haiti.png" alt="Haiti Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 mb-3">
+                            Caribbean
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Haiti's Crisis: A Policy Analysis</h3>
+                        <p class="text-gray-600 text-sm">An in-depth examination of Haiti's ongoing political and humanitarian crisis...</p>
+                        <a href="haiti-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/nato.png" alt="NATO-Russia" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 mb-3">
                             Security
@@ -590,21 +609,6 @@
                         <h3 class="font-semibold text-gray-900 mb-2">Militarization of NATO-Russian Border</h3>
                         <p class="text-gray-600 text-sm">Analyzing the deteriorating security relationship between NATO and Russia...</p>
                         <a href="nato-russia-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
-                            <span>Read More</span>
-                            <i class="fas fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&h=250&fit=crop" alt="TikTok Ban" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 mb-3">
-                            Technology
-                        </div>
-                        <h3 class="font-semibold text-gray-900 mb-2">The TikTok Ban: National Security vs. Digital Rights</h3>
-                        <p class="text-gray-600 text-sm">Analyzing the implications of the TikTok ban on national security concerns...</p>
-                        <a href="tiktok-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
                             <span>Read More</span>
                             <i class="fas fa-arrow-right text-xs"></i>
                         </a>
@@ -655,5 +659,30 @@
             </div>
         </div>
     </footer>
+
+    <!-- Navigation dropdown script -->
+    <script src="navigation.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button')?.addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+        
+        // Add fade-in animation to elements
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('h2, h3, p, img').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>

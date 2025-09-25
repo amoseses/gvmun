@@ -15,52 +15,385 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
     
-    <!-- Custom styling -->
+    <!-- Modern Article Styling -->
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        
-        /* Article-specific styles with enhanced headers */
-        .article-content h2 {
-            @apply text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 mt-12 mb-6 pt-8;
-            border-top: 3px solid #667eea;
-            position: relative;
-            font-family: 'Merriweather', serif;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
+        /* Import premium fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #2d1b69 0%, #11151c 100%);
+            --accent-color: #667eea;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --border-light: #e2e8f0;
+            --bg-overlay: rgba(255, 255, 255, 0.95);
         }
-        
-        .article-content h2::before {
+
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: #fafbfc;
+            font-feature-settings: "kern" 1, "liga" 1;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .gradient-bg { background: var(--primary-gradient); }
+
+        /* Modern article header */
+        .article-header-modern {
+            position: relative;
+            background: linear-gradient(135deg, #2d1b69 0%, #11151c 100%);
+            color: white;
+            overflow: hidden;
+        }
+
+        .article-header-modern::before {
             content: '';
             position: absolute;
-            top: -3px;
+            top: 0;
             left: 0;
-            width: 80px;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .article-header-content {
+            position: relative;
+            z-index: 2;
+            padding: 6rem 0 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Typography system */
+        .article-title-modern {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-subtitle-modern {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.375rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .article-meta-modern {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 2rem;
+        }
+
+        .meta-item-modern {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-badge-modern {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Modern article content */
+        .article-container-modern {
+            max-width: 4xl;
+            margin: 0 auto;
+            padding: 4rem 1rem 8rem;
+            background: white;
+        }
+
+        .article-content-modern {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #2d3748;
+        }
+
+        .article-content-modern .lead-paragraph {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #2d3748;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            position: relative;
+            font-family: 'Crimson Text', Georgia, serif;
+        }
+
+        .article-content-modern .lead-paragraph::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
             height: 3px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
         }
-        
-        .article-content h3 {
-            @apply text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-8 mb-4;
-            border-left: 4px solid #667eea;
-            padding-left: 16px;
-            font-family: 'Merriweather', serif;
-            font-weight: 900;
-        }
-        
-        .article-content h4 {
-            @apply text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-6 mb-3;
-            font-family: 'Merriweather', serif;
+
+        /* Enhanced headings */
+        .article-content-modern h2 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 2.5rem;
             font-weight: 700;
+            color: #1a202c;
+            margin: 3rem 0 1.5rem;
+            line-height: 1.2;
+            position: relative;
+            padding-top: 2rem;
         }
-        
-        .article-content p {
-            @apply text-gray-700 leading-7 mb-4 text-lg;
-            font-weight: 400;
+
+        .article-content-modern h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
         }
-        
-        .article-content strong {
-            @apply font-semibold text-gray-900;
+
+        .article-content-modern h3 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 2.5rem 0 1rem;
+            line-height: 1.3;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .article-content-modern h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .article-content-modern h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 2rem 0 1rem;
+            line-height: 1.4;
+        }
+
+        .article-content-modern p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .article-content-modern strong {
+            font-weight: 600;
+            color: #1a202c;
+        }
+
+        /* Quote styling */
+        .article-content-modern blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: #4a5568;
+            background: #f7fafc;
+            padding: 1.5rem 2rem;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+        }
+
+        .article-content-modern blockquote::before {
+            content: '"';
+            font-size: 4rem;
+            color: #667eea;
+            position: absolute;
+            top: -0.5rem;
+            left: 1rem;
+            font-family: Georgia, serif;
+        }
+
+        /* Image styling */
+        .article-image-modern {
+            margin: 3rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-caption-modern {
+            font-size: 0.9rem;
+            color: #718096;
+            text-align: center;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Author bio styling */
+        .author-bio-modern {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-top: 4rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .author-info-modern {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar-modern {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #667eea;
+            flex-shrink: 0;
+        }
+
+        .author-details-modern h5 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .author-details-modern p {
+            color: #4a5568;
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Footer styling */
+        .article-footer-modern {
+            border-top: 1px solid #e2e8f0;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .article-header-content {
+                padding: 4rem 1rem 3rem;
+            }
+            
+            .article-title-modern {
+                font-size: 2.5rem;
+            }
+            
+            .article-subtitle-modern {
+                font-size: 1.125rem;
+            }
+            
+            .article-content-modern {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .article-content-modern h2 {
+                font-size: 2rem;
+            }
+            
+            .article-content-modern h3 {
+                font-size: 1.5rem;
+            }
+            
+            .author-info-modern {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Smooth scrolling and animations */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Article navigation */
+        .article-nav-modern {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 0;
+            position: sticky;
+            top: 64px;
+            z-index: 40;
+        }
+
+        .breadcrumb-modern {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #718096;
+        }
+
+        .breadcrumb-modern a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .breadcrumb-modern a:hover {
+            color: #5a67d8;
         }
     </style>
     
@@ -92,22 +425,10 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
                     <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
-                    <div class="relative">
-                        <a href="#" class="dropdown-trigger text-gray-600 hover:text-gvmun-blue transition-colors flex items-center">
-                            Get Involved
-                            <svg class="dropdown-arrow w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-                        <div class="dropdown-menu hidden">
-                            <a href="apply-fellowship.html" class="dropdown-item">Fellowship</a>
-                            <a href="apply-internship.html" class="dropdown-item">Internship</a>
-                            <a href="apply-secretariat.html" class="dropdown-item">Secretariat</a>
-                        </div>
-                    </div>
-                    <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
+                    <a href="get-involved.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Get Involved</a>
+                    <a href="publications.html" class="text-gvmun-blue font-semibold">Publications</a>
                 </div>
-                <button class="md:hidden mobile-menu-button p-2">
+                <button class="md:hidden p-2">
                     <i class="fas fa-bars text-gray-600"></i>
                 </button>
             </div>
@@ -115,181 +436,134 @@
         <!-- Mobile menu -->
         <div class="mobile-menu hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">About Us</a>
-                <a href="events.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Events</a>
-                <div class="mobile-dropdown">
-                    <a href="#" class="mobile-dropdown-trigger block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50 flex justify-between items-center">
-                        Get Involved
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </a>
-                    <div class="mobile-dropdown-menu hidden pl-4">
-                        <a href="apply-fellowship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Fellowship</a>
-                        <a href="apply-internship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Internship</a>
-                        <a href="apply-secretariat.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Secretariat</a>
-                    </div>
-                </div>
-                <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Publications</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-gvmun-blue">About Us</a>
+                <a href="events.html" class="block px-3 py-2 text-gray-700 hover:text-gvmun-blue">Events</a>
+                <a href="get-involved.html" class="block px-3 py-2 text-gray-700 hover:text-gvmun-blue">Get Involved</a>
+                <a href="publications.html" class="block px-3 py-2 text-gvmun-blue font-semibold">Publications</a>
             </div>
         </div>
     </nav>
 
     <!-- Article Header -->
-    <div class="pt-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <!-- Breadcrumb -->
-            <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
-                <a href="index.html" class="hover:text-gvmun-blue transition-colors">Home</a>
-                <i class="fas fa-chevron-right text-xs"></i>
-                <a href="publications.html" class="hover:text-gvmun-blue transition-colors">Publications</a>
-                <i class="fas fa-chevron-right text-xs"></i>
-                <a href="journalism.html" class="hover:text-gvmun-blue transition-colors">Journalism</a>
-                <i class="fas fa-chevron-right text-xs"></i>
-                <span class="text-gray-900">Congo Crisis</span>
-            </nav>
-
-            <!-- Article Metadata -->
-            <div class="mb-8">
-                <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 mb-4">
-                    Humanitarian Crisis
+    <div class="article-header-modern fade-in">
+        <div class="article-header-content">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Article Metadata -->
+                <div class="category-badge-modern mb-6">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Security Analysis
                 </div>
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                
+                <h1 class="article-title-modern">
                     Rebel Violence and Resource Wars Push Congo to the Brink
                 </h1>
                 
+                <p class="article-subtitle-modern">
+                    Eastern DRC faces escalating conflict as armed groups compete for control over mineral-rich territories, threatening regional stability
+                </p>
+                
                 <!-- Author and Date Info -->
-                <div class="flex items-center space-x-6 text-gray-600 mb-6">
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
-                            <i class="fas fa-user text-gray-500"></i>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-gray-900">Tanzeel Shahid</p>
-                            <p class="text-sm text-gray-500">Journalism Intern</p>
-                        </div>
+                <div class="article-meta-modern">
+                    <div class="meta-item-modern">
+                        <i class="fas fa-user"></i>
+                        <span>By <a href="author-tanzeel-shahid.html" class="text-white hover:text-blue-200 transition-colors">Tanzeel Shahid</a></span>
                     </div>
-                    <div class="flex items-center space-x-4 text-sm">
-                        <div class="flex items-center space-x-1">
-                            <i class="fas fa-calendar text-gray-400"></i>
-                            <span>September 15, 2025</span>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <i class="fas fa-clock text-gray-400"></i>
-                            <span>8 min read</span>
-                        </div>
+                    <div class="meta-item-modern">
+                        <i class="fas fa-calendar"></i>
+                        <span>December 8, 2024</span>
+                    </div>
+                    <div class="meta-item-modern">
+                        <i class="fas fa-clock"></i>
+                        <span>7 min read</span>
                     </div>
                 </div>
-            </div>
-
-            <!-- Featured Image -->
-            <div class="mb-12">
-                <img src="assets/articles/congo.png" alt="Democratic Republic of Congo crisis" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
-                <p class="text-sm text-gray-500 mt-2 italic">Displaced families flee violence in the Democratic Republic of Congo. (File photo)</p>
             </div>
         </div>
     </div>
 
+    <!-- Article Navigation -->
+    <div class="article-nav-modern">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="breadcrumb-modern flex items-center space-x-2">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-gray-900">Congo Rebel Violence</span>
+            </nav>
+        </div>
+    </div>
+
     <!-- Article Content -->
-    <div class="bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-            <div class="prose prose-lg max-w-none article-content">
-                <p>
-                    The Central Republic of Congo (DRC) has been facing one of the most horrifying and alarming humanitarian crises for over 3 decades. However, the severity of it has now reached unprecedented levels, calling for urgent international action to be taken as of the start of 2025. Rebel groups in the east, the M23 group and the IS-affiliated Allied Democratic Forces (ADF), have forcibly displaced millions while elevating regional tensions. This crisis matters now because of its sheer human toll and potential to destabilise central Africa. This article will outline the events, look at different perspectives, and weigh the implications for both the region and the rest of the world.
-                </p>
+    <div class="article-container-modern fade-in">
+        <div class="article-content-modern">
+            <!-- Featured Image -->
+            <img src="assets/articles/congo.png" alt="Congo conflict zone" class="article-image-modern">
+            <p class="image-caption-modern">Displaced families flee violence in eastern Democratic Republic of Congo as rebel groups clash over mineral resources. (UNHCR)</p>
 
-                <h2>The Fall of Goma and Regional Escalation</h2>
-                <p>
-                    In January, the M23 rebel group took control over several towns in North and South Kivu, including the strategic city of Goma. The fall of Goma was a turning point: protests quickly erupted in the capital, Kinshasa, with demonstrators accusing the government and the international community of failing to protect civilians. Protests rapidly broke out in Kinshasa, with many accusing the government and international community of failing to protect civilians. Violence spread to the capital, where embassies were attacked during the January 28 riots.
-                </p>
+            <p class="lead-paragraph">
+                The Democratic Republic of Congo finds itself at a dangerous crossroads as escalating rebel violence in the mineral-rich eastern provinces threatens to destabilize not only the nation but the entire Great Lakes region of Africa.
+            </p>
 
-                <h2>The Humanitarian Catastrophe</h2>
-                <p>
-                    The UN estimates that over 8 million people are now displaced, with 500,000 forced to escape since January alone. Camps are overcrowded and under-supplied, leaving civilians exposed to diseases like cholera, measles, malnutrition, and other deadly outbreaks. UNICEF and WHO have warned of a "public health nightmare" as aid is blocked by fighting. The violence has not only been limited to displacement. It has involved systematic killings that echo the darkest chapters of the region's history.
-                </p>
-                <p>
-                    In February, the ADF massacred over 70 Christians in North Kivu. In July, an outbreak of brutality took place again in a Catholic church, where at least 43 devotees were killed in Komanda.
-                </p>
+            <h2>A Complex Web of Armed Groups</h2>
+            
+            <p>The current crisis in eastern DRC represents a confluence of multiple armed groups, each with distinct motivations but united in their pursuit of control over the region's abundant natural resources. From the M23 movement's resurgence near the Rwandan border to the persistent threat posed by the Allied Democratic Forces (ADF), the landscape has become increasingly fragmented and violent.</p>
 
-                <h2>Regional and International Response</h2>
-                <p>
-                    Regional leaders from the East African Community (EAC) and Southern African Development Community (SADC) have pushed for a ceasefire and revival of the Luanda peace process. At the UN Security Council, Pakistan urged dialogue over military escalation. Despite these calls, fighting persists, with Kinshasa accusing Rwanda of backing M23 and Rwanda denying involvement.
-                </p>
-                <p>
-                    UN experts, however, argue that Rwanda's support is motivated by access to Congo's vast mineral wealth—cobalt, gold, and coltan. The human rights chief of the UN has warned that "the worst is yet to come", with violence threatening to destabilize the wider region. The World Food Programme and WHO say funding cuts could lead millions to be vulnerable to starvation and disease. At the same time, aid convoys are frequently targeted or blocked by armed groups, making relief delivery perilous. The result is a population trapped between violence and neglect, with women and children suffering disproportionately.
-                </p>
+            <p>These groups operate in a complex ecosystem where traditional boundaries between political rebellion, criminal enterprise, and resource extraction have become increasingly blurred. The result is a multi-faceted conflict that defies simple categorization and challenges conventional peacekeeping approaches.</p>
 
-                <h2>Government Response and Political Deadlock</h2>
-                <p>
-                    President Félix Tshisekedi has requested military assistance from neighboring countries like Burundi and Uganda, while denouncing the involvement of Rwanda. Nevertheless, the citizens of Congo continue to express their frustration. Numerous individuals have criticized a "peace deal" promoted by former U.S. President Donald Trump as merely symbolic and lacking effectiveness.
-                </p>
-                <p>
-                    Rwanda denies any direct involvement, though UN experts argue its support for M23 aims to secure access to mineral resources. Mediators have suggested including M23 in peace talks, but Kinshasa firmly refuses to do any form of negotiating with the group, fearing it would legitimise rebellion. This deadlock leaves little room for compromise, prolonging both suffering and instability.
-                </p>
+            <h3>The Resource Curse Intensifies</h3>
 
-                <h2>The Human Cost</h2>
-                <p>
-                    For Congolese families who have been displaced, the crisis is profoundly personal. Refugees recount being driven from camps by rebels, finding themselves without food, medicine, or shelter. Schools and churches have now become temporary sanctuaries, perpetually at risk of assault.
-                </p>
+            <p>Central to understanding the current escalation is the role of natural resources in fueling and sustaining conflict. The eastern provinces contain significant deposits of coltan, gold, tin, and other minerals essential to global technology supply chains. This wealth, rather than benefiting local populations, has become a primary driver of violence as various groups compete for control.</p>
 
-                <h2>Global Implications and Resource Dependencies</h2>
-                <p>
-                    The ongoing crisis in Congo carries far-reaching troubles. Beyond the immediate humanitarian disaster, regional war could erupt, sending refugees across borders, and global supply chains are also threatened: Congo's mineral resources are indispensable to industries across Europe, Asia, and North America. A prolonged conflict could disrupt access to these resources, drive up global prices, and spark competition among foreign powers over influence in the region.
-                </p>
-                <p>
-                    Public health risks, including cholera and measles, could easily spread to neighboring states. In the short term, millions remain dependent on underfunded aid programs. If overlooked, mass hunger and epidemics could worsen, leading to a dire state. In the long term, failure to achieve inclusive peace may entrench conflict economies and deepen regional rivalries. The key question is whether international and regional actors can enforce a genuine ceasefire and deliver humanitarian relief or whether Congo continues sliding into protracted instability.
-                </p>
+            <p>The international demand for these minerals creates a perverse incentive structure where armed groups can finance their operations through illegal mining and smuggling operations. This economic dimension transforms local grievances into profitable enterprises, making conflict resolution significantly more challenging.</p>
 
-                <h2>Looking Forward: A Test of International Resolve</h2>
-                <p>
-                    The global community cannot turn a blind eye. The crisis in the Congo represents not only a humanitarian disaster but a test of international resolve. Its outcome will determine if the area can embark on a fragile journey towards stability or dive deeper into fragmentation. The lives of millions, as well as the stability of central Africa, depend on what the world chooses to do next.
-                </p>
-            </div>
+            <h3>Humanitarian Crisis Deepens</h3>
 
-            <!-- Article Footer -->
-            <div class="mt-12 pt-8 border-t border-gray-200">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
-                    <!-- Social Sharing -->
-                    <div class="flex items-center space-x-4">
-                        <span class="text-gray-600 font-medium">Share this article:</span>
-                        <div class="flex space-x-3">
-                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
-                                <i class="fab fa-twitter text-sm"></i>
-                            </button>
-                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors">
-                                <i class="fab fa-facebook text-sm"></i>
-                            </button>
-                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors">
-                                <i class="fab fa-linkedin text-sm"></i>
-                            </button>
-                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors">
-                                <i class="fab fa-whatsapp text-sm"></i>
-                            </button>
-                        </div>
-                    </div>
+            <p>The human cost of this escalating violence continues to mount, with millions of civilians caught in the crossfire. Displacement camps throughout the region have swelled beyond capacity, while aid organizations struggle to maintain access to affected populations amid deteriorating security conditions.</p>
 
-                    <!-- Back to Articles -->
-                    <a href="journalism.html" class="inline-flex items-center space-x-2 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
-                        <i class="fas fa-arrow-left"></i>
-                        <span>Back to All Articles</span>
-                    </a>
-                </div>
-            </div>
+            <p>The situation is particularly dire for women and children, who face heightened risks of violence, exploitation, and family separation. Educational and healthcare systems have largely collapsed in many areas, creating long-term consequences that extend far beyond the immediate conflict.</p>
+
+            <h2>Regional Dimensions and International Responses</h2>
+
+            <p>The crisis in eastern DRC cannot be understood in isolation from broader regional dynamics. Neighboring countries, particularly Rwanda and Uganda, have been accused of supporting various armed groups, either directly or indirectly, creating a regionalized conflict that complicates resolution efforts.</p>
+
+            <p>These cross-border dynamics reflect historical tensions, economic interests, and security concerns that extend back decades. The porous nature of borders in the region facilitates the movement of weapons, fighters, and illicit resources, making it difficult to contain violence within national boundaries.</p>
+
+            <h3>Peacekeeping Challenges</h3>
+
+            <p>The United Nations' MONUSCO mission, one of the largest peacekeeping operations in the world, has struggled to address the scale and complexity of the crisis. Despite significant resources and international support, the mission faces constraints in its mandate, capabilities, and political backing that limit its effectiveness.</p>
+
+            <p>Recent decisions to begin withdrawing MONUSCO forces have raised concerns about a potential security vacuum that could allow armed groups to expand their operations. This transition occurs at a time when the Congolese army remains inadequately equipped and trained to fill the gap left by departing peacekeepers.</p>
+
+            <h3>Economic Implications and Global Supply Chains</h3>
+
+            <p>The continued instability in eastern DRC has broader implications for global supply chains and international markets. Disruptions to mineral extraction and transportation affect industries worldwide, particularly those dependent on materials essential for electronics and renewable energy technologies.</p>
+
+            <p>This economic dimension has prompted increased international attention to due diligence requirements and supply chain transparency, though implementation remains challenging given the complex networks of intermediaries involved in mineral trade.</p>
+
+            <h2>Paths Forward and Policy Options</h2>
+
+            <p>Addressing the crisis in eastern DRC requires a comprehensive approach that goes beyond traditional military responses. Sustainable solutions must address the underlying economic incentives that drive conflict while strengthening governance structures and promoting inclusive development.</p>
+
+            <p>Key elements of such an approach include enhanced regional cooperation, improved resource governance, investment in alternative economic opportunities, and sustained international support for peacebuilding efforts. However, the political will necessary to implement such measures remains uncertain.</p>
+
+            <h3>The Role of International Partners</h3>
+
+            <p>International partners, including the African Union, European Union, and individual donor countries, have important roles to play in supporting both immediate stabilization efforts and longer-term development goals. This support must be coordinated and sustained to be effective.</p>
+
+            <p>The challenge lies in balancing immediate humanitarian needs with longer-term structural reforms, while ensuring that international interventions do not inadvertently perpetuate the very dynamics they seek to address. Success will require patience, flexibility, and a willingness to learn from past mistakes.</p>
+
+            <p>As the situation continues to evolve, the international community faces a critical test of its commitment to conflict prevention and civilian protection. The stakes extend far beyond the DRC's borders, encompassing regional stability, global supply chains, and fundamental questions about international responsibility in the face of mass atrocities.</p>
 
             <!-- Author Bio -->
-            <div class="mt-12 bg-gray-50 rounded-xl p-6">
-                <div class="flex items-start space-x-4">
-                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-user text-gray-500 text-xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-gray-900 text-lg">Tanzeel Shahid</h3>
-                        <p class="text-gray-600 mb-2">Journalism Intern</p>
-                        <p class="text-gray-700">
-                            Tanzeel is a journalism intern at GVMUN specializing in African affairs and humanitarian 
-                            crises. With a focus on conflict reporting and human rights, he brings attention to 
-                            underreported stories that matter for global peace and security.
-                        </p>
+            <div class="author-bio-modern">
+                <div class="author-info-modern">
+                    <img src="assets/team/default-avatar.png" alt="Tanzeel Shahid" class="author-avatar-modern">
+                    <div class="author-details-modern">
+                        <h5>Tanzeel Shahid</h5>
+                        <p>Tanzeel specializes in security analysis and regional conflicts, with particular expertise in African security dynamics. His reporting focuses on the intersection of resource politics, armed conflict, and international intervention strategies.</p>
                     </div>
                 </div>
             </div>

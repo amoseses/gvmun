@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>As Conflict Escalates, Displaced Families Seek Shelter in 'Ghost Camps' - GVMUN</title>
+    <title>Discussing the Recent US Ban on TikTok - GVMUN</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +24,7 @@
 
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --secondary-gradient: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            --secondary-gradient: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
             --accent-color: #667eea;
             --text-primary: #1a202c;
             --text-secondary: #4a5568;
@@ -49,7 +49,7 @@
         /* Modern article header */
         .article-header-modern {
             position: relative;
-            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
             color: white;
             overflow: hidden;
         }
@@ -426,7 +426,7 @@
                     <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
                     <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
                     <a href="get-involved.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Get Involved</a>
-                    <a href="publications.html" class="text-gvmun-blue font-semibold">Publications</a>
+                    <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
                 </div>
                 <button class="md:hidden p-2">
                     <i class="fas fa-bars text-gray-600"></i>
@@ -436,125 +436,146 @@
     </nav>
 
     <!-- Article Header -->
-    <div class="article-header-modern fade-in">
-        <div class="article-header-content">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Article Metadata -->
-                <div class="category-badge-modern mb-6">
-                    <i class="fas fa-heart"></i>
-                    Middle East
+    <div class="pt-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                <a href="index.html" class="hover:text-gvmun-blue transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html" class="hover:text-gvmun-blue transition-colors">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html" class="hover:text-gvmun-blue transition-colors">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-gray-900">Discussing the Recent US Ban on TikTok</span>
+            </nav>
+
+            <!-- Article Metadata -->
+            <div class="mb-8">
+                <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 mb-4">
+                    Technology
                 </div>
-                
-                <h1 class="article-title-modern">
-                    As Conflict Escalates, Displaced Families Seek Shelter in 'Ghost Camps'
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                    Discussing the Recent US Ban on TikTok
                 </h1>
-                
-                <p class="article-subtitle-modern">
-                    Thousands of Palestinian families find themselves in makeshift settlements as humanitarian conditions deteriorate amid ongoing violence
-                </p>
+                <h2 class="text-xl md:text-2xl text-gray-600 mb-6">
+                    TikTok and the New Frontline in the US China Tech War
+                </h2>
                 
                 <!-- Author and Date Info -->
-                <div class="article-meta-modern">
-                    <div class="meta-item-modern">
-                        <i class="fas fa-user"></i>
-                        <span>By <a href="author-jackson-daly.html" class="text-white hover:text-blue-200 transition-colors">Jackson Daly</a></span>
+                <div class="flex items-center space-x-6 text-gray-600 mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-gray-500"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Angela Li</p>
+                            <p class="text-sm text-gray-500">Winter 2025 Journalism Intern</p>
+                        </div>
                     </div>
-                    <div class="meta-item-modern">
-                        <i class="fas fa-calendar"></i>
-                        <span>December 5, 2024</span>
-                    </div>
-                    <div class="meta-item-modern">
-                        <i class="fas fa-clock"></i>
-                        <span>9 min read</span>
+                    <div class="flex items-center space-x-4 text-sm">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-calendar text-gray-400"></i>
+                            <span>January 21, 2025</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-clock text-gray-400"></i>
+                            <span>7 min read</span>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-12">
+                <img src="assets/articles/tiktok.png" alt="TikTok ban discussion" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
+                <p class="text-sm text-gray-500 mt-2 italic">TikTok app amid the US ban controversy. (File photo)</p>
             </div>
         </div>
     </div>
 
-    <!-- Article Navigation -->
-    <div class="article-nav-modern">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="breadcrumb-modern flex items-center space-x-2">
-                <a href="index.html">Home</a>
-                <i class="fas fa-chevron-right text-xs"></i>
-                <a href="publications.html">Publications</a>
-                <i class="fas fa-chevron-right text-xs"></i>
-                <a href="journalism.html">Journalism</a>
-                <i class="fas fa-chevron-right text-xs"></i>
-                <span class="text-gray-900">Ghost Camps</span>
-            </nav>
-        </div>
-    </div>
-
     <!-- Article Content -->
-    <div class="article-container-modern fade-in">
-        <div class="article-content-modern">
-            <!-- Featured Image -->
-            <img src="assets/articles/palestine.png" alt="Palestinian displacement camps" class="article-image-modern">
-            <p class="image-caption-modern">Families navigate the harsh conditions of displacement camps established in response to escalating conflict. (UN OCHA)</p>
+    <div class="bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="prose prose-lg max-w-none article-content">
+                <p class="text-xl text-gray-700 leading-8 font-medium mb-8">
+                    In recent years, the global technological landscape has been reshaped by geopolitical tensions between the United States and China, with one of the most recent high-profile battles taking place over TikTok. The US government's increasing scrutiny of TikTok has led to a ban of TikTok on January 19th, 2025 due to national security concerns over data privacy and potential ties to the Chinese government.
+                </p>
 
-            <p class="lead-paragraph">
-                In the shadow of escalating conflict, thousands of Palestinian families have established what aid workers grimly refer to as "ghost camps"—makeshift settlements that emerge overnight as people flee violence, only to disappear when conditions become untenable or new threats emerge.
-            </p>
+                <p>
+                    As of January 20th, 2025, however, on the same day of President Trump's inauguration and beginning of his second term in office, TikTok is back online for American Users. President Trump plans to restore TikTok by delaying the ban for 90 more days to work out "a 50-50 joint venture between TikTok's existing parent company, China-based ByteDance, and a new, American owner". Despite President Trump pledging to reverse the ban, however, it is extremely difficult for him to undo a law passed by Congress and signed by the former president with an executive order.
+                </p>
 
-            <h2>Life in the Shadows</h2>
-            
-            <p>These temporary settlements represent a stark evolution in the displacement crisis, characterized by their ephemeral nature and the desperate circumstances that drive their creation. Unlike established refugee camps with international oversight and basic infrastructure, ghost camps exist in a legal and humanitarian gray area, often lacking access to clean water, medical care, or adequate shelter.</p>
+                <p>
+                    Not only do most American citizens oppose the ban, but in this period of uncertainty, a portion have fled to alternative platforms, mainly the Chinese social media app Xiaohongshu (Rednote). TikTok had some 170 million US users before the ban, but as a result of the uncertainty, Xiaohongshu gained nearly 3 million users in one day. This shift has significant ramifications for both China's online influence and the ongoing geopolitical contest between the two superpowers.
+                </p>
 
-            <p>The residents of these camps live in constant uncertainty, never knowing whether their temporary refuge will last days or weeks. Families construct shelters from whatever materials they can salvage—plastic sheeting, discarded wood, metal scraps—creating a patchwork landscape of desperation and resilience that shifts with each new wave of displacement.</p>
+                <h2>The Battle for Digital Dominance</h2>
+                <p>
+                    The potential US ban on TikTok is much more than a matter of data privacy. It is part of a larger geopolitical struggle between the US and China, where influence over digital platforms has become a strategic tool in shaping global narratives. The Biden administration had made two national security arguments about TikTok. One was a fear that China could access users' information as potential blackmail material. Another was that the company could manipulate content in a way that benefits the Chinese government. President Biden thus signed a law last April that gave ByteDance 270 days to sell TikTok to an owner from the United States or one of its allies or face a ban.
+                </p>
 
-            <h3>The Human Cost of Invisible Displacement</h3>
+                <p>
+                    As US users begin to migrate to Chinese platforms due to the ban on TikTok, they are not just engaging in rare cultural exchange with Chinese social media users over the internet, but also entering an ecosystem that offers a distinct perspective on global trends and ideologies. This movement could have far-reaching implications for the balance of digital power.
+                </p>
 
-            <p>What makes these ghost camps particularly troubling is their invisibility to official humanitarian response systems. Because they exist outside formal structures and often in locations that are difficult to access or monitor, their residents frequently fall through the cracks of international aid distribution networks.</p>
+                <h2>Implications for US-China Relations</h2>
+                <p>
+                    The rising popularity of Xiaohongshu and other Chinese platforms is part of a broader strategy by China to expand its digital influence and reshape the global narrative. Though Xiaohongshu is scrambling to find ways to moderate English-language content according to Chinese censorship requirements and build English-Chinese translation tools, Chinese state media has overall cheered the trend, with state broadcaster CCTV saying that the TikTok users had found a "new home."
+                </p>
 
-            <p>Children in these settlements face particular hardships, with education becoming a distant memory as families focus on day-to-day survival. Health conditions deteriorate rapidly in the unsanitary conditions, while the psychological trauma of repeated displacement compounds the stress of living in constant fear of having to move again.</p>
+                <p>
+                    This shift could affect how countries view China's role in the digital economy, and the influence of Chinese tech companies could challenge the dominance of Western platforms like Facebook, Instagram, and Twitter, particularly in markets outside of the US and Europe. The US is evidently wary of China's growing influence and is increasingly focused on controlling Chinese media's reach as a critical aspect of the broader geopolitical battle for media dominance.
+                </p>
 
-            <h3>Humanitarian Access and Security Challenges</h3>
+                <h2>Conclusion</h2>
+                <p>
+                    As TikTok refugees flood to platforms like Xiaohongshu, they are not just finding new spaces for entertainment, but also contributing to a broader geopolitical shift in a way that aligns with the strategic interests of the US and China.
+                </p>
+            </div>
 
-            <p>Aid organizations struggle to provide assistance to ghost camp residents due to security concerns and the shifting nature of these settlements. The locations often exist in areas where humanitarian access is restricted or dangerous, and by the time aid workers can establish contact, the camps may have already dissolved and reformed elsewhere.</p>
+            <!-- Article Footer -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+                    <!-- Social Sharing -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-600 font-medium">Share this article:</span>
+                        <div class="flex space-x-3">
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                                <i class="fab fa-twitter text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors">
+                                <i class="fab fa-facebook text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors">
+                                <i class="fab fa-linkedin text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors">
+                                <i class="fab fa-whatsapp text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
 
-            <p>This dynamic creates a cycle of humanitarian inefficiency, where resources are allocated to address needs that may no longer exist in specific locations, while new crises emerge in areas that have not yet been assessed or reached by aid organizations.</p>
-
-            <h2>International Response and Legal Obligations</h2>
-
-            <p>The existence of ghost camps highlights significant gaps in international humanitarian law and protection mechanisms. While international law provides clear frameworks for protecting displaced populations, the fluid nature of these settlements makes it difficult to apply traditional protection measures effectively.</p>
-
-            <p>International organizations have called for innovative approaches to address this challenge, including mobile aid distribution systems and rapid response teams capable of providing assistance to temporary settlements. However, implementation remains constrained by security concerns and resource limitations.</p>
-
-            <h3>The Role of Technology and Innovation</h3>
-
-            <p>Some humanitarian organizations are experimenting with technology-based solutions to track and assist ghost camp populations. Satellite imagery, mobile communication networks, and digital cash transfer systems offer potential tools for reaching displaced populations that traditional aid delivery methods cannot effectively serve.</p>
-
-            <p>These technological innovations, while promising, face significant challenges in implementation, including concerns about privacy, security, and the digital divide that may exclude the most vulnerable populations from receiving assistance.</p>
-
-            <h3>Regional Implications and Cross-Border Dynamics</h3>
-
-            <p>The ghost camp phenomenon extends beyond immediate displacement to affect regional stability and international relations. Neighboring countries face pressure to accommodate populations that may attempt to cross borders, while international partners grapple with how to provide support without legitimizing or inadvertently encouraging further displacement.</p>
-
-            <p>This regional dimension complicates diplomatic efforts to address the underlying causes of displacement while highlighting the interconnected nature of humanitarian crises in the contemporary Middle East.</p>
-
-            <h2>Looking Forward: Sustainable Solutions</h2>
-
-            <p>Addressing the ghost camp crisis requires both immediate humanitarian action and longer-term political solutions. In the short term, the international community must develop more flexible and responsive aid delivery mechanisms capable of adapting to the fluid nature of displacement patterns.</p>
-
-            <p>However, sustainable solutions ultimately depend on addressing the root causes of displacement through political dialogue, conflict resolution, and efforts to rebuild the social and economic infrastructure necessary for stable communities. Without such comprehensive approaches, the cycle of displacement and temporary settlement is likely to continue indefinitely.</p>
-
-            <h3>The Path to Dignity and Stability</h3>
-
-            <p>The stories emerging from ghost camps are ultimately about human dignity and the universal desire for safety and stability. Each temporary settlement represents not just a humanitarian challenge but a collection of individual stories—families seeking to protect their children, elderly people trying to maintain their health and independence, and young adults attempting to build futures despite overwhelming uncertainty.</p>
-
-            <p>As the international community grapples with how to respond to this evolving crisis, the voices and experiences of ghost camp residents must remain at the center of policy discussions and humanitarian planning. Only by centering their needs and experiences can effective solutions be developed and implemented.</p>
-
-            <p>The ghost camps may be temporary in their physical existence, but their impact on the lives of displaced populations and the broader humanitarian landscape will likely persist long after the last tent is taken down and the last family finds permanent shelter.</p>
+                    <!-- Back to Articles -->
+                    <a href="journalism.html" class="inline-flex items-center space-x-2 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to All Articles</span>
+                    </a>
+                </div>
+            </div>
 
             <!-- Author Bio -->
-            <div class="author-bio-modern">
-                <div class="author-info-modern">
-                    <img src="assets/team/default-avatar.png" alt="Jackson Daly" class="author-avatar-modern">
-                    <div class="author-details-modern">
-                        <h5>Jackson Daly</h5>
-                        <p>Jackson specializes in Middle Eastern affairs and humanitarian crises, with extensive experience covering displacement and refugee issues. His reporting focuses on the human impact of conflict and the challenges facing humanitarian organizations in crisis zones.</p>
+            <div class="mt-12 bg-gray-50 rounded-xl p-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-user text-gray-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 text-lg">Angela Li</h3>
+                        <p class="text-gray-600 mb-2">Winter 2025 Journalism Intern</p>
+                        <p class="text-gray-700">
+                            Angela is a journalism intern at GVMUN, specializing in technology policy and US-China relations. 
+                            She focuses on analyzing the intersection of technology, geopolitics, and international law in the digital age.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -597,14 +618,14 @@
                 </article>
 
                 <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&h=250&fit=crop" alt="TikTok Ban" class="w-full h-48 object-cover">
+                    <img src="assets/articles/earthquake.png" alt="Myanmar Earthquake" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 mb-3">
-                            Technology
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800 mb-3">
+                            Southeast Asia
                         </div>
-                        <h3 class="font-semibold text-gray-900 mb-2">The TikTok Ban: National Security vs. Digital Rights</h3>
-                        <p class="text-gray-600 text-sm">Analyzing the implications of the TikTok ban on national security concerns...</p>
-                        <a href="tiktok-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                        <h3 class="font-semibold text-gray-900 mb-2">Earthquake in Myanmar: An Analysis of the Situation</h3>
+                        <p class="text-gray-600 text-sm">On March 28, 2025, a devastating 7.7 magnitude earthquake struck Myanmar...</p>
+                        <a href="myanmar-earthquake-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
                             <span>Read More</span>
                             <i class="fas fa-arrow-right text-xs"></i>
                         </a>

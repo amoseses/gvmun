@@ -12,55 +12,389 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
-    <!-- Custom styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Modern Article Styling -->
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        
-        /* Article-specific styles with enhanced headers */
-        .article-content h2 {
-            @apply text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 mt-12 mb-6 pt-8;
-            border-top: 3px solid #667eea;
-            position: relative;
-            font-family: 'Merriweather', serif;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-color: #667eea;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --border-light: #e2e8f0;
+            --bg-overlay: rgba(255, 255, 255, 0.95);
         }
-        
-        .article-content h2::before {
+
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: #fafbfc;
+            font-feature-settings: "kern" 1, "liga" 1;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .gradient-bg { background: var(--primary-gradient); }
+
+        /* Modern article header */
+        .article-header-modern {
+            position: relative;
+            background: linear-gradient(135deg, #000428 0%, #004e92 100%);
+            color: white;
+            overflow: hidden;
+        }
+
+        .article-header-modern::before {
             content: '';
             position: absolute;
-            top: -3px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .article-header-content {
+            position: relative;
+            z-index: 2;
+            padding: 6rem 0 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Typography system */
+        .article-title-modern {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-subtitle-modern {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.375rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .article-meta-modern {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 2rem;
+        }
+
+        .meta-item-modern {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-badge-modern {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Modern article content */
+        .article-container-modern {
+            max-width: 800px;
+            margin: -3rem auto 0;
+            position: relative;
+            z-index: 10;
+            background: white;
+            border-radius: 24px 24px 0 0;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+            min-height: 50vh;
+        }
+
+        .article-content-modern {
+            padding: 4rem 3rem 3rem;
+            font-family: 'Crimson Text', Georgia, serif;
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+        }
+
+        .article-content-modern .lead-paragraph {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-light);
+            font-style: italic;
+            position: relative;
+        }
+
+        .article-content-modern .lead-paragraph::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
             left: 0;
             width: 80px;
-            height: 3px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 2px;
+            background: var(--primary-gradient);
         }
-        
-        .article-content h3 {
-            @apply text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-8 mb-4;
-            border-left: 4px solid #667eea;
-            padding-left: 16px;
-            font-family: 'Merriweather', serif;
-            font-weight: 900;
-        }
-        
-        .article-content h4 {
-            @apply text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mt-6 mb-3;
-            font-family: 'Merriweather', serif;
+
+        /* Enhanced headings */
+        .article-content-modern h2 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 2.5rem;
             font-weight: 700;
+            line-height: 1.2;
+            margin: 3rem 0 1.5rem;
+            color: var(--text-primary);
+            position: relative;
+            padding-top: 2rem;
         }
-        
-        .article-content p {
-            @apply text-gray-700 leading-7 mb-4 text-lg;
-            font-weight: 400;
+
+        .article-content-modern h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
         }
-        
-        .article-content strong {
-            @apply font-semibold text-gray-900;
+
+        .article-content-modern h3 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 1.875rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin: 2.5rem 0 1rem;
+            color: var(--text-primary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .article-content-modern h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 4px;
+            height: 1.5rem;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+
+        .article-content-modern h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin: 2rem 0 1rem;
+            color: var(--accent-color);
+        }
+
+        .article-content-modern p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .article-content-modern strong {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Quote styling */
+        .article-content-modern blockquote {
+            font-size: 1.375rem;
+            font-style: italic;
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 12px 12px 0;
+            position: relative;
+        }
+
+        .article-content-modern blockquote::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--accent-color);
+            opacity: 0.3;
+            position: absolute;
+            top: 0.5rem;
+            left: 1rem;
+            font-family: Georgia, serif;
+        }
+
+        /* Image styling */
+        .article-image-modern {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+
+        .image-caption-modern {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-top: 0.75rem;
+            text-align: center;
+        }
+
+        /* Author bio styling */
+        .author-bio-modern {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border: 1px solid var(--border-light);
+        }
+
+        .author-info-modern {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .author-avatar-modern {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .author-details-modern h5 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .author-details-modern p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Footer styling */
+        .article-footer-modern {
+            background: var(--text-primary);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .article-header-content {
+                padding: 4rem 1rem 3rem;
+            }
+
+            .article-title-modern {
+                font-size: 2.5rem;
+            }
+
+            .article-subtitle-modern {
+                font-size: 1.25rem;
+            }
+
+            .article-content-modern {
+                padding: 3rem 1.5rem 2rem;
+                font-size: 1.125rem;
+            }
+
+            .article-content-modern h2 {
+                font-size: 2rem;
+            }
+
+            .article-content-modern h3 {
+                font-size: 1.5rem;
+            }
+
+            .author-info-modern {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Smooth scrolling and animations */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Article navigation */
+        .article-nav-modern {
+            position: sticky;
+            top: 80px;
+            background: var(--bg-overlay);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
+            z-index: 40;
+        }
+
+        .breadcrumb-modern {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .breadcrumb-modern a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb-modern a:hover {
+            color: var(--text-primary);
         }
     </style>
     
@@ -78,9 +412,9 @@
         }
     </script>
 </head>
-<body class="bg-gray-50">
+<body>
     <!-- Navigation Bar -->
-    <nav class="navbar fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-3">
@@ -92,203 +426,135 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
                     <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
-                    <div class="relative">
-                        <a href="#" class="dropdown-trigger text-gray-600 hover:text-gvmun-blue transition-colors flex items-center">
-                            Get Involved
-                            <svg class="dropdown-arrow w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </a>
-                        <div class="dropdown-menu hidden">
-                            <a href="apply-fellowship.html" class="dropdown-item">Fellowship</a>
-                            <a href="apply-internship.html" class="dropdown-item">Internship</a>
-                            <a href="apply-secretariat.html" class="dropdown-item">Secretariat</a>
-                        </div>
-                    </div>
-                    <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
+                    <a href="get-involved.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Get Involved</a>
+                    <a href="publications.html" class="text-gvmun-blue font-semibold">Publications</a>
                 </div>
-                <button class="md:hidden mobile-menu-button p-2">
+                <button class="md:hidden p-2">
                     <i class="fas fa-bars text-gray-600"></i>
                 </button>
-            </div>
-        </div>
-        <!-- Mobile menu -->
-        <div class="mobile-menu hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">About Us</a>
-                <a href="events.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Events</a>
-                <div class="mobile-dropdown">
-                    <a href="#" class="mobile-dropdown-trigger block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50 flex justify-between items-center">
-                        Get Involved
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </a>
-                    <div class="mobile-dropdown-menu hidden pl-4">
-                        <a href="apply-fellowship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Fellowship</a>
-                        <a href="apply-internship.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Internship</a>
-                        <a href="apply-secretariat.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Secretariat</a>
-                    </div>
-                </div>
-                <a href="publications.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gvmun-blue hover:bg-gray-50">Publications</a>
             </div>
         </div>
     </nav>
 
     <!-- Article Header -->
-    <div class="pt-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <!-- Breadcrumb -->
-            <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
-                <a href="index.html" class="hover:text-gvmun-blue transition-colors">Home</a>
-                <i class="fas fa-chevron-right text-xs"></i>
-                <a href="publications.html" class="hover:text-gvmun-blue transition-colors">Publications</a>
-                <i class="fas fa-chevron-right text-xs"></i>
-                <a href="journalism.html" class="hover:text-gvmun-blue transition-colors">Journalism</a>
-                <i class="fas fa-chevron-right text-xs"></i>
-                <span class="text-gray-900">Gaza Crisis</span>
-            </nav>
-
-            <!-- Article Metadata -->
-            <div class="mb-8">
-                <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 mb-4">
+    <div class="article-header-modern fade-in">
+        <div class="article-header-content">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Article Metadata -->
+                <div class="category-badge-modern mb-6">
+                    <i class="fas fa-heart-broken"></i>
                     Middle East
                 </div>
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                
+                <h1 class="article-title-modern">
                     Starvation Surges in Gaza as Aid Fails to Meet Needs
                 </h1>
                 
+                <p class="article-subtitle-modern">
+                    Gaza faces a worst-case famine scenario as food and humanitarian supplies barely trickle into the enclave, leaving thousands of children with acute malnutrition
+                </p>
+                
                 <!-- Author and Date Info -->
-                <div class="flex items-center space-x-6 text-gray-600 mb-6">
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
-                            <i class="fas fa-user text-gray-500"></i>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-gray-900">Alisa Pomelnikova</p>
-                            <p class="text-sm text-gray-500">Journalism Intern</p>
-                        </div>
+                <div class="article-meta-modern">
+                    <div class="meta-item-modern">
+                        <i class="fas fa-user"></i>
+                        <span>By Alisa Pomelnikova</span>
                     </div>
-                    <div class="flex items-center space-x-4 text-sm">
-                        <div class="flex items-center space-x-1">
-                            <i class="fas fa-calendar text-gray-400"></i>
-                            <span>August 15, 2025</span>
-                        </div>
-                        <div class="flex items-center space-x-1">
-                            <i class="fas fa-clock text-gray-400"></i>
-                            <span>9 min read</span>
-                        </div>
+                    <div class="meta-item-modern">
+                        <i class="fas fa-calendar"></i>
+                        <span>August 15, 2025</span>
+                    </div>
+                    <div class="meta-item-modern">
+                        <i class="fas fa-clock"></i>
+                        <span>9 min read</span>
                     </div>
                 </div>
-            </div>
-
-            <!-- Featured Image -->
-            <div class="mb-12">
-                <img src="assets/articles/gaza.png" alt="Gaza humanitarian crisis" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
-                <p class="text-sm text-gray-500 mt-2 italic">Gaza faces severe food shortages and humanitarian crisis as aid delivery remains inadequate. (File photo)</p>
             </div>
         </div>
     </div>
 
+    <!-- Article Navigation -->
+    <div class="article-nav-modern">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="breadcrumb-modern flex items-center space-x-2">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-gray-900">Gaza Crisis</span>
+            </nav>
+        </div>
+    </div>
+
     <!-- Article Content -->
-    <div class="bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-            <div class="prose prose-lg max-w-none article-content">
-                <p class="text-xl text-gray-700 leading-8 font-medium mb-8">
-                    On July 29, an international hunger organization issued its starkest warning yet: Gaza is on the brink of a "worst-case famine scenario", battered by months of Israeli military assault and an unrelenting blockade.
-                </p>
+    <div class="article-container-modern fade-in">
+        <div class="article-content-modern">
+            <!-- Featured Image -->
+            <img src="assets/articles/gaza.png" alt="Gaza humanitarian crisis" class="article-image-modern">
+            <p class="image-caption-modern">Gaza faces severe food shortages and humanitarian crisis as aid delivery remains inadequate. (File photo)</p>
 
-                <p>
-                    For nearly a year, food and humanitarian supplies have barely trickled into the enclave. The crisis reached a critical point in March, when Israel imposed a complete blockade in the midst of a truce with Hamas, effectively cutting off the last lifelines of aid to the Gaza Strip. According to the Integrated Food Security Phase Classification (IPC), the number of families facing extreme hunger doubled between May and July. Many areas have now crossed the critical threshold that signals famine.
-                </p>
+            <p class="lead-paragraph">
+                On July 29, an international hunger organization issued its starkest warning yet: Gaza is on the brink of a "worst-case famine scenario", battered by months of Israeli military assault and an unrelenting blockade.
+            </p>
 
-                <p>
-                    By mid-July, Gaza City was registering malnutrition rates that met formal famine criteria. In just three months (April - mid-July), more than 20,000 children were hospitalized with acute malnutrition; over 3,000 were in life-threatening condition. Doctors are warning of a sharp rise in deaths among children under five. Projections show more than 71,000 children and 17,000 mothers will soon require urgent, specialized treatment for acute malnutrition.
-                </p>
+            <h2>The Unfolding Crisis</h2>
+            <p>
+                For nearly a year, food and humanitarian supplies have barely trickled into the enclave. The crisis reached a critical point in March, when Israel imposed a complete blockade in the midst of a truce with Hamas, effectively cutting off the last lifelines of aid to the Gaza Strip. According to the Integrated Food Security Phase Classification (IPC), the number of families facing extreme hunger doubled between May and July. Many areas have now crossed the critical threshold that signals famine.
+            </p>
 
-                <p>
-                    Under mounting international pressure, the Israeli army has announced occasional "tactical pauses" to allow in aid convoys. But relief agencies warn that this volume is catastrophically insufficient to stop the looming famine. After partially easing the blockade in May, Israel allowed only minimal amounts of humanitarian goods to be delivered for several weeks — a lifeline so thin that it failed to reach many in need. Moreover, according to humanitarian organizations, new import regulations have only worsened the situation, causing logistical disruptions and delays in the delivery of food and medicine.
-                </p>
+            <p>
+                By mid-July, Gaza City was registering malnutrition rates that met formal famine criteria. In just three months (April - mid-July), more than 20,000 children were hospitalized with acute malnutrition; over 3,000 were in life-threatening condition. Doctors are warning of a sharp rise in deaths among children under five. Projections show more than 71,000 children and 17,000 mothers will soon require urgent, specialized treatment for acute malnutrition.
+            </p>
 
-                <p>
-                    "With such limited aid, the humanitarian situation is spiraling," said Dr. Amjad Alshawa, head of the Palestinian NGO Network.
-                </p>
+            <h2>Insufficient Aid and Failed Promises</h2>
+            <p>
+                Under mounting international pressure, the Israeli army has announced occasional "tactical pauses" to allow in aid convoys. But relief agencies warn that this volume is catastrophically insufficient to stop the looming famine. After partially easing the blockade in May, Israel allowed only minimal amounts of humanitarian goods to be delivered for several weeks — a lifeline so thin that it failed to reach many in need. Moreover, according to humanitarian organizations, new import regulations have only worsened the situation, causing logistical disruptions and delays in the delivery of food and medicine.
+            </p>
 
-                <h2>Israel's Defense and Disputed Claims</h2>
-                <p>
-                    Israeli officials maintain that restrictions and a controversial new distribution system are necessary to prevent Hamas from seizing aid. Yet a classified U.S. government analysis submitted to the State Department reportedly found no evidence of systematic aid theft by Hamas. The Israel Defense Forces dismissed the report as "biased."
-                </p>
+            <blockquote>
+                "With such limited aid, the humanitarian situation is spiraling," said Dr. Amjad Alshawa, head of the Palestinian NGO Network.
+            </blockquote>
 
-                <p>
-                    At an August 10 press conference, Prime Minister Benjamin Netanyahu again rejected allegations of famine as "exaggerated." While acknowledging "deprivation" in the enclave, he insisted: "If Israel had a policy of starvation, no one in Gaza would have survived two years of war."
-                </p>
+            <h2>Israel's Defense and Disputed Claims</h2>
+            <p>
+                Israeli officials maintain that restrictions and a controversial new distribution system are necessary to prevent Hamas from seizing aid. Yet a classified U.S. government analysis submitted to the State Department reportedly found no evidence of systematic aid theft by Hamas. The Israel Defense Forces dismissed the report as "biased."
+            </p>
 
-                <p>
-                    Meanwhile, the United Nations and other international organizations disagree, warning that the current level of aid (limited truck deliveries and sporadic airdrops) is completely insufficient for Gaza's two million residents.
-                </p>
+            <p>
+                At an August 10 press conference, Prime Minister Benjamin Netanyahu again rejected allegations of famine as "exaggerated." While acknowledging "deprivation" in the enclave, he insisted: "If Israel had a policy of starvation, no one in Gaza would have survived two years of war."
+            </p>
 
-                <p>
-                    Airdrops, in particular, have drawn public anger for their inefficiency and danger. In one tragic incident, 14-year-old Muhannad Eid was killed when a humanitarian package fell on him. "This is humiliation from the air, not help," his brother, Mohammed, told reporters. "We've warned again and again about these unsafe, inhumane methods and repeatedly called for the safe and adequate delivery of aid through land crossings. We need protection."
-                </p>
+            <p>
+                Meanwhile, the United Nations and other international organizations disagree, warning that the current level of aid (limited truck deliveries and sporadic airdrops) is completely insufficient for Gaza's two million residents.
+            </p>
 
-                <h2>Why More Food Alone Won't End the Crisis</h2>
-                <p>
-                    Experts caution that with famine already gripping parts of Gaza, simply increasing food deliveries will not be enough. Over half the population is now in the "emergency" or "catastrophic" phase of hunger, where the body's systems begin to collapse. The medical complexity of treating such phases of acute malnutrition makes the situation especially dangerous.
-                </p>
+            <h2>Dangerous and Inadequate Relief Methods</h2>
+            <p>
+                Airdrops, in particular, have drawn public anger for their inefficiency and danger. In one tragic incident, 14-year-old Muhannad Eid was killed when a humanitarian package fell on him. "This is humiliation from the air, not help," his brother, Mohammed, told reporters. "We've warned again and again about these unsafe, inhumane methods and repeatedly called for the safe and adequate delivery of aid through land crossings. We need protection."
+            </p>
 
-                <p>
-                    "In the final stages of starvation, even water can trigger organ failure, and improper or too-rapid feeding can cause refeeding syndrome, which is deadly due to the sudden imbalance of electrolytes," explained Dr. Patel, a specialist in emergency nutrition. Dr. Noor Alamassi of Project HOPE added: "A bag of flour will not save anyone if it does not contain the essential nutrients people need." Recovery requires weeks or even months of careful medical supervision. Children need fortified milk, ready-to-use therapeutic foods, and constant monitoring of sodium and potassium levels in the blood.
-                </p>
+            <h2>Why More Food Alone Won't End the Crisis</h2>
+            <p>
+                Experts caution that with famine already gripping parts of Gaza, simply increasing food deliveries will not be enough. Over half the population is now in the "emergency" or "catastrophic" phase of hunger, where the body's systems begin to collapse. The medical complexity of treating such phases of acute malnutrition makes the situation especially dangerous.
+            </p>
 
-                <p>
-                    But in reality, Gaza's healthcare system is already crippled by shortages of doctors, medicine, and equipment to provide such care. Aid workers warn that even if food supplies resume, without medical infrastructure, saving thousands of lives will be extremely difficult.
-                </p>
-            </div>
+            <p>
+                "In the final stages of starvation, even water can trigger organ failure, and improper or too-rapid feeding can cause refeeding syndrome, which is deadly due to the sudden imbalance of electrolytes," explained Dr. Patel, a specialist in emergency nutrition. Dr. Noor Alamassi of Project HOPE added: "A bag of flour will not save anyone if it does not contain the essential nutrients people need." Recovery requires weeks or even months of careful medical supervision. Children need fortified milk, ready-to-use therapeutic foods, and constant monitoring of sodium and potassium levels in the blood.
+            </p>
 
-            <!-- Article Footer -->
-            <div class="mt-12 pt-8 border-t border-gray-200">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
-                    <!-- Social Sharing -->
-                    <div class="flex items-center space-x-4">
-                        <span class="text-gray-600 font-medium">Share this article:</span>
-                        <div class="flex space-x-3">
-                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
-                                <i class="fab fa-twitter text-sm"></i>
-                            </button>
-                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors">
-                                <i class="fab fa-facebook text-sm"></i>
-                            </button>
-                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors">
-                                <i class="fab fa-linkedin text-sm"></i>
-                            </button>
-                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors">
-                                <i class="fab fa-whatsapp text-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Back to Articles -->
-                    <a href="journalism.html" class="inline-flex items-center space-x-2 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
-                        <i class="fas fa-arrow-left"></i>
-                        <span>Back to All Articles</span>
-                    </a>
-                </div>
-            </div>
+            <p>
+                But in reality, Gaza's healthcare system is already crippled by shortages of doctors, medicine, and equipment to provide such care. Aid workers warn that even if food supplies resume, without medical infrastructure, saving thousands of lives will be extremely difficult.
+            </p>
 
             <!-- Author Bio -->
-            <div class="mt-12 bg-gray-50 rounded-xl p-6">
-                <div class="flex items-start space-x-4">
-                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                        <i class="fas fa-user text-gray-500 text-xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-gray-900 text-lg">Alisa Pomelnikova</h3>
-                        <p class="text-gray-600 mb-2">Journalism Intern</p>
-                        <p class="text-gray-700">
-                            Alisa is a journalism intern at GVMUN with a focus on humanitarian crises and international 
-                            relations in conflict zones. She specializes in analyzing the impact of political decisions
-                            on vulnerable populations and documenting humanitarian challenges.
-                        </p>
+            <div class="author-bio-modern">
+                <div class="author-info-modern">
+                    <img src="assets/team/default-avatar.png" alt="Alisa Pomelnikova" class="author-avatar-modern">
+                    <div class="author-details-modern">
+                        <h5>Alisa Pomelnikova</h5>
+                        <p>Alisa is a journalism intern at GVMUN with a focus on humanitarian crises and international relations in conflict zones. She specializes in analyzing the impact of political decisions on vulnerable populations and documenting humanitarian challenges.</p>
                     </div>
                 </div>
             </div>
@@ -364,11 +630,7 @@
                     <div class="space-y-2">
                         <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
                         <a href="events.html" class="block text-gray-400 hover:text-white transition-colors">Events</a>
-                        <div class="space-y-1 pl-4 mt-1 border-l border-gray-700">
-                            <a href="apply-fellowship.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Fellowship</a>
-                            <a href="apply-internship.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Internship</a>
-                            <a href="apply-secretariat.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Secretariat</a>
-                        </div>
+                        <a href="get-involved.html" class="block text-gray-400 hover:text-white transition-colors">Get Involved</a>
                         <a href="publications.html" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
                     </div>
                 </div>
@@ -398,34 +660,30 @@
     <script src="navigation.js"></script>
     <script>
         // Mobile menu toggle
-        document.querySelector('.mobile-menu-button')?.addEventListener('click', function() {
-            document.querySelector('.mobile-menu').classList.toggle('hidden');
-        });
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
         
-        // Mobile dropdown toggle
-        document.querySelector('.mobile-dropdown-trigger')?.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector('.mobile-dropdown-menu').classList.toggle('hidden');
-        });
-        
-        // Desktop dropdown functionality
-        const dropdownTrigger = document.querySelector('.dropdown-trigger');
-        const dropdownMenu = document.querySelector('.dropdown-menu');
-        
-        if (dropdownTrigger && dropdownMenu) {
-            // Toggle dropdown visibility on click
-            dropdownTrigger.addEventListener('click', function(e) {
-                e.preventDefault();
-                dropdownMenu.classList.toggle('hidden');
-            });
-            
-            // Hide dropdown when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!dropdownTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                    dropdownMenu.classList.add('hidden');
-                }
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
             });
         }
+        
+        // Smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+        
+        // Add fade-in animation to elements
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
+
+        document.querySelectorAll('h2, h3, p, img').forEach((el) => {
+            observer.observe(el);
+        });
     </script>
 </body>
 </html>

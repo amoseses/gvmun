@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Years On: How the Coup Has Shaped Myanmar - GVMUN</title
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom styling -->
+    <style>
+        /* Modern article header */
+        .article-header-modern {
+            position: relative;
+            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+            overflow: hidden;
+        }
+
+        .article-header-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .article-header-content {
+            position: relative;
+            z-index: 2;
+            padding: 6rem 0 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Typography system */
+        .article-title-modern {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .article-subtitle-modern {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.375rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .article-meta-modern {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 2rem;
+        }
+
+        .meta-item-modern {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-badge-modern {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Modern article content */
+        .article-container-modern {
+            max-width: 4xl;
+            margin: 0 auto;
+            padding: 4rem 1rem 8rem;
+            background: white;
+        }
+
+        .article-content-modern {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #2d3748;
+        }
+
+        .article-content-modern .lead-paragraph {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #2d3748;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            position: relative;
+            font-family: 'Crimson Text', Georgia, serif;
+        }
+
+        .article-content-modern .lead-paragraph::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        /* Enhanced headings */
+        .article-content-modern h2 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin: 3rem 0 1.5rem;
+            line-height: 1.2;
+            position: relative;
+            padding-top: 2rem;
+        }
+
+        .article-content-modern h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .article-content-modern h3 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 2.5rem 0 1rem;
+            line-height: 1.3;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .article-content-modern h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+
+        .article-content-modern h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 2rem 0 1rem;
+            line-height: 1.4;
+        }
+
+        .article-content-modern p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .article-content-modern strong {
+            font-weight: 600;
+            color: #1a202c;
+        }
+
+        .bibliography {
+            background: #f8fafc;
+            border-left: 4px solid #667eea;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 32px;
+        }
+
+        .bibliography h2 {
+            border-top: none !important;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+
+        .bibliography ol {
+            padding-left: 20px;
+        }
+
+        .bibliography li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            color: #374151;
+            font-size: 16px;
+        }
+
+        .bibliography a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .bibliography a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gvmun-blue': '#667eea',
+                        'gvmun-purple': '#764ba2',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold gradient-bg bg-clip-text text-transparent">GVMUN</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
+                    <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
+                    <a href="get-involved.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Get Involved</a>
+                    <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
+                </div>
+                <button class="md:hidden p-2">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="pt-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                <a href="index.html" class="hover:text-gvmun-blue transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html" class="hover:text-gvmun-blue transition-colors">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html" class="hover:text-gvmun-blue transition-colors">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-gray-900">Four Years On: How the Coup Has Shaped Myanmar</span>
+            </nav>
+
+            <!-- Article Metadata -->
+            <div class="mb-8">
+                <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800 mb-4">
+                    Southeast Asia
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                    Four Years On: How the Coup Has Shaped Myanmar
+                </h1>
+                <h2 class="text-xl md:text-2xl text-gray-600 mb-6">
+                    Recent Developments and Their Impact
+                </h2>
+                
+                <!-- Author and Date Info -->
+                <div class="flex items-center space-x-6 text-gray-600 mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-gray-500"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Lisha Pitso</p>
+                            <p class="text-sm text-gray-500">Winter 2025 Journalism Intern</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 text-sm">
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-calendar text-gray-400"></i>
+                            <span>February 1, 2025</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <i class="fas fa-clock text-gray-400"></i>
+                            <span>10 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="mb-12">
+                <img src="assets/articles/coup.png" alt="Myanmar military coup aftermath" class="w-full h-64 md:h-96 object-cover rounded-xl shadow-lg">
+                <p class="text-sm text-gray-500 mt-2 italic">Myanmar four years after the military coup of February 1, 2021. (File photo)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+            <div class="prose prose-lg max-w-none article-content">
+                <p class="text-xl text-gray-700 leading-8 font-medium mb-8">
+                    Four years after the military took control of Myanmar on February 1, 2021, the nation is still enmeshed in a severe humanitarian catastrophe, a collapsing economy, and widespread violence. Aung San Suu Kyi's democratically elected government was overthrown in a coup, sparking a protracted civil conflict that would have a significant impact on the nation's future.
+                </p>
+
+                <h2>Intensification of Military Hostilities</h2>
+                <p>
+                    After the coup, countrywide protests erupted demanding the return of civilian rule. The junta's brutal crackdown on these protests led to the emergence of armed resistance factions, in particular the People's Defence Force (PDF), formed by the National Unity Government (NUG), a shadow government comprised of ousted legislators. These factions have joined forces with established ethnic armed groups, escalating the conflict.
+                </p>
+                <p>
+                    Recent reports show that the junta governs merely 21% of Myanmar's territory, struggling against PDF units and ethnic armed organizations. The armed forces have endured major losses, encompassing crucial trade routes and military installations. Internal conflicts within the military have emerged as well, with demands for the ousting of its leader, Min Aung Hlaing.
+                </p>
+
+                <h2>Humanitarian and Financial Crisis</h2>
+                <p>
+                    The ongoing violence has led to a serious humanitarian crisis. Over 4 million people have been displaced, and half of the population is now impoverished. Access to essential utilities has deteriorated; less than 50% of people can now access power. The United Nations has warned about an oncoming possibility of catastrophic hunger in Rakhine State, mainly hurting the Rohingya Muslim community.
+                </p>
+                <p>
+                    Myanmar's economy is in ruins. Widespread inflation has resulted from the kyat's sharp decline and the country's GDP shrinking significantly. Many young people have fled the country or joined rebel groups as a result of the military's implementation of mandatory conscription, which has put more strain on the labor market.
+                </p>
+                <p>
+                    Crucial infrastructure, such as energy facilities, has come under the control of resistance groups, intensifying the junta's difficulties.
+                </p>
+
+                <h2>Global and Domestic Forces</h2>
+                <p>
+                    The junta is facing increased isolation on a global scale. The International Criminal Court has issued an arrest warrant for Min Aung Hlaing for crimes against humanity connected to the abuse of the Rohingya. China has been crucial in the area; while Beijing first backed the junta, it has since pushed for elections, which are generally seen as a front.
+                </p>
+                <p>
+                    In Myanmar, the military persists in using savage methods, such as sexual violence and mass executions, to uphold authority, especially in large urban areas. In spite of these efforts, resistance groups have achieved notable successes, seizing towns and key locations. The civil war has led to more than 6,000 civilian fatalities and the uprooting of close to 3.5 million individuals.
+                </p>
+
+                <h2>Outlook for the Future</h2>
+                <p>
+                    With the ongoing conflict, the potential for the junta's downfall is being thought about more frequently. Nonetheless, even if the military government collapses, difficulties will persist. The NUG and supporting resistance groups must manage the challenges of unifying various ethnic factions and creating a stable, democratic governance system. The role of the international community will be vital in aiding a shift towards a federal democratic system that meets the hopes of Myanmar's varied population.
+                </p>
+                <p>
+                    In summary, four years following the coup, Myanmar finds itself at a pivotal point. The remarkable resilience and defiance of its citizens in the face of military oppression have been significant. However, the journey toward peace and democracy is still filled with obstacles that will need ongoing internal determination and global assistance to address.
+                </p>
+
+                <div class="bibliography">
+                    <h2>Bibliography</h2>
+                    <ol>
+                        <li>Guardian Editorial. (2025, February 4). The Guardian view on Myanmar, four years on: The army unleashed terror, but the people are defiant. <em>The Guardian</em>. <a href="https://www.theguardian.com/commentisfree/2025/feb/04/the-guardian-view-on-myanmar-four-years-on-the-army-unleashed-terror-but-the-people-are-defiant" target="_blank">https://www.theguardian.com/commentisfree/2025/feb/04/...</a></li>
+                        
+                        <li>Le Monde. (2024, September 18). En Birmanie, la junte militaire en pleine déroute économique. <em>Le Monde</em>. <a href="https://www.lemonde.fr/economie/article/2024/09/18/en-birmanie-la-junte-militaire-en-pleine-deroute-economique_6323143_3234.html" target="_blank">https://www.lemonde.fr/economie/article/2024/09/18/...</a></li>
+                        
+                        <li>Reuters. (2024, November 27). Myanmar's junta chief Min Aung Hlaing faces growing challenges. <em>Reuters</em>. <a href="https://www.reuters.com/world/asia-pacific/myanmars-junta-chief-min-aung-hlaing-2024-11-27" target="_blank">https://www.reuters.com/world/asia-pacific/myanmars-junta-chief-min-aung-hlaing-2024-11-27</a></li>
+                        
+                        <li>The Times. (2024, December 15). "They plucked out his eye with a motorbike key. I wanted to kill them." <em>The Times</em>. <a href="https://www.thetimes.co.uk/article/they-plucked-out-his-eye-with-a-motorbike-key-i-wanted-to-kill-them-tpbkq5cvf" target="_blank">https://www.thetimes.co.uk/article/they-plucked-out-his-eye-with-a-motorbike-key-i-wanted-to-kill-them-tpbkq5cvf</a></li>
+                        
+                        <li>Time. (2025, February 1). Four years after Myanmar's coup, is the junta losing control? <em>Time</em>. <a href="https://time.com/7160736/myanmar-coup-civil-war-conflict-timeline-endgame-explainer" target="_blank">https://time.com/7160736/myanmar-coup-civil-war-conflict-timeline-endgame-explainer</a></li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Article Footer -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+                    <!-- Social Sharing -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-600 font-medium">Share this article:</span>
+                        <div class="flex space-x-3">
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                                <i class="fab fa-twitter text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors">
+                                <i class="fab fa-facebook text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors">
+                                <i class="fab fa-linkedin text-sm"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors">
+                                <i class="fab fa-whatsapp text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Back to Articles -->
+                    <a href="journalism.html" class="inline-flex items-center space-x-2 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to All Articles</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="mt-12 bg-gray-50 rounded-xl p-6">
+                <div class="flex items-start space-x-4">
+                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-user text-gray-500 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 text-lg">Lisha Pitso</h3>
+                        <p class="text-gray-600 mb-2">Winter 2025 Journalism Intern</p>
+                        <p class="text-gray-700">
+                            Lisha is a journalism intern at GVMUN, specializing in Southeast Asian affairs and conflict analysis. 
+                            She focuses on covering political developments and humanitarian crises in the region, bringing attention to underreported stories.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/trump.png" alt="Trump Article" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 mb-3">
+                            US Politics
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Trump 2.0: What It Means For The World</h3>
+                        <p class="text-gray-600 text-sm">Examining the potential impact of Donald Trump's return to the presidency...</p>
+                        <a href="trump-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/nato.png" alt="NATO Russia" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 mb-3">
+                            Security
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Militarization of NATO-Russian Border</h3>
+                        <p class="text-gray-600 text-sm">Analyzing the deteriorating security relationship between NATO and Russia...</p>
+                        <a href="nato-russia-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/palestine.png" alt="Palestine Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 mb-3">
+                            Middle East
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">As Conflict Escalates, Displaced Families Seek Shelter in 'Ghost Camps'</h3>
+                        <p class="text-gray-600 text-sm">Thousands of Palestinians are forced into makeshift shelters...</p>
+                        <a href="palestine-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold">GVMUN</span>
+                    </div>
+                    <p class="text-gray-400">Global Virtual Model United Nations - Improving the Model UN space while encouraging youth activism and political education.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+                        <a href="events.html" class="block text-gray-400 hover:text-white transition-colors">Events</a>
+                        <a href="get-involved.html" class="block text-gray-400 hover:text-white transition-colors">Get Involved</a>
+                        <a href="publications.html" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gvmun_official/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@GVModelUN" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/official-gvmun/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@gvmunofficial" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mt-4">Contact: <a href="mailto:gvmunsecretariat@gmail.com" class="text-gvmun-blue hover:underline">gvmunsecretariat@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

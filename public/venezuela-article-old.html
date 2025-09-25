@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venezuela's Crisis Deepens as Opposition Leader Faces Exile - GVMUN</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Modern Article Styling -->
+    <style>
+        /* Import premium fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+        :root {
+            --primary-blue: #667eea;
+            --primary-purple: #764ba2;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --bg-light: #f7fafc;
+            --border-light: #e2e8f0;
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .gradient-bg { background: var(--primary-gradient); }
+
+        /* Modern article header */
+        .article-header-modern {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            position: relative;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .article-header-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(102,126,234,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>') center/cover;
+            opacity: 0.3;
+        }
+
+        .article-header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Typography system */
+        .article-title-modern {
+            font-family: 'Crimson Text', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .article-subtitle-modern {
+            font-size: 1.375rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .article-meta-modern {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .meta-item-modern {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .category-badge-modern {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Modern article content */
+        .article-container-modern {
+            max-width: 4xl;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .article-content-modern {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-content-modern .lead-paragraph {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .article-content-modern h2 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 2.5rem 0 1.5rem 0;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border-light);
+            position: relative;
+        }
+
+        .article-content-modern h2::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--primary-gradient);
+        }
+
+        .article-content-modern h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2rem 0 1rem 0;
+        }
+
+        .article-content-modern p {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .article-content-modern strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .article-content-modern blockquote {
+            border-left: 4px solid var(--primary-blue);
+            background: var(--bg-light);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+
+        /* Navigation enhancements */
+        .article-nav-modern {
+            background: white;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 64px;
+            z-index: 10;
+        }
+
+        .article-nav-modern .container {
+            max-width: 4xl;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .article-nav-modern nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .article-nav-modern a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .article-nav-modern a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animation */
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .article-content-modern {
+                padding: 2rem 1.5rem;
+            }
+
+            .article-meta-modern {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .article-title-modern {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gvmun-blue': '#667eea',
+                        'gvmun-purple': '#764ba2',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="navbar fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold gradient-bg bg-clip-text text-transparent">GVMUN</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About Us</a>
+                    <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
+                    <a href="get-involved.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Get Involved</a>
+                    <a href="publications.html" class="text-gvmun-blue font-semibold">Publications</a>
+                </div>
+                <button class="md:hidden p-2">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-gvmun-blue">About Us</a>
+                <a href="events.html" class="block px-3 py-2 text-gray-700 hover:text-gvmun-blue">Events</a>
+                <a href="get-involved.html" class="block px-3 py-2 text-gray-700 hover:text-gvmun-blue">Get Involved</a>
+                <a href="publications.html" class="block px-3 py-2 text-gvmun-blue font-semibold">Publications</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="article-header-modern fade-in">
+        <div class="article-header-content">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Article Metadata -->
+                <div class="category-badge-modern mb-6">
+                    <i class="fas fa-flag"></i>
+                    Caribbean
+                </div>
+                
+                <h1 class="article-title-modern">
+                    Venezuela's Crisis Deepens as Opposition Leader Faces Exile
+                </h1>
+                
+                <p class="article-subtitle-modern">
+                    Political turmoil escalates as international pressure mounts on the Maduro government amid economic collapse and humanitarian concerns
+                </p>
+                
+                <!-- Author and Date Info -->
+                <div class="article-meta-modern">
+                    <div class="meta-item-modern">
+                        <i class="fas fa-user"></i>
+                        <span>By <a href="author-tanzeel-shahid.html" class="text-white hover:text-blue-200 transition-colors">Tanzeel Shahid</a></span>
+                    </div>
+                    <div class="meta-item-modern">
+                        <i class="fas fa-calendar"></i>
+                        <span>December 10, 2024</span>
+                    </div>
+                    <div class="meta-item-modern">
+                        <i class="fas fa-clock"></i>
+                        <span>6 min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Navigation -->
+    <div class="article-nav-modern">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="breadcrumb-modern flex items-center space-x-2">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-gray-900">Venezuela's Crisis Deepens</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="article-container-modern fade-in">
+        <div class="article-content-modern">
+            <!-- Featured Image -->
+            <img src="assets/articles/venezuela.png" alt="Venezuelan political crisis" class="article-image-modern">
+            <p class="image-caption-modern">Supporters gather in Caracas as political tensions escalate between government and opposition forces. (Reuters)</p>
+
+            <p class="lead-paragraph">
+                Venezuela's political landscape has reached a critical juncture as opposition leader María Corina Machado faces mounting pressure from the Maduro government, highlighting the deepening crisis that has gripped the nation for over a decade.
+            </p>
+
+            <h2>Opposition Under Siege</h2>
+            
+            <p>The recent developments in Venezuela underscore the increasingly authoritarian tendencies of the Maduro government as it seeks to eliminate political opposition ahead of the upcoming electoral period. Machado, who has emerged as a prominent voice against the current administration, represents the latest target in a systematic campaign to silence dissent.</p>
+
+            <p>The opposition leader's situation reflects broader patterns of political persecution that have characterized Venezuela under Maduro's rule. From arbitrary detentions to judicial harassment, the government has employed various tactics to marginalize those who challenge its authority, creating an environment where democratic participation becomes increasingly difficult.</p>
+
+            <h3>International Response and Diplomatic Pressure</h3>
+
+            <p>The international community has responded with growing concern to the deteriorating situation in Venezuela. Regional organizations, including the Organization of American States (OAS), have condemned the government's actions against opposition figures, while individual countries have imposed additional sanctions targeting key officials within the Maduro administration.</p>
+
+            <p>This international pressure, however, has yet to produce meaningful change within Venezuela. The government has consistently dismissed external criticism as foreign interference, instead doubling down on its confrontational approach toward both domestic opposition and international observers.</p>
+
+            <h3>Economic Collapse and Humanitarian Consequences</h3>
+
+            <p>The political crisis occurs against the backdrop of Venezuela's ongoing economic collapse, which has left millions struggling to meet basic needs. Hyperinflation, currency devaluation, and widespread shortages of essential goods have created a humanitarian emergency that continues to drive migration throughout the region.</p>
+
+            <p>The connection between political instability and economic decline has become increasingly apparent, as the lack of legitimate governance structures undermines confidence in any potential recovery efforts. International observers note that sustainable economic recovery will likely require fundamental political reforms that the current government appears unwilling to implement.</p>
+
+            <h2>Regional Implications and Migration Crisis</h2>
+
+            <p>Venezuela's internal crisis has profound implications for regional stability, particularly as millions of Venezuelans have fled their homeland in search of better opportunities and safety. Neighboring countries have struggled to accommodate this massive population displacement, creating tensions that extend far beyond Venezuela's borders.</p>
+
+            <p>The situation has prompted regional governments to reconsider their approaches to Venezuelan policy, balancing humanitarian concerns with domestic political pressures related to immigration and resource allocation. This dynamic has complicated diplomatic efforts to address the crisis through multilateral channels.</p>
+
+            <h3>Looking Forward: Potential Scenarios</h3>
+
+            <p>As the situation continues to evolve, several potential scenarios emerge for Venezuela's future. The international community's continued engagement, combined with internal pressure for change, may eventually create conditions for meaningful dialogue and democratic transition.</p>
+
+            <p>However, the government's apparent determination to maintain power at all costs suggests that any resolution will require sustained international pressure and creative diplomatic solutions. The opposition's resilience, despite facing significant challenges, indicates that the struggle for democratic governance in Venezuela is far from over.</p>
+
+            <p>The coming months will be crucial in determining whether Venezuela can find a path toward political reconciliation and economic recovery, or whether the current crisis will deepen further, with implications that extend throughout the hemisphere.</p>
+
+            <!-- Author Bio -->
+            <div class="author-bio-modern">
+                <div class="author-info-modern">
+                    <img src="assets/team/default-avatar.png" alt="Tanzeel Shahid" class="author-avatar-modern">
+                    <div class="author-details-modern">
+                        <h5>Tanzeel Shahid</h5>
+                        <p>Tanzeel specializes in security analysis and regional conflicts, with particular expertise in Latin American political developments. His reporting focuses on the intersection of domestic political dynamics and international security concerns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/congo.png" alt="Congo Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 mb-3">
+                            Humanitarian Crisis
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Rebel Violence and Resource Wars Push Congo to the Brink</h3>
+                        <p class="text-gray-600 text-sm">The Central Republic of Congo faces unprecedented humanitarian challenges...</p>
+                        <a href="congo-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/palestine.png" alt="Palestine Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-800 mb-3">
+                            Middle East
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">As Conflict Escalates, Displaced Families Seek Shelter in 'Ghost Camps'</h3>
+                        <p class="text-gray-600 text-sm">Palestinian displacement crisis worsens amid ongoing conflict...</p>
+                        <a href="palestine-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <img src="assets/articles/haiti.png" alt="Haiti Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 mb-3">
+                            Caribbean
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Haiti's Crisis: A Policy Analysis</h3>
+                        <p class="text-gray-600 text-sm">Examining the ongoing humanitarian and political crisis in Haiti...</p>
+                        <a href="haiti-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors text-sm font-medium mt-3">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold">GVMUN</span>
+                    </div>
+                    <p class="text-gray-400">Global Virtual Model United Nations - Improving the Model UN space while encouraging youth activism and political education.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+                        <a href="events.html" class="block text-gray-400 hover:text-white transition-colors">Events</a>
+                        <div class="space-y-1 pl-4 mt-1 border-l border-gray-700">
+                            <a href="apply-fellowship.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Fellowship</a>
+                            <a href="apply-internship.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Internship</a>
+                            <a href="apply-secretariat.html" class="block text-gray-400 hover:text-white transition-colors text-sm">Secretariat</a>
+                        </div>
+                        <a href="publications.html" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gvmun_official/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@GVModelUN" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/official-gvmun/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@gvmunofficial" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mt-4">Contact: <a href="mailto:gvmunsecretariat@gmail.com" class="text-gvmun-blue hover:underline">gvmunsecretariat@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navigation dropdown script -->
+    <script src="navigation.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button')?.addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Mobile dropdown toggle
+        document.querySelector('.mobile-dropdown-trigger')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.mobile-dropdown-menu').classList.toggle('hidden');
+        });
+        
+        // Desktop dropdown functionality
+        const dropdownTrigger = document.querySelector('.dropdown-trigger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        
+        if (dropdownTrigger && dropdownMenu) {
+            // Toggle dropdown visibility on click
+            dropdownTrigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('hidden');
+            });
+            
+            // Hide dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdownTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
