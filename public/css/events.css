@@ -322,3 +322,192 @@
         color: #1a1a1a;
     }
 }
+
+/* Conference Details Section */
+.conference-details {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.conference-info {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.conference-welcome h3 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.conference-welcome p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 16px;
+}
+
+.committees-info {
+    margin: 48px 0;
+}
+
+.committees-info h3 {
+    font-size: 1.75rem;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.committees-info > p {
+    font-size: 1.125rem;
+    color: #4a5568;
+    margin-bottom: 24px;
+}
+
+.committee-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.committee-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+}
+
+.committee-card h4 {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.difficulty-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.difficulty-badge.beginner {
+    background-color: #10b981;
+    color: white;
+}
+
+.difficulty-badge.advanced {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.committee-card p {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.awards-info {
+    margin: 48px 0;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.awards-info h3 {
+    font-size: 1.75rem;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.awards-info > p {
+    font-size: 1.125rem;
+    color: #4a5568;
+    margin-bottom: 16px;
+}
+
+.awards-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+}
+
+.awards-list li {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+.awards-info em {
+    font-size: 1rem;
+    color: #6b7280;
+    display: block;
+    margin-top: 24px;
+    line-height: 1.6;
+}
+
+.contact-info {
+    margin: 48px 0;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.125rem;
+    color: #4a5568;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.secretary-generals {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 32px;
+    display: inline-block;
+}
+
+.secretary-generals p {
+    color: white;
+    margin: 0;
+}
+
+.secretary-generals p:first-child {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.secretary-generals p:last-child {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .committee-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .committee-card {
+        margin-bottom: 16px;
+    }
+    
+    .conference-welcome h3 {
+        font-size: 1.75rem;
+    }
+    
+    .committees-info h3,
+    .awards-info h3 {
+        font-size: 1.5rem;
+    }
+}

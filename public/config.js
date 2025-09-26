@@ -6,8 +6,8 @@ const WEBSITE_CONFIG = {
     fullName: "Global Virtual Model United Nations",
     
     nextConference: {
-        name: "GVMUNC IX",
-        date: "2025-10-15T00:00:00",
+        name: "GVMUNC X",
+        date: "2025-10-19T00:00:00",
         registrationUrl: "#" 
     },
     

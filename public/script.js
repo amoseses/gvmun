@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Countdown timer function
     function updateCountdown() {
-        const targetDate = new Date('2025-09-20T00:00:00').getTime();
+        const targetDate = new Date('2025-10-19T00:00:00').getTime();
         const now = new Date().getTime();
         const difference = targetDate - now;
 
