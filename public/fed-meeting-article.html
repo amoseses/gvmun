@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Brief - Fed Meeting Analysis and Predictions of Effects - GVMUN</title>
+    <meta name="description" content="Analysis of the Federal Reserve's recent interest rate cut and its implications for employment, inflation, and the global economy.">
+    <meta name="keywords" content="Federal Reserve, Fed meeting, interest rates, inflation, employment, monetary policy, Jerome Powell, economy">
+    <meta name="author" content="Shravya Nadagowda - GVMUN">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="News Brief - Fed Meeting Analysis and Predictions of Effects - GVMUN">
+    <meta property="og:description" content="Analysis of the Federal Reserve's recent interest rate cut and its implications for employment, inflation, and the global economy.">
+    <meta property="og:image" content="assets/articles/fed.png">
+    <meta property="og:url" content="https://gvmun.org/fed-meeting-article.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="News Brief - Fed Meeting Analysis and Predictions of Effects - GVMUN">
+    <meta name="twitter:description" content="Analysis of the Federal Reserve's recent interest rate cut and its implications for employment, inflation, and the global economy.">
+    <meta name="twitter:image" content="assets/articles/fed.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/gvmunlogo.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gvmun-blue': '#1e40af',
+                        'gvmun-purple': '#7c3aed',
+                        'gvmun-gold': '#f59e0b'
+                    },
+                    fontFamily: {
+                        'serif': ['Crimson Text', 'Source Serif Pro', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-color: #8b5cf6;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --bg-section: #f8fafc;
+        }
+        
+        .gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .article-header-modern {
+            background: var(--primary-gradient);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .article-header-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .article-content-modern {
+            font-family: 'Crimson Text', Georgia, serif;
+        }
+        
+        .article-content-modern .lead-paragraph {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .article-content-modern h2 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 3rem 0 1.5rem;
+            padding-top: 2rem;
+            position: relative;
+        }
+        
+        .article-content-modern h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+        
+        .article-content-modern p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fef7f0 0%, #fdf2e9 100%);
+            border: 1px solid #fed7aa;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .highlight-box::before {
+            content: '💰';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .policy-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #38bdf8;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .policy-box::before {
+            content: '📊';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .expert-quote-box {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e5edff 100%);
+            border: 1px solid #6366f1;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .expert-quote-box::before {
+            content: '💬';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .article-container-modern {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .article-content-modern h2 {
+                font-size: 1.6rem;
+            }
+            
+            .article-content-modern p {
+                font-size: 1rem;
+            }
+            
+            .article-content-modern .lead-paragraph {
+                font-size: 1.1rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                    <span class="text-xl font-bold text-gray-900">GVMUN</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About</a>
+                    <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
+                    <a href="get-involved.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Get Involved</a>
+                    <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
+                </div>
+                <button class="md:hidden p-2">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modern Article Header -->
+    <header class="article-header-modern text-white">
+        <div class="relative z-10 article-container-modern">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center space-x-2 text-sm text-white/70 mb-8 fade-in">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html" class="hover:text-white transition-colors">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html" class="hover:text-white transition-colors">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-white">Fed Meeting Analysis</span>
+            </nav>
+
+            <!-- Category Badge -->
+            <div class="mb-6 fade-in">
+                <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-white/20 backdrop-blur-sm border border-white/30 text-white">
+                    <i class="fas fa-chart-line mr-2"></i>
+                    Economics
+                </span>
+            </div>
+
+            <!-- Article Title -->
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 fade-in font-serif">
+                News Brief - Fed Meeting Analysis and Predictions of Effects
+            </h1>
+
+            <!-- Article Subtitle -->
+            <p class="text-xl md:text-2xl text-white/90 leading-relaxed mb-8 max-w-4xl fade-in font-sans">
+                Economic and financial changes from Federal Reserve rate cuts, impacting employment and inflation
+            </p>
+
+            <!-- Author & Meta Information -->
+            <div class="flex flex-wrap items-center gap-6 text-white/80 fade-in">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <i class="fas fa-user text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-white">Shravya Nadagowda</p>
+                        <p class="text-sm text-white/70">Journalism Intern</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-1">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>September 21, 2025</span>
+                </div>
+                
+                <div class="flex items-center space-x-1">
+                    <i class="fas fa-clock"></i>
+                    <span>6 min read</span>
+                </div>
+                
+                <div class="flex items-center space-x-1">
+                    <i class="fas fa-eye"></i>
+                    <span>4,823 views</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <main class="bg-white">
+        <div class="article-container-modern">
+            <!-- Featured Image -->
+            <div class="mb-12 fade-in">
+                <img src="assets/articles/fed.png" alt="Federal Reserve meeting analysis" class="w-full h-96 object-cover rounded-2xl shadow-2xl">
+                <p class="text-sm text-gray-500 mt-3 italic text-center">Federal Reserve building in Washington D.C. (File photo)</p>
+            </div>
+
+            <!-- Article Content -->
+            <article class="article-content-modern max-w-4xl mx-auto fade-in">
+                
+                <!-- Lead Paragraph -->
+                <div class="lead-paragraph">
+                    The recent Fed (Federal Reserve) Meeting Analysis was a critical movement towards the U.S. Monetary policy adjustment, challenging the Central Bank. Due to inflation, unstable employment, and market volatility, the Fed cut interest rates by 25 basis points on September 17, 2025, bringing the combined funds to a target rate of 4.00%-4.25%.
+                </div>
+
+                <!-- Key Statistics -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">25</div>
+                        <p class="text-gray-600 font-medium">Basis Points Cut</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4.3%</div>
+                        <p class="text-gray-600 font-medium">Current Unemployment Rate</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4.25%</div>
+                        <p class="text-gray-600 font-medium">New Target Rate (Upper Bound)</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3.0%</div>
+                        <p class="text-gray-600 font-medium">Projected PCE Inflation Peak</p>
+                    </div>
+                </div>
+
+                <p>
+                    This issue primarily revolves around the labor market, highlighting both its constraints and advantages. This could benefit corporations, economies, and governments by decreasing inflation, increasing employment, and stabilizing finance. The Fed strategized this budget cut towards national and international allocations, and a step towards tangible change in the global economy.
+                </p>
+
+                <h2>Employment and Inflation Dynamics</h2>
+                
+                <p>
+                    The August Employment Rate was expected to further stagnate job creation and continuation. Unemployment rose to 4.3%, and could rise to 4.5% by the end of 2025, and incoming data can be used to predict October job rates. The increase in goods was consistent for 3 months for inflation, pressuring the ongoing acceleration of tariffs.
+                </p>
+                
+                <p>
+                    Additionally, housing and infrastructure development played a pivotal role in the Expenditure Price Index (PCE), and the estimated peak for PCE inflation will be 3.0% by the end of the year. This is a highlight for investors and agents, as opportunities are rising across sectors and regions: Real estate, fixed income, secured credit, and technology stocks that deliver strong earnings.
+                </p>
+
+                <div class="policy-box">
+                    <strong>FOMC Policy Focus:</strong> The Federal Open Market Committee is utilizing interest rates to reduce inflation, stabilizing the value at 2% annual rate for the long term through policy initiatives, consumer pricing shifts, and balancing economic growth.
+                </div>
+
+                <h2>Long-term Inflation Targets</h2>
+                
+                <p>
+                    Due to the projection of the economic outlooks, the Federal Open Market Committee (FOMC) is utilizing interest rates to reduce inflation, stabilizing the value at 2% annual rate for the long term. Through policy initiatives, consumer pricing shifts, and balancing economic growth, the goal could be reached by the estimated time.
+                </p>
+                
+                <p>
+                    The Personal Consumption Expenditures Price Index (PCE) measured core pricing of energy and food, conveying the goal of 2% annual rate wasn't attained. By calculating the timeline, this goal wouldn't originally hit the value until the closing of 2028. The Fed predominantly focused on clearing its dilemma of controlling inflation without a market recession.
+                </p>
+
+                <h2>September 2025 Fed Decision Analysis</h2>
+                
+                <p>
+                    In September of 2025, the Fed's decision on interest rates was announced. Policy and changemakers were deeply concerned about high rates that could disturb the labor market, as well as stalling economic and industrial growth. Fed Chair Jerome Powell alluded that Wednesday's step to decrease the interest rate was claimed as a risk management cut, not critical.
+                </p>
+                
+                <p>
+                    The Federal Reserve's policy outlines continue to impact currency strength, international capital flow, and market debt strategies emerging in the industry. A reduced federal funding rate could alleviate the economic constraints of managing financial liabilities and open new opportunities. However, if geopolitical intervention occurs, this could limit the ability of the U.S. to ease. The Fed meeting emphasized strategies for a globalized economy.
+                </p>
+
+                <div class="highlight-box">
+                    <strong>Dot Plot Analysis:</strong> The Fed's updated dot plot indicates the FOMC's data for approximate future interest rates, with median expectations of funding rates ranging from 3.5-3.7% by the end of 2025, suggesting two more quarter-point cuts in the remaining meetings.
+                </div>
+
+                <h2>Global Perspectives and Expert Views</h2>
+                
+                <p>
+                    Jerome Powell seems to be balancing the Fed's inflation levels, as well as the weakening labor market. He is balancing this through a dual mandate for flexibility. In his recent tone, Powell is signaling protection rather than a risky action, implying that the Fed isn't rushing towards rapid economic cuts without clear evidence of an economic slowdown that's consistent.
+                </p>
+
+                <div class="expert-quote-box">
+                    <strong>Jerome Powell:</strong> "Labour demand has softened, and the recent pace of job creation appears to be running below the 'breakeven' rate needed to hold the unemployment rate constant."
+                </div>
+
+                <p>
+                    Joachim Nagel speaks on the U.S. political interference, emphasizing the crucial need for independence for the financial system. Nagel quotes, "There were indications that the attacks on the Fed contributed to a steeper U.S. yield curve on corresponding trading days: lower yields at the short end and higher yields at the long end." Nagel appreciates Powell's approach to conflict and agrees with Jerome Powell's strategizing.
+                </p>
+                
+                <p>
+                    Stephen Miran, a new governor, objected in favor of a half-percentage-point cut. He favored the 50 basis-point cut rather than the adopted 25 bps. Jerome Powell believed the rate cut was a "risk management cut," designed to weaken the labor market risks. However, Jeffrey R. Schmid, a Fed governor, supports the rate cut, expressing his confidence that the economic growth would sustain without higher inflation gains.
+                </p>
+
+                <h2>Implications and Future Outlook</h2>
+                
+                <p>
+                    If the Fed meeting analysis and effects were ignored, there could be a lack of preparedness for changes in the economy. The economy manages finances, policies, and market growth, which are crucial for corporations, employment, and housing rates. If these fields are unstable, stock and bond markets, currencies, and finances could have unexpected events, and financial markets rely on these fields heavily.
+                </p>
+                
+                <p>
+                    The short-term effects range from immediate market shifts to finances and stocks. Additionally, delays of business decisions, pressures of central banks, and inflation could arise. Consumers may experience doubt about the investment, analyzing the long-term benefits and consequences.
+                </p>
+                
+                <p>
+                    The long-term effects consist of market trends and shifts in investment and financial strategizing, sustained economic development, increased public debt, employment percentages, minimum wages, and changes in business behavior. To conclude, the Federal Reserve's meeting was crucial for economic policies towards inflation, job growth, finances, and employment. It's pivotal for communities, committees, and regions to remain educated and aware of their economies and changes in market rates, through politics and policy shifts.
+                </p>
+
+            </article>
+
+            <!-- Article Footer Actions -->
+            <div class="border-t border-gray-200 pt-8 mt-12 fade-in">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+                    <!-- Social Sharing -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-600 font-medium">Share this article:</span>
+                        <div class="flex space-x-3">
+                            <button class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors" onclick="shareOnTwitter()">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors" onclick="shareOnFacebook()">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors" onclick="shareOnLinkedIn()">
+                                <i class="fab fa-linkedin"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors" onclick="shareOnWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Back to Articles -->
+                    <a href="journalism.html" class="inline-flex items-center space-x-2 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to All Articles</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="bg-gray-50 rounded-2xl p-6 mt-12 fade-in">
+                <div class="flex items-start space-x-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gvmun-blue to-gvmun-purple rounded-full flex items-center justify-center text-white text-xl flex-shrink-0">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-gray-900 text-lg mb-2">Shravya Nadagowda</h3>
+                        <p class="text-gvmun-blue font-medium mb-3">Journalism Intern</p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Shravya is a journalism intern at GVMUN, specializing in economic policy and financial markets analysis. 
+                            Her reporting focuses on Federal Reserve decisions, monetary policy, and their global economic implications, 
+                            with particular expertise in analyzing interest rate impacts on employment and inflation dynamics.
+                        </p>
+                        <div class="mt-4 flex space-x-3">
+                            <a href="mailto:shravya@gvmun.org" class="text-gvmun-blue hover:text-gvmun-purple transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="#" class="text-gvmun-blue hover:text-gvmun-purple transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Related Articles Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Related Articles</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore more insights into economic policy and global financial markets</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <img src="assets/articles/india.png" alt="India Tariffs" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 mb-3">
+                            <i class="fas fa-chart-line mr-1"></i>
+                            Politics
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2 text-lg leading-tight">Tariffs on India Jump to 50% Amid Russian Oil Dispute</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">The Trump campaign has proposed sharp escalations, doubling tariff rates from 25% to 50% on Indian goods...</p>
+                        <a href="india-tariffs-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                            <span>Read Article</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <img src="assets/articles/trump.png" alt="Trump Presidency" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 mb-3">
+                            <i class="fas fa-flag-usa mr-1"></i>
+                            US Politics
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2 text-lg leading-tight">Trump 2.0: What It Means For The World</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Analyzing the global implications of Donald Trump's historic return to the presidency...</p>
+                        <a href="trump-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                            <span>Read Article</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <img src="assets/articles/brics.png" alt="BRICS Summit" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-800 mb-3">
+                            <i class="fas fa-globe mr-1"></i>
+                            International Relations
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2 text-lg leading-tight">The 17th BRICS Summit 2025: A Defining Moment</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">The historic BRICS summit in Rio de Janeiro marked a consequential gathering...</p>
+                        <a href="brics-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                            <span>Read Article</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="bg-gradient-to-r from-gvmun-blue to-gvmun-purple py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-white mb-4">Stay Updated with GVMUN</h3>
+                <p class="text-white/90 mb-6">Get the latest articles and insights delivered to your inbox</p>
+                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-lg border-0 focus:ring-2 focus:ring-white/50">
+                    <button class="bg-white text-gvmun-blue px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Organization Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold">GVMUN</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">Global Virtual Model United Nations - Improving the Model UN space while encouraging youth activism and political education.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4 text-lg">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+                        <a href="events.html" class="block text-gray-400 hover:text-white transition-colors">Events</a>
+                        <a href="get-involved.html" class="block text-gray-400 hover:text-white transition-colors">Get Involved</a>
+                        <a href="publications.html" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
+                        <a href="journalism.html" class="block text-gray-400 hover:text-white transition-colors">Journalism</a>
+                    </div>
+                </div>
+                
+                <!-- Connect -->
+                <div>
+                    <h4 class="font-semibold mb-4 text-lg">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://www.instagram.com/gvmun_official/" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@GVModelUN" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/official-gvmun/" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@gvmunofficial" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xl">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Contact: <a href="mailto:gvmunsecretariat@gmail.com" class="text-gvmun-blue hover:underline">gvmunsecretariat@gmail.com</a></p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 GVMUN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Social Sharing -->
+    <script>
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("News Brief - Fed Meeting Analysis and Predictions of Effects - Economic analysis by GVMUN");
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent("News Brief - Fed Meeting Analysis and Predictions of Effects");
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`, '_blank');
+        }
+
+        function shareOnWhatsApp() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("News Brief - Fed Meeting Analysis and Predictions of Effects - Economic analysis by GVMUN");
+            window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

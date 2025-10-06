@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaza Crisis: Latest Developments and Escalations - GVMUN</title>
+    <meta name="description" content="Analysis of the unprecedented humanitarian emergency in Gaza, including confirmed famine conditions and escalating conflict affecting millions of civilians.">
+    <meta name="keywords" content="Gaza, humanitarian crisis, famine, journalists, Israel, Palestine, Middle East, conflict">
+    <meta name="author" content="Andrea Pérez Rodríguez - GVMUN">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Gaza Crisis: Latest Developments and Escalations - GVMUN">
+    <meta property="og:description" content="Analysis of the unprecedented humanitarian emergency in Gaza, including confirmed famine conditions and escalating conflict affecting millions of civilians.">
+    <meta property="og:image" content="assets/articles/gazafamine.png">
+    <meta property="og:url" content="https://gvmun.org/gaza-famine-article.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gaza Crisis: Latest Developments and Escalations - GVMUN">
+    <meta name="twitter:description" content="Analysis of the unprecedented humanitarian emergency in Gaza, including confirmed famine conditions and escalating conflict affecting millions of civilians.">
+    <meta name="twitter:image" content="assets/articles/gazafamine.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/gvmunlogo.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gvmun-blue': '#1e40af',
+                        'gvmun-purple': '#7c3aed',
+                        'gvmun-gold': '#f59e0b'
+                    },
+                    fontFamily: {
+                        'serif': ['Crimson Text', 'Source Serif Pro', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-color: #8b5cf6;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --bg-section: #f8fafc;
+        }
+        
+        .gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .article-header-modern {
+            background: var(--primary-gradient);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .article-header-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .article-content-modern {
+            font-family: 'Crimson Text', Georgia, serif;
+        }
+        
+        .article-content-modern .lead-paragraph {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .article-content-modern h2 {
+            font-family: 'Source Serif Pro', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 3rem 0 1.5rem;
+            padding-top: 2rem;
+            position: relative;
+        }
+        
+        .article-content-modern h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+        
+        .article-content-modern p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fef7f0 0%, #fdf2e9 100%);
+            border: 1px solid #fed7aa;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .highlight-box::before {
+            content: '⚠️';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .famine-box {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            border: 1px solid #f87171;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .famine-box::before {
+            content: '🍽️';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .press-freedom-box {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e5edff 100%);
+            border: 1px solid #6366f1;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .press-freedom-box::before {
+            content: '📰';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .article-container-modern {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .article-content-modern h2 {
+                font-size: 1.6rem;
+            }
+            
+            .article-content-modern p {
+                font-size: 1rem;
+            }
+            
+            .article-content-modern .lead-paragraph {
+                font-size: 1.1rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                    <span class="text-xl font-bold text-gray-900">GVMUN</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">About</a>
+                    <a href="events.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Events</a>
+                    <a href="get-involved.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Get Involved</a>
+                    <a href="publications.html" class="text-gray-600 hover:text-gvmun-blue transition-colors">Publications</a>
+                </div>
+                <button class="md:hidden p-2">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modern Article Header -->
+    <header class="article-header-modern text-white">
+        <div class="relative z-10 article-container-modern">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center space-x-2 text-sm text-white/70 mb-8 fade-in">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="publications.html" class="hover:text-white transition-colors">Publications</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <a href="journalism.html" class="hover:text-white transition-colors">Journalism</a>
+                <i class="fas fa-chevron-right text-xs"></i>
+                <span class="text-white">Gaza Crisis: Latest Developments</span>
+            </nav>
+
+            <!-- Category Badge -->
+            <div class="mb-6 fade-in">
+                <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-white/20 backdrop-blur-sm border border-white/30 text-white">
+                    <i class="fas fa-globe-americas mr-2"></i>
+                    Middle East
+                </span>
+            </div>
+
+            <!-- Article Title -->
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 fade-in font-serif">
+                Gaza Crisis: Latest Developments and Escalations
+            </h1>
+
+            <!-- Article Subtitle -->
+            <p class="text-xl md:text-2xl text-white/90 leading-relaxed mb-8 max-w-4xl fade-in font-sans">
+                An unprecedented humanitarian emergency unfolds as famine conditions worsen and press freedom comes under attack
+            </p>
+
+            <!-- Author & Meta Information -->
+            <div class="flex flex-wrap items-center gap-6 text-white/80 fade-in">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <i class="fas fa-user text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-white">Andrea Pérez Rodríguez</p>
+                        <p class="text-sm text-white/70">Journalism Intern</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-1">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>October 6, 2025</span>
+                </div>
+                
+                <div class="flex items-center space-x-1">
+                    <i class="fas fa-clock"></i>
+                    <span>8 min read</span>
+                </div>
+                
+                <div class="flex items-center space-x-1">
+                    <i class="fas fa-eye"></i>
+                    <span>9,127 views</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <main class="bg-white">
+        <div class="article-container-modern">
+            <!-- Featured Image -->
+            <div class="mb-12 fade-in">
+                <img src="assets/articles/gazafamine.png" alt="Gaza humanitarian crisis" class="w-full h-96 object-cover rounded-2xl shadow-2xl">
+                <p class="text-sm text-gray-500 mt-3 italic text-center">Children in Gaza face severe malnutrition amid ongoing humanitarian crisis. (File photo)</p>
+            </div>
+
+            <!-- Article Content -->
+            <article class="article-content-modern max-w-4xl mx-auto fade-in">
+                
+                <!-- Lead Paragraph -->
+                <div class="lead-paragraph">
+                    The Gaza Strip is currently facing an unprecedented humanitarian emergency, with the Integrated Food Security Phase Classification (IPC) confirming famine, recent Israeli airstrikes killing journalists such as Al Jazeera's Anas al-Sharif, and an escalating conflict that is deepening civilian suffering. This crisis is unfolding in Gaza, where millions, particularly children, are trapped between bombardments, forced displacement, and extreme malnutrition, while those reporting from the ground face growing risks.
+                </div>
+
+                <!-- Crisis Statistics -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">138</div>
+                        <p class="text-gray-600 font-medium">Deaths from Malnutrition (Aug 2025)</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">132,000</div>
+                        <p class="text-gray-600 font-medium">Children at Risk by June 2026</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">25</div>
+                        <p class="text-gray-600 font-medium">Children Deaths (Aug 2025)</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">$38M</div>
+                        <p class="text-gray-600 font-medium">UNICEF Emergency Funding Request</p>
+                    </div>
+                </div>
+
+                <p>
+                    The situation is worsening by the moment, and with the lack of humanitarian aid due to the closure of the borders by the Israelis, this situation does not seem likely to improve any time soon.
+                </p>
+
+                <h2>IPC Declares Famine in Gaza City</h2>
+                
+                <p>
+                    In late August 2025, the Integrated Food Security Phase Classification (IPC) officially declared a famine in parts of Gaza City, marking a critical turning point in the humanitarian crisis. According to their findings, thousands of families are facing starvation, with children and women suffering the highest mortality rates, as more than 138 deaths linked to malnutrition were recorded in August 2025, including 25 children.
+                </p>
+                
+                <p>
+                    Projections warn that over 132,000 children under five could die from acute malnutrition by June 2026, as AP News has announced it and Save the Children. This report brought international attention to the severity of the situation, as the IPC's declaration is considered the global standard for classifying food insecurity and famine conditions.
+                </p>
+
+                <div class="famine-box">
+                    <strong>Famine Alert:</strong> The IPC's official declaration of famine in parts of Gaza City represents the highest level of food insecurity classification, indicating that deaths, destitution, and extremely critical levels of acute malnutrition are evident among the population.
+                </div>
+
+                <p>
+                    This statement, however, is contradicted by recent events, such as the attempt from Barcelona to deliver humanitarian aid by ship only a few days ago, which was forced to return to port after being denied entry. This incident illustrates the systematic obstruction of humanitarian assistance and the deliberate prevention of relief efforts for the Palestinian population.
+                </p>
+
+                <h2>Targeting of Journalists Raises Press Freedom Concerns</h2>
+                
+                <p>
+                    Shortly after the release of the famine report, Israeli airstrikes intensified across Gaza, including a strike that killed several journalists, among them Al Jazeera correspondent Anas al-Sharif. His death was particularly impactful because he had been documenting the dire humanitarian situation inside hospitals and refugee camps, and shortly before his death, he had recorded a final video message describing the suffering of civilians.
+                </p>
+                
+                <p>
+                    The targeting of journalists raised renewed concerns over press freedom and the safety of reporters in conflict zones, as media workers have increasingly been caught in crossfire or deliberately targeted since the beginning of the war, a clear manifestation of dictatorial practices, seeking not only to suppress independent reporting but also to manipulate narratives and exert control over international opinion.
+                </p>
+
+                <div class="press-freedom-box">
+                    <strong>Press Freedom Under Attack:</strong> The death of journalists like Anas al-Sharif represents a broader pattern of targeting media workers, undermining independent reporting and the public's right to information about the humanitarian crisis.
+                </div>
+
+                <h2>International Response and Divided Opinions</h2>
+                
+                <p>
+                    International organizations such as the United Nations and the World Food Programme have warned that Gaza is on the verge of humanitarian collapse, urging Israel to lift restrictions on aid deliveries and allow full humanitarian access. The UN Secretary-General described the IPC famine declaration as "a wake-up call to the international community."
+                </p>
+                
+                <p>
+                    At the same time, humanitarian NGOs like Médecins Sans Frontières stressed that hospitals are overwhelmed and lacking both food and medicine. Israeli officials, however, have rejected these claims, arguing, as reported by Haaretz, that the data is "incomplete and politically manipulated," while insisting that aid trucks continue to enter Gaza on a daily basis.
+                </p>
+
+                <p>
+                    International responses to the crisis remain sharply divided. According to The Guardian, European Union representatives condemned attacks on journalists and demanded accountability, framing press freedom as a non-negotiable principle even during wartime. The United States, meanwhile, voiced concern over civilian casualties but refrained from directly criticizing Israel, focusing instead on calls for de-escalation.
+                </p>
+                
+                <p>
+                    In contrast, Arab League leaders, cited by Al Jazeera, accused Israel of committing systematic violations of international law and urged the implementation of international sanctions. For civilians in Gaza, however, the issue is one of survival rather than politics: testimonies published in The New York Times describe parents skipping meals so their children can eat, journalists fearing for their lives, and families in refugee camps speaking of a "sense of abandonment," exposing the apparent separation between political disputes and the lived reality on the ground.
+                </p>
+
+                <h2>Global Implications and Long-term Consequences</h2>
+                
+                <p>
+                    The crisis in Gaza matters globally because it raises urgent questions about human rights, humanitarian law, and freedom of the press. If the IPC-confirmed famine and the targeting of journalists are ignored, the consequences could reach far beyond Gaza: mass civilian deaths, regional instability, and the erosion of international norms protecting civilians and reporters in armed conflicts.
+                </p>
+                
+                <p>
+                    In the short term, further restrictions on aid and ongoing airstrikes are likely to accelerate the humanitarian collapse. At the same time, divisions among world powers over how to respond may compromise the collective response.
+                </p>
+
+                <div class="highlight-box">
+                    <strong>Regional Stability at Risk:</strong> The Gaza crisis threatens to destabilize the broader Middle East region, with potential consequences for international law, humanitarian norms, and the safety of civilians and journalists in conflict zones worldwide.
+                </div>
+
+                <p>
+                    In addition, the crisis shows deeper problems in how the region is governed and how the international community handles conflicts. People struggle to access basic resources, and political disagreements hinder the search for quick solutions. In the long run, the region's stability will depend on not just ending the current fighting, but also on rebuilding infrastructure, holding those responsible accountable, and creating ways for dialogue that prevent future conflicts.
+                </p>
+                
+                <p>
+                    Without sustained and coordinated action, people will continue to suffer the most.
+                </p>
+
+            </article>
+
+            <!-- Article Footer Actions -->
+            <div class="border-t border-gray-200 pt-8 mt-12 fade-in">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+                    <!-- Social Sharing -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-600 font-medium">Share this article:</span>
+                        <div class="flex space-x-3">
+                            <button class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors" onclick="shareOnTwitter()">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-colors" onclick="shareOnFacebook()">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-colors" onclick="shareOnLinkedIn()">
+                                <i class="fab fa-linkedin"></i>
+                            </button>
+                            <button class="flex items-center justify-center w-10 h-10 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors" onclick="shareOnWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Back to Articles -->
+                    <a href="journalism.html" class="inline-flex items-center space-x-2 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to All Articles</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="bg-gray-50 rounded-2xl p-6 mt-12 fade-in">
+                <div class="flex items-start space-x-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gvmun-blue to-gvmun-purple rounded-full flex items-center justify-center text-white text-xl flex-shrink-0">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-gray-900 text-lg mb-2">Andrea Pérez Rodríguez</h3>
+                        <p class="text-gvmun-blue font-medium mb-3">Journalism Intern</p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Andrea is a journalism intern at GVMUN, specializing in Middle Eastern affairs and humanitarian crises. 
+                            Her reporting focuses on conflict zones, press freedom, and the human impact of international disputes, 
+                            with particular expertise in analyzing humanitarian emergencies and their global implications.
+                        </p>
+                        <div class="mt-4 flex space-x-3">
+                            <a href="mailto:andrea@gvmun.org" class="text-gvmun-blue hover:text-gvmun-purple transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="#" class="text-gvmun-blue hover:text-gvmun-purple transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Related Articles Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Related Articles</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore more insights into Middle Eastern affairs and humanitarian crises</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <img src="assets/articles/gaza.png" alt="Gaza Starvation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 mb-3">
+                            <i class="fas fa-exclamation-triangle mr-1"></i>
+                            Middle East
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2 text-lg leading-tight">Starvation Surges in Gaza as Aid Fails to Meet Needs</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Gaza is on the brink of a worst-case famine scenario as food and humanitarian supplies barely trickle into the enclave...</p>
+                        <a href="gaza-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                            <span>Read Article</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <img src="assets/articles/palestine.png" alt="Palestine Analysis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 mb-3">
+                            <i class="fas fa-globe-americas mr-1"></i>
+                            Middle East
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2 text-lg leading-tight">Understanding the Palestinian Crisis</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">A comprehensive analysis of the ongoing Palestinian crisis and its regional implications...</p>
+                        <a href="palestine-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                            <span>Read Article</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <img src="assets/articles/haiti.png" alt="Haiti Crisis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 mb-3">
+                            <i class="fas fa-exclamation-triangle mr-1"></i>
+                            Humanitarian Crisis
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2 text-lg leading-tight">Armed Groups Recruit Children in Haiti's Crisis</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Analysis of the devastating impact of youth recruitment by armed gangs in Haiti...</p>
+                        <a href="haiti-article.html" class="inline-flex items-center space-x-1 text-gvmun-blue hover:text-gvmun-purple transition-colors font-medium">
+                            <span>Read Article</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="bg-gradient-to-r from-gvmun-blue to-gvmun-purple py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-white mb-4">Stay Updated with GVMUN</h3>
+                <p class="text-white/90 mb-6">Get the latest articles and insights delivered to your inbox</p>
+                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-lg border-0 focus:ring-2 focus:ring-white/50">
+                    <button class="bg-white text-gvmun-blue px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Organization Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/gvmunlogo.png" alt="GVMUN Logo" class="h-8 w-8 rounded-lg">
+                        <span class="text-xl font-bold">GVMUN</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">Global Virtual Model United Nations - Improving the Model UN space while encouraging youth activism and political education.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold mb-4 text-lg">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="about.html" class="block text-gray-400 hover:text-white transition-colors">About Us</a>
+                        <a href="events.html" class="block text-gray-400 hover:text-white transition-colors">Events</a>
+                        <a href="get-involved.html" class="block text-gray-400 hover:text-white transition-colors">Get Involved</a>
+                        <a href="publications.html" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
+                        <a href="journalism.html" class="block text-gray-400 hover:text-white transition-colors">Journalism</a>
+                    </div>
+                </div>
+                
+                <!-- Connect -->
+                <div>
+                    <h4 class="font-semibold mb-4 text-lg">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://www.instagram.com/gvmun_official/" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@GVModelUN" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/official-gvmun/" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@gvmunofficial" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xl">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Contact: <a href="mailto:gvmunsecretariat@gmail.com" class="text-gvmun-blue hover:underline">gvmunsecretariat@gmail.com</a></p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 GVMUN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Social Sharing -->
+    <script>
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("Gaza Crisis: Latest Developments and Escalations - A comprehensive analysis by GVMUN");
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent("Gaza Crisis: Latest Developments and Escalations");
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`, '_blank');
+        }
+
+        function shareOnWhatsApp() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("Gaza Crisis: Latest Developments and Escalations - A comprehensive analysis by GVMUN");
+            window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
