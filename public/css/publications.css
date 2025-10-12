@@ -363,6 +363,18 @@
     font-size: 0.9rem;
 }
 
+.ssrn-btn {
+    background: #1a365d;
+    color: white;
+    border-color: #1a365d;
+}
+
+.ssrn-btn:hover {
+    background: #2c5282;
+    border-color: #2c5282;
+    color: white;
+}
+
 .paper-stats {
     display: flex;
     align-items: center;
