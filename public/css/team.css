@@ -17,108 +17,42 @@
     margin: 0 auto;
 }
 
-/* Center items in the last row when there are 7, 8, or 9 members */
-.team-grid .team-member:nth-child(7):nth-last-child(1) {
-    grid-column: 2; /* Center a single item in the third row */
-}
-
-.team-grid .team-member:nth-child(7):nth-last-child(2),
-.team-grid .team-member:nth-child(8):nth-last-child(1) {
-    /* For 8 members (2 in bottom row), adjust spacing */
-    grid-column: span 1;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Remove the special centering for 7th member since we now have 6 members */
-/* Center the bottom row with 3 members */
-.team-grid .team-member:nth-child(4),
-.team-grid .team-member:nth-child(5),
-.team-grid .team-member:nth-child(6) {
-    /* Bottom row naturally centers with 3 items in 3-column grid */
-}
-
-/* Center the last two team members (7th and 8th) on the bottom row */
 .team-grid {
-    /* ...existing code... */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Special handling for the bottom row with 2 members (Wyatt and Yatee) */
-.team-grid .team-member:nth-last-child(1),
-.team-grid .team-member:nth-last-child(2) {
-    justify-self: center;
+.team-member {
+    flex: 0 0 280px; /* Fixed width for consistency */
 }
 
-/* When there are 8 team members (as now), center the last two */
-@media (min-width: 901px) {
-    /* Make sure the grid has a specific width for precise centering */
+/* For the last row with 2 members, create a centered flex container */
+.team-grid .team-member:nth-child(n+7) {
+    flex-basis: 280px;
+}
+
+/* Ensure proper centering for last 2 items */
+@supports (display: grid) {
     .team-grid {
-        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 32px;
+        justify-content: center;
+        max-width: 900px;
     }
     
-    /* Manually position the 7th and 8th items */
-    .team-grid .team-member:nth-child(7) {
-        grid-column: 1 / span 1;
-        margin-left: auto;
-        margin-right: 16px;
-    }
-    
-    .team-grid .team-member:nth-child(8) {
-        grid-column: 3 / span 1;
-        margin-left: 16px;
-        margin-right: auto;
-    }
-    
-    /* Add an invisible spacer element in the middle position */
-    .team-grid::after {
-        content: "";
-        grid-column: 2;
-        grid-row: 3;
+    .team-member {
+        width: 100%;
+        max-width: 280px;
+        justify-self: center;
     }
 }
 
-/* Center Wyatt and Yatee in the team grid */
-@media (min-width: 901px) {
-    /* Create specific positioning for the last row with 2 members */
-    .team-grid {
-        position: relative;
-    }
-    
-    /* Position 7th and 8th members (Wyatt and Yatee) in the center */
-    .team-grid .team-member:nth-child(7),
-    .team-grid .team-member:nth-child(8) {
-        /* Reset previous positioning */
-        margin-left: 0;
-        margin-right: 0;
-        grid-column: auto;
-    }
-    
-    /* Apply specific positioning to center the last row */
-    .team-grid::after {
-        content: none; /* Remove previous spacer */
-    }
-    
-    /* Center the last two items when total is 8 */
-    .team-grid:has(.team-member:nth-child(8):last-child) {
-        padding-bottom: 0;
-    }
-    
-    .team-grid:has(.team-member:nth-child(8):last-child) .team-member:nth-child(7),
-    .team-grid:has(.team-member:nth-child(8):last-child) .team-member:nth-child(8) {
-        margin: 0 auto;
-        transform: translateX(calc(50% - 140px)); /* Center items by offsetting by half the team grid column width */
-    }
-    
-    /* Apply gap between the two centered items */
-    .team-grid:has(.team-member:nth-child(8):last-child) .team-member:nth-child(7) {
-        margin-right: 40px;
-    }
-    
-    .team-grid:has(.team-member:nth-child(8):last-child) .team-member:nth-child(8) {
-        margin-left: 40px;
-    }
-}
+
 
 .team-member {
     text-align: center;
@@ -276,7 +210,13 @@
         max-width: 600px;
     }
     
-    /* No special centering needed for even number of members in 2-column layout */
+    /* Reset desktop centering rules for 2-column layout */
+    .team-grid .team-member:nth-child(7),
+    .team-grid .team-member:nth-child(8) {
+        grid-column: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -287,9 +227,13 @@
         max-width: 350px;
     }
     
-    .team-grid .team-member:nth-child(7) {
+    /* Reset the desktop centering for mobile single column layout */
+    .team-grid .team-member:nth-child(7),
+    .team-grid .team-member:nth-child(8) {
         grid-column: 1;
         justify-self: center;
+        margin-left: 0;
+        margin-right: 0;
     }
     
     .member-bio {
