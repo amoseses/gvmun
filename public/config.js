@@ -45,24 +45,24 @@ const WEBSITE_CONFIG = {
             image: "assets/team/ayushmaan.jpg"
         },
         {
+            name: "Jackson Dorris",
+            role: "Secretary General",
+            image: "assets/team/jackson.jpg"
+        },
+        {
+            name: "Wyatt Janczewski",
+            role: "Undersecretary General",
+            image: "assets/team/wyatt.png"
+        },
+        {
             name: "Kush Dave",
             role: "Secretary General", 
             image: "assets/team/kush.jpg"
         },
         {
-            name: "Aayush Dhar",
-            role: "Undersecretary General",
-            image: "assets/team/aayush.jpg"
-        },
-        {
             name: "Anushka Chaudhary",
             role: "Graphic Designer",
             image: "assets/team/anushka.jpg"
-        },
-        {
-            name: "Jackson Dorris",
-            role: "Journalism Head",
-            image: "assets/team/jackson.jpg"
         },
         {
             name: "Lilli Stroock",
@@ -73,6 +73,11 @@ const WEBSITE_CONFIG = {
             name: "Tharun Naguleswaran",
             role: "Webmaster",
             image: "assets/team/tharun.jpg"
+        },
+        {
+            name: "Aayush Dhar",
+            role: "Finance Director",
+            image: "assets/team/aayush.jpg"
         }
     ],
     
