@@ -50,6 +50,11 @@ const WEBSITE_CONFIG = {
             image: "assets/team/jackson.jpg"
         },
         {
+            name: "Aayush Dhar",
+            role: "Secretary General",
+            image: "assets/team/aayush.jpg"
+        },
+        {
             name: "Wyatt Janczewski",
             role: "Undersecretary General",
             image: "assets/team/wyatt.png"
@@ -73,11 +78,6 @@ const WEBSITE_CONFIG = {
             name: "Tharun Naguleswaran",
             role: "Webmaster",
             image: "assets/team/tharun.jpg"
-        },
-        {
-            name: "Aayush Dhar",
-            role: "Finance Director",
-            image: "assets/team/aayush.jpg"
         }
     ],
     
@@ -85,11 +85,6 @@ const WEBSITE_CONFIG = {
         {
             name: "Project Delegate",
             logo: "assets/partners/project-delegate.png",
-            url: "#"
-        },
-        {
-            name: "WAVEMUN",
-            logo: "assets/partners/wavemun.png", 
             url: "#"
         },
         {
