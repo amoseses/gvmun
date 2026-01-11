@@ -51,7 +51,7 @@ const WEBSITE_CONFIG = {
         },
         {
             name: "Aayush Dhar",
-            role: "Secretary General",
+            role: "Undersecretary General",
             image: "assets/team/aayush.jpg"
         },
         {
