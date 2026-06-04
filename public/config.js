@@ -6,15 +6,15 @@ const WEBSITE_CONFIG = {
     fullName: "Global Virtual Model United Nations",
     
     nextConference: {
-        name: "GVMUNC X",
-        date: "2025-10-19T00:00:00",
+        name: "GVMUNC XIV",
+        date: "2026-06-13T08:30:00-05:00",
         registrationUrl: "#" 
     },
     
     stats: {
-        delegates: "1300+",
+        delegates: "3500+",
         countries: "30+",
-        previousConference: "GVMUNEC IV 2024"
+        previousConference: "GVMUNC X"
     },
     
     socialMedia: {
@@ -84,13 +84,18 @@ const WEBSITE_CONFIG = {
     partners: [
         {
             name: "Project Delegate",
-            logo: "assets/partners/project-delegate.png",
+            logo: "assets/partners/projectdelegate.jpg",
             url: "#"
         },
         {
             name: "VAIMUN",
-            logo: "assets/partners/vaimun.png",
+            logo: "assets/partners/vaimun.jpg",
             url: "#"
+        },
+        {
+            name: "PerkioMUN",
+            logo: "assets/partners/perkiomun.svg",
+            url: "https://mymun.com/conferences/perkiomun-2026"
         }
     ],
     
