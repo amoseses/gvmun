@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
-  <title id="title">Atticus Moes profile placeholder</title>
-  <desc id="desc">A branded profile placeholder for Atticus Moes.</desc>
-  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#667eea"/><stop offset="1" stop-color="#764ba2"/></linearGradient></defs>
-  <rect width="400" height="400" rx="200" fill="url(#g)"/>
-  <circle cx="200" cy="155" r="78" fill="white"/>
-  <path d="M96 340c16-76 72-116 104-116s88 40 104 116" fill="white"/>
-  <text x="200" y="228" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="88" font-weight="700" fill="white">AM</text>
-</svg>

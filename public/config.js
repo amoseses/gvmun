@@ -7,8 +7,8 @@ const WEBSITE_CONFIG = {
     
     nextConference: {
         name: "GVMUNC XIV",
-        date: "2026-06-13T08:30:00-05:00",
-        registrationUrl: "#" 
+        date: "2026-08-15T08:30:00-04:00",
+        registrationUrl: "https://mymun.com/conferences/gvmunc-xiv-2026" 
     },
     
     stats: {
@@ -73,11 +73,6 @@ const WEBSITE_CONFIG = {
             name: "Lilli Stroock",
             role: "Outreach Head",
             image: "assets/team/lilli.jpg"
-        },
-        {
-            name: "Tharun Naguleswaran",
-            role: "Webmaster",
-            image: "assets/team/tharun.jpg"
         }
     ],
     
@@ -94,7 +89,7 @@ const WEBSITE_CONFIG = {
         },
         {
             name: "PerkioMUN",
-            logo: "assets/partners/perkiomun.svg",
+            logo: "assets/partners/perkiomun.png",
             url: "https://mymun.com/conferences/perkiomun-2026"
         }
     ],
